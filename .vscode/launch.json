@@ -1,0 +1,98 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch BuclesWhile",
+            "request": "launch",
+            "mainClass": "BuclesWhile",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Launch CondicionesSwitch",
+            "request": "launch",
+            "mainClass": "CondicionesSwitch",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Launch Condiciones",
+            "request": "launch",
+            "mainClass": "Condiciones",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Launch Precedencia",
+            "request": "launch",
+            "mainClass": "Precedencia",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Launch Entrada",
+            "request": "launch",
+            "mainClass": "Entrada",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Launch Precision",
+            "request": "launch",
+            "mainClass": "Precision",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Launch Matematicas",
+            "request": "launch",
+            "mainClass": "Matematicas",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cadenas",
+            "request": "launch",
+            "mainClass": "Cadenas",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Launch Escapes",
+            "request": "launch",
+            "mainClass": "Escapes",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Launch Hexadecimales",
+            "request": "launch",
+            "mainClass": "Hexadecimales",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Launch HolaMundo",
+            "request": "launch",
+            "mainClass": "HolaMundo",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Launch Unicode",
+            "request": "launch",
+            "mainClass": "Unicode",
+            "projectName": "curso-programacion-java_ca609098"
+        }
+    ]
+}
