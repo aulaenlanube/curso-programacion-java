@@ -1,6 +1,8 @@
 public class BreakContinue {
 
     public static void main(String[] args) {
+        int cantidad = 3;
+        System.out.println("La palabra se ha repetido "+cantidad+(cantidad == 1 ? " vez" : " veces"));
 
         //ejemplo 1
         System.out.println("Empezamos...");
