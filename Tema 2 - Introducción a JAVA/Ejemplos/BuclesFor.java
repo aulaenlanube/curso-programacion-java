@@ -6,7 +6,9 @@ public class BuclesFor {
 
         Scanner entrada = new Scanner(System.in);
         double media = 0;
-        int cantidadNumeros = 4;
+        System.out.println("Dime cuántos números quieres introducir");
+        int cantidadNumeros = entrada.nextInt();
+        
         for (int i = 0; i < cantidadNumeros; i++) {
             System.out.println("Dime un número: " + (i + 1) + " de " + cantidadNumeros);
             int num = entrada.nextInt();
