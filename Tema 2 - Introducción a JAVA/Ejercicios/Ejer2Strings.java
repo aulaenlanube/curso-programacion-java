@@ -21,12 +21,11 @@ public class Ejer2Strings {
 
         for (int i = 1; i <= 5; i++) {
 
-            System.out.println("Dime una palabra: " + i + " de " + 5);
+            System.out.println("Dime una palabra: " + i + " de 5");
             palabra = entrada.nextLine();
 
             if (palabra.length() > palabraMax.length())
                 palabraMax = palabra;
-
         }
 
         System.out.println("La palabra más larga es: " + palabraMax);
