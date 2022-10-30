@@ -18,7 +18,7 @@ public class Ejer1Iniciacion {
 
         Scanner entrada = new Scanner(System.in);
         int cantidadNumeros, numActual;
-        int contador = 1, max = Integer.MIN_VALUE, min = Integer.MAX_VALUE, contadorMax = 1, contadorMin = 1;
+        int contador = 1, max = Integer.MIN_VALUE, min = Integer.MAX_VALUE, contadorMax = 0, contadorMin = 0;
 
         System.out.println("Cuántos números quieres introducir??");
         cantidadNumeros = entrada.nextInt();
