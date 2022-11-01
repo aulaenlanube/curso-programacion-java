@@ -49,7 +49,6 @@ public class Ejer1Figuras {
 
                 if(i == 0 || i == altura - 1 || j == 0 || j == base-1) System.out.print("* ");
                 else System.out.print("  ");
-
             }
             System.out.println();
         }
