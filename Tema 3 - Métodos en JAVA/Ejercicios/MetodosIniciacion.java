@@ -40,12 +40,12 @@ public class MetodosIniciacion {
     static void mostarParImpar(int n)
     {
         if(n%2 == 0) System.out.println("\n"+n+" es par\n");
-        System.out.println("\n"+n+" es impar\n");
+        else System.out.println("\n"+n+" es impar\n");
     }
 
     static void menu(int opciones)
     {
-        System.out.println("\nMENÚ PRINCIPAL, selecciona una opcion entre 1 y "+opciones);
+        System.out.println("\nMENÚ PRINCIPAL, selecciona una opción entre 1 y "+opciones);
         for(int i=1;i<opciones;i++)
         {
             System.out.println(i+" - Esta el la opción "+i);
