@@ -32,7 +32,9 @@ public class Menu {
         entrada.close();
     }
 
-    //método que muestra el menú
+    /**
+     * Muestra el menú de selección de figura
+     */
     static void mostrarMenu() {
         System.out.println("MENU FIGURAS");
         System.out.println("Selecciona una opción");
@@ -45,13 +47,16 @@ public class Menu {
         System.out.println("-----------------------------------");
     }
 
-    // método que dibuja un cuadrado con relleno
-    static void cuadrado(int lado) {
+    /**
+     * Dibuja un cuadrado con relleno formado por asteriscos
+     * @param n Es el lado del cuadrado
+     */
+    static void cuadrado(int n) {
 
         System.out.println();
-        for (int i = 0; i < lado; i++) {
+        for (int i = 0; i < n; i++) {
 
-            for (int j = 0; j < lado; j++) {
+            for (int j = 0; j < n; j++) {
                 System.out.print("* ");
             }
             System.out.println();
@@ -59,14 +64,17 @@ public class Menu {
         System.out.println();
     }
 
-    // método que dibuja un cuadrado sin relleno
-    static void cuadradoSinRelleno(int lado) {
+    /**
+     * Dibuja un cuadrado sin relleno formado por asteriscos
+     * @param n Es el lado del cuadrado
+     */
+    static void cuadradoSinRelleno(int n) {
 
         System.out.println();
-        for (int i = 0; i < lado; i++) {
-            for (int j = 0; j < lado; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
 
-                if (i == 0 || i == lado - 1 || j == 0 || j == lado - 1)
+                if (i == 0 || i == n - 1 || j == 0 || j == n - 1)
                     System.out.print("* ");
                 else
                     System.out.print("  ");
@@ -76,11 +84,15 @@ public class Menu {
         System.out.println();
     }
 
-    // método que dibuja un triángulo con relleno
-    static void triangulo(int altura) {
+   
+    /**
+     * Dibuja un triángulo formado por asteriscos
+     * @param n El la altura del triángulo
+     */
+    static void triangulo(int n) {
 
         System.out.println();
-        for (int i = 0; i < altura; i++) {
+        for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print("* ");
             }
@@ -89,14 +101,17 @@ public class Menu {
         System.out.println();
     }
 
-    // método que dibuja un triángulo sin relleno
-    static void trianguloSinRelleno(int altura) {
+    /**
+     * Dibuja un triángulo sin relleno formado por asteriscos
+     * @param n Es la altura del triángulo 
+     */
+    static void trianguloSinRelleno(int n) {
 
         System.out.println();
-        for (int i = 0; i < altura; i++) {
+        for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
 
-                if (i == 0 || i == altura - 1 || j == 0 || j == i)
+                if (i == 0 || i == n - 1 || j == 0 || j == i)
                     System.out.print("* ");
                 else
                     System.out.print("  ");
