@@ -6,7 +6,7 @@ public class Menu {
 
         Scanner entrada = new Scanner(System.in);
         int opcion = 0;
-        int dimension = 10; //aquí va la altura de la figura
+        int dimension = 10; //aquí va la altura de las figuras
 
         do {
 
@@ -45,7 +45,7 @@ public class Menu {
         System.out.println("-----------------------------------");
     }
 
-    // método que dibuja un rectángulo con relleno
+    // método que dibuja un cuadrado con relleno
     static void cuadrado(int lado) {
 
         System.out.println();
@@ -59,7 +59,7 @@ public class Menu {
         System.out.println();
     }
 
-    // método que dibuja un rectángulo sin relleno
+    // método que dibuja un cuadrado sin relleno
     static void cuadradoSinRelleno(int lado) {
 
         System.out.println();
@@ -89,7 +89,7 @@ public class Menu {
         System.out.println();
     }
 
-    // método que dibuja un tritángulo sin relleno
+    // método que dibuja un triángulo sin relleno
     static void trianguloSinRelleno(int altura) {
 
         System.out.println();
