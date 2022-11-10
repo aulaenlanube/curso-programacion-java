@@ -6,12 +6,11 @@ public class Menu {
 
         Scanner entrada = new Scanner(System.in);
         int opcion = 0;
-        int dimension = 10; //aquí va la altura de las figuras
+        int dimension = 10; // aquí va la altura de las figuras
 
         do {
-
             mostrarMenu();
-            opcion = entrada.nextInt();
+            opcion = entrada.nextInt();               
 
             switch (opcion) {
                 case 1:
@@ -25,9 +24,8 @@ public class Menu {
                     break;
                 case 4:
                     trianguloSinRelleno(dimension);
-                    break;                
+                    break;
             }
-
         } while (opcion != 5);
         entrada.close();
     }
@@ -49,6 +47,7 @@ public class Menu {
 
     /**
      * Dibuja un cuadrado con relleno formado por asteriscos
+     * 
      * @param n Es el lado del cuadrado
      */
     static void cuadrado(int n) {
@@ -66,6 +65,7 @@ public class Menu {
 
     /**
      * Dibuja un cuadrado sin relleno formado por asteriscos
+     * 
      * @param n Es el lado del cuadrado
      */
     static void cuadradoSinRelleno(int n) {
@@ -84,9 +84,9 @@ public class Menu {
         System.out.println();
     }
 
-   
     /**
      * Dibuja un triángulo formado por asteriscos
+     * 
      * @param n El la altura del triángulo
      */
     static void triangulo(int n) {
@@ -103,7 +103,8 @@ public class Menu {
 
     /**
      * Dibuja un triángulo sin relleno formado por asteriscos
-     * @param n Es la altura del triángulo 
+     * 
+     * @param n Es la altura del triángulo
      */
     static void trianguloSinRelleno(int n) {
 
