@@ -16,6 +16,6 @@ public class Triangulo2 {
     }
 
     public static void main(String[] args) {
-        triangulo(3);
+        triangulo(5);
     }
 }

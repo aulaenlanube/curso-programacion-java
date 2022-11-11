@@ -34,15 +34,19 @@ public class Menu {
      * Muestra el menú de selección de figura
      */
     static void mostrarMenu() {
-        System.out.println("MENU FIGURAS");
-        System.out.println("Selecciona una opción");
-        System.out.println("-----------------------------------");
-        System.out.println("1 - Dibujar cuadrado");
-        System.out.println("2 - Dibujar cuadrado sin relleno");
-        System.out.println("3 - Dibujar triángulo");
-        System.out.println("4 - Dibujar triángulo sin relleno");
-        System.out.println("5 - SALIR");
-        System.out.println("-----------------------------------");
+        System.out.println(
+            """                
+            
+            /-----------------------------------------/
+            / Selecciona una opción entre 1 y 5       /
+            /-----------------------------------------/
+            /  1 - Dibujar cuadrado                   /
+            /  2 - Dibujar cuadrado sin relleno       / 
+            /  3 - Dibujar triángulo                  /
+            /  4 - Dibujar triángulo sin relleno      /
+            /  5 - Salir                              /
+            /-----------------------------------------/           
+            """);
     }
 
     /**

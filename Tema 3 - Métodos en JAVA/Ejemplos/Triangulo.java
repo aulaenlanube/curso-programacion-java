@@ -17,7 +17,7 @@ public class Triangulo {
     }
 
     public static void main(String[] args) {
-        int altura = 8;
+        int altura = 3;
         triangulo(altura);
     }
 
