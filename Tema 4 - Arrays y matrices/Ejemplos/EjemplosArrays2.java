@@ -1,7 +1,5 @@
 import java.util.Random;
 
-import javax.swing.JPopupMenu.Separator;
-
 public class EjemplosArrays2 {
 
     public static void main(String[] args) {
