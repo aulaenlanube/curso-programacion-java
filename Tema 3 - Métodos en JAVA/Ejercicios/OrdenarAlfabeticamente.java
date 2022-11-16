@@ -3,20 +3,16 @@ public class OrdenarAlfabeticamente {
     public static void main(String[] args) {
 
         final String PALABRA = "aaaaaAAA";
-        mostrarPalabraOrdenada(PALABRA);        
-
+        mostrarPalabraOrdenada(PALABRA);   
     }
 
     static void mostrarPalabraOrdenada(String cad)
     {
-        cad = cad.toLowerCase();
-
-        if (palabraOrdenada(cad))
+        if (palabraOrdenada(cad.toLowerCase()))
             System.out.println("La palabra [" + cad + "] está ordenada alfabéticamente.");
         else
             System.out.println("La palabra [" + cad + "] NO está ordenada alfabéticamente.");
     }
-
 
     static boolean palabraOrdenada(String cad) {
         

@@ -4,8 +4,7 @@ public class ComprobarBinario {
 
         final int NUM = 120011;
         if(esBinario(NUM)) System.out.println("El número "+NUM+" está en binario.");
-        else System.out.println("El número "+NUM+" NO está en binario.");
-        
+        else System.out.println("El número "+NUM+" NO está en binario.");        
     }
 
     static boolean esBinario(int n)
