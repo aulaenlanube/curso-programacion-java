@@ -2,6 +2,39 @@ public class FigurasRombos {
 
     public static void main(String[] args) {
 
+        romboTipo1(10,'■');
+        System.out.println();
+
+        romboTipo1SinRelleno(10,'■');
+        System.out.println();
+
+        romboTipo1Diagonales(10);
+        System.out.println();
+
+        romboTipo2(10,'■');
+        System.out.println();
+
+        romboTipo2SinRelleno(10,'■');
+        System.out.println();
+
+        romboTipo2Creciente(10);
+        System.out.println();
+
+        romboTipo2Decreciente(10);
+        System.out.println();
+
+        romboTipo2CrecienteHorizontal(10);
+        System.out.println();
+
+        romboTipo2DecrecienteHorizontal(10);
+        System.out.println();
+
+        romboTipo2CrecienteVertical(10);
+        System.out.println();
+
+        romboTipo2DecrecienteVertical(10);
+        System.out.println();
+
         romboDoble(10, '■', '□');
         System.out.println();
     }
