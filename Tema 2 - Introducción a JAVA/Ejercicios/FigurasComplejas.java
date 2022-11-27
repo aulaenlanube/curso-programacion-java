@@ -2,10 +2,39 @@ public class FigurasComplejas {
 
     public static void main(String[] args) {
 
-        ejercicio1(5,'3','2');
         System.out.println();
 
-        ejercicio9(5);
+        ejercicio1(5, '3', '2');
+        System.out.println();
+
+        ejercicio2(5, 'O');
+        System.out.println();
+
+        ejercicio3(8, 4, 'O');
+        System.out.println();
+
+        ejercicio4(6);
+        System.out.println();
+
+        ejercicio5(6);
+        System.out.println();
+
+        ejercicio6(6);
+        System.out.println();
+
+        ejercicio7(6);
+        System.out.println();
+
+        ejercicio8(6);
+        System.out.println();
+
+        ejercicio9(6);
+        System.out.println();
+
+        ejercicio10(6);
+        System.out.println();
+
+        ejercicio11(6);
         System.out.println();
     }
 
@@ -65,9 +94,10 @@ public class FigurasComplejas {
         for (int i = 0; i < altura; i++) {
 
             for (int j = 0; j < base + i; j++) {
-                if (j > i)
-                    System.out.print(c + " ");
-                System.out.print("  ");
+                if (j >= i)
+                    System.out.print(c);
+                else
+                    System.out.print(" ");
             }
             System.out.println();
         }
@@ -150,7 +180,7 @@ public class FigurasComplejas {
         }
     }
 
-    //ejer extra
+    // ejer extra
     static void ejercicio10(int n) {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
@@ -163,7 +193,7 @@ public class FigurasComplejas {
         }
     }
 
-    //ejer extra
+    // ejer extra
     static void ejercicio11(int n) {
 
         for (int i = 0; i < n; i++) {
@@ -180,4 +210,3 @@ public class FigurasComplejas {
     }
 
 }
-
