@@ -121,8 +121,10 @@ public class FigurasRombos {
     }
 
     static void romboTipo2SinRelleno(int n, char c) {
+
         int filas = n / 2 + 1;
 
+        // parte superior
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= filas - altura; espacios++) {
@@ -139,7 +141,8 @@ public class FigurasRombos {
             System.out.println();
         }
 
-        filas--;
+        // parte inferior
+        filas--; // eliminamos la fila superior
 
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
@@ -159,7 +162,10 @@ public class FigurasRombos {
     }
 
     static void romboTipo2Creciente(int n) {
+
         int filas = n / 2 + 1;
+
+        // parte superior
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= filas - altura; espacios++) {
@@ -176,7 +182,8 @@ public class FigurasRombos {
             }
             System.out.println("");
         }
-        filas--;
+        // parte inferior
+        filas--; // eliminamos la fila superior
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= altura; espacios++) {
@@ -196,7 +203,10 @@ public class FigurasRombos {
     }
 
     static void romboTipo2Decreciente(int n) {
+
         int filas = n / 2 + 1;
+
+        // parte superior
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= filas - altura; espacios++) {
@@ -213,7 +223,8 @@ public class FigurasRombos {
             }
             System.out.println("");
         }
-        filas--;
+        // parte inferior
+        filas--; // eliminamos la fila superior
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= altura; espacios++) {
@@ -234,8 +245,11 @@ public class FigurasRombos {
     }
 
     static void romboTipo2CrecienteHorizontal(int n) {
+
         int filas = n / 2 + 1;
         int cont = 1;
+
+        // parte superior
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= filas - altura; espacios++) {
@@ -248,7 +262,8 @@ public class FigurasRombos {
             System.out.println("");
             cont++;
         }
-        filas--;
+        // parte inferior
+        filas--; // eliminamos la fila superior
         cont = filas;
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
@@ -265,8 +280,11 @@ public class FigurasRombos {
     }
 
     static void romboTipo2DecrecienteHorizontal(int n) {
+
         int filas = n / 2 + 1;
         int cont = filas;
+
+        // parte superior
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= filas - altura; espacios++) {
@@ -281,7 +299,8 @@ public class FigurasRombos {
             System.out.println("");
             cont--;
         }
-        filas--;
+        // parte inferior
+        filas--; // eliminamos la fila superior
         cont += 2;
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
@@ -299,8 +318,11 @@ public class FigurasRombos {
     }
 
     static void romboTipo2CrecienteVertical(int n) {
+
         int filas = n / 2 + 1;
         int cont = 1;
+
+        // parte superior
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= filas - altura; espacios++) {
@@ -319,7 +341,8 @@ public class FigurasRombos {
             cont = 1;
 
         }
-        filas--;
+        // parte inferior
+        filas--; // eliminamos la fila superior
         cont = 1;
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
@@ -342,8 +365,11 @@ public class FigurasRombos {
     }
 
     static void romboTipo2DecrecienteVertical(int n) {
+
         int filas = n / 2 + 1;
         int cont = filas;
+
+        // parte superior
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= filas - altura; espacios++) {
@@ -360,10 +386,10 @@ public class FigurasRombos {
             }
             System.out.println("");
             cont = filas;
-
         }
+        // parte inferior
+        filas--; // eliminamos la fila superior
         cont = n / 2 + 1;
-        filas--;
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= altura; espacios++) {
@@ -386,6 +412,8 @@ public class FigurasRombos {
     static void romboDoble(int n, char c1, char c2) {
 
         int filas = n / 2 + 1;
+
+        // parte superior
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= filas - altura; espacios++) {
@@ -399,7 +427,8 @@ public class FigurasRombos {
             }
             System.out.println();
         }
-        filas--;
+        // parte inferior
+        filas--; // eliminamos la fila superior
         for (int altura = 1; altura <= filas; altura++) {
             // espacios
             for (int espacios = 1; espacios <= altura; espacios++) {
@@ -414,7 +443,5 @@ public class FigurasRombos {
             System.out.println();
         }
     }
-
-    
 
 }
