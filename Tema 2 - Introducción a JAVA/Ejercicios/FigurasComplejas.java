@@ -4,6 +4,9 @@ public class FigurasComplejas {
 
         ejercicio1(5,'3','2');
         System.out.println();
+
+        ejercicio9(5);
+        System.out.println();
     }
 
     static void ejercicio1(int n, char c1, char c2) {
@@ -122,10 +125,10 @@ public class FigurasComplejas {
         }
     }
 
-    static void ejercicio8(int N) {
-        for (int i = 0; i < N; i++) {
+    static void ejercicio8(int n) {
+        for (int i = 0; i < n; i++) {
             int cont = i;
-            for (int j = 0; j < N; j++) {
+            for (int j = 0; j < n; j++) {
                 cont++;
                 System.out.print(cont % 10 + " ");
             }
@@ -133,13 +136,13 @@ public class FigurasComplejas {
         }
     }
 
-    static void ejercicio9(int N) {
-        for (int i = 0; i < N; i++) {
+    static void ejercicio9(int n) {
+        for (int i = 0; i < n; i++) {
             int cont = 0;
-            for (int j = 0; j < N; j++) {
+            for (int j = 0; j < n; j++) {
                 if (i >= j)
                     cont++;
-                if (j >= N - i)
+                if (j >= n - i)
                     cont--;
                 System.out.print(cont % 10 + " ");
             }
@@ -147,24 +150,7 @@ public class FigurasComplejas {
         }
     }
 
-    static void cejercicio9Solucion2(int n) {
-        for (int i = 1; i <= n * 2; i++) {
-            int contador = i;
-            if (i > n)
-                contador = n * 2 - i + 1;
-            for (int j = 1; j <= n * 2; j++) {
-                if (j < i && j < n * 2 - i + 1)
-                    System.out.print(j + " ");
-                else if (j > i && j > n * 2 - i + 1)
-                    System.out.print(n * 2 - j + 1 + " ");
-                else
-                    System.out.print(contador + " ");
-            }
-            System.out.println();
-        }
-
-    }
-
+    //ejer extra
     static void ejercicio10(int n) {
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
@@ -177,14 +163,15 @@ public class FigurasComplejas {
         }
     }
 
-    static void ejercicio11(int N) {
+    //ejer extra
+    static void ejercicio11(int n) {
 
-        for (int i = 0; i < N; i++) {
+        for (int i = 0; i < n; i++) {
             int cont = 1;
-            if (i >= N / 2)
+            if (i >= n / 2)
                 cont += 2;
-            for (int j = 0; j < N; j++) {
-                if (j == N / 2)
+            for (int j = 0; j < n; j++) {
+                if (j == n / 2)
                     cont++;
                 System.out.print(cont % 10 + " ");
             }
