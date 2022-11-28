@@ -16,10 +16,10 @@ class MenuExamen {
                     dibujarFiguraExamen(6);
                     break;
                 case "2":
-                    cantidadPalabras("Hoy es viernes, 25 de  noviembre", 3);
+                    cantidadPalabras("Hoy es viernes, 25 de noviembre de 2022", 3);
                     break;
                 case "3":
-                    invertirString("Hoy es viernes", 0);
+                    invertirString("Hoy es viernes, 25 de noviembre de 2022", 0);
                     break;
                 case "4":
                     invertirArray(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, " - ");
