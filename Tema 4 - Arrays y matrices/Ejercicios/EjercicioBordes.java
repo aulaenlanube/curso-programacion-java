@@ -20,12 +20,60 @@ public class EjercicioBordes {
                 Estamos haciendo ejercicios de repaso
                 """;
 
-        mostrarTituloConBorde("Hoy es jueves, 1 de diciembre de 2022");
-        mostrarTituloConBorde(texto);
+        mostrarTextoConBordes("Hoy es jueves, 1 de diciembre de 2022");
+        mostrarTextoConBordes(texto);
+        mostrarArrayConBordes(new int[] {1,-2,-112,564,23,1,2323,2,3});
 
     }
 
-    static void mostrarTituloConBorde(String texto) {
+    static void mostrarArrayConBordes(int[] nums) {
+
+        imprimirBordeSuperiorArray(nums);
+        imprimirEnterosArray(nums);
+        imprimirBordeInferiorArray(nums);
+    }
+
+    static void imprimirEnterosArray(int[] array) {
+
+        System.out.print(LINEA_VERTICAL+" ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]+" "+LINEA_VERTICAL+" ");            
+        }
+        System.out.println();
+    }
+
+    static void imprimirBordeSuperiorArray(int[] array) {
+        imprimirBordeArray(array, BORDE_SUP);
+    }
+
+    static void imprimirBordeInferiorArray(int[] array) {
+        imprimirBordeArray(array, BORDE_INF);
+    }
+
+    static void imprimirBordeArray(int[] array, int tipoBorde) {
+
+        //imprimimos la esquina suprior izquierda
+        System.out.print(tipoBorde == BORDE_SUP ? ESQUINA_SUP_IZQ : ESQUINA_INF_IZQ);
+
+        //por cada entero del Array
+        for (int i = 0; i < array.length; i++) {
+
+            //imprimimos las líneas horizontales
+            int lineas = digitos(Math.abs(array[i])) + 2;
+            if(array[i]<0) lineas++;
+            for (int j = 0; j < lineas; j++)
+                System.out.print(LINEA_HORIZONTAL);
+
+            //imprimimos el separador
+            if (i < array.length - 1)
+                System.out.print(tipoBorde == BORDE_SUP ? SEPARADOR_SUP : SEPARADOR_INF);
+        }
+
+        //imprimimos la esquina suprior derecha
+        System.out.println(tipoBorde == BORDE_SUP ? ESQUINA_SUP_DER : ESQUINA_INF_DER);
+    }
+
+    static void mostrarTextoConBordes(String texto) {
 
         // pasamos a mayúsculas
         texto = texto.toUpperCase();
@@ -34,25 +82,40 @@ public class EjercicioBordes {
         String[] lineas = texto.split("\n");
 
         // obtenemos la longitud de la línea más larga
-        int lineaMax = obtenerLineaMax(lineas);
+        int ancho = obtenerAnchoMaximo(lineas);
 
-        // borde superior
-        imprimirBorde(BORDE_SUP, lineaMax);
-
-        // líneas centrales
-        imprimirLineas(lineas, lineaMax);
-
-        // borde inferior
-        imprimirBorde(BORDE_INF, lineaMax);
+        // imprimimos el texto con los bordes
+        imprimirLetrasBordes(lineas, ancho);
     }
 
-    static int obtenerLineaMax(String[] lineas) {
-        int lineaMax = 0;
+    static void imprimirLetrasBordes(String[] lineas, int ancho) {
+
+        // borde superior
+        imprimirBordeSuperior(ancho);
+
+        // líneas centrales
+        imprimirLineas(lineas, ancho);
+
+        // borde inferior
+        imprimirBordeInferior(ancho);
+
+    }
+
+    static void imprimirBordeSuperior(int ancho) {
+        imprimirBorde(BORDE_SUP, ancho);
+    }
+
+    static void imprimirBordeInferior(int ancho) {
+        imprimirBorde(BORDE_INF, ancho);
+    }
+
+    static int obtenerAnchoMaximo(String[] lineas) {
+        int anchoMax = 0;
         for (String lineaActual : lineas) {
-            if (lineaActual.length() > lineaMax)
-                lineaMax = lineaActual.length();
+            if (lineaActual.length() > anchoMax)
+                anchoMax = lineaActual.length();
         }
-        return lineaMax;
+        return anchoMax;
     }
 
     static void imprimirLineas(String[] lineas, int lineaMax) {
@@ -75,5 +138,12 @@ public class EjercicioBordes {
             System.out.print(LINEA_HORIZONTAL);
         System.out.println(tipoBorde == BORDE_SUP ? ESQUINA_SUP_DER : ESQUINA_INF_DER);
 
+    }
+
+    static int digitos(int n) {
+
+        if (n < 10)
+            return 1;
+        return 1 + digitos(n / 10);
     }
 }
