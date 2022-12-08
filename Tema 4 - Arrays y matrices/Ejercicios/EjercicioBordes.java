@@ -13,6 +13,8 @@ public class EjercicioBordes {
     static final char SEPARADOR_DER = '╣';
     static final char SEPARADOR_CRUZ = '╬';
 
+    static final char SEPARADOR_FILAS_MATRICES = '■';
+
     static final int BORDE_SUP = 0;
     static final int BORDE_INF = 1;
 
@@ -27,7 +29,15 @@ public class EjercicioBordes {
         mostrarMatrizConBordes(nums1);
         mostrarMatrizConBordes(nums2);
         mostrarMatrizConBordes(nums3);
+        mostrarMatricesConBordes(nums1, nums2, 5);
+        mostrarMatricesConBordes(nums2, nums3, 5);
+        mostrarMatricesConBordes(nums1, nums3, 5);
+        mostrarMatricesConBordes(nums2, nums3, 5);
+
     }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     static void mostrarArrayConBordes(int[] array) {
         System.out.println(crearStringArrayConBordes(array));
@@ -35,6 +45,56 @@ public class EjercicioBordes {
 
     static void mostrarMatrizConBordes(int[][] matriz) {
         System.out.println(crearStringMatrizConBordes(matriz));
+    }
+
+    static void mostrarMatricesConBordes(int[][] a, int[][] b, int separacion) {
+        System.out.println(crearStringMatricesConBordes(a, b, separacion));
+
+        // línea horizontal para separar las filas
+        for (int i = 0; i < 100; i++)
+            System.out.print(SEPARADOR_FILAS_MATRICES);
+        System.out.println("\n");
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    private static String crearStringMatricesConBordes(int[][] a, int[][] b, int separacion) {
+
+        // obtenemos Arrays con una String por línea
+        String[] lineasA = crearStringMatrizConBordes(a).split("\n");
+        String[] lineasB = crearStringMatrizConBordes(b).split("\n");
+        String[] textoMatrices = new String[lineasA.length > lineasB.length ? lineasA.length : lineasB.length];
+        String textoMatricesFinal = "";
+        for (int i = 0; i < textoMatrices.length; i++) {
+
+            textoMatrices[i] = "";
+
+            // añadimos línea de A
+            if (i < lineasA.length)
+                textoMatrices[i] += lineasA[i];
+
+            // añadimos los espacios
+            int espacios = anchoMaximo(lineasA) - textoMatrices[i].length() + separacion;
+            for (int j = 0; j < espacios; j++)
+                textoMatrices[i] += " ";
+
+            // añadimos la línea de B
+            if (i < lineasB.length)
+                textoMatrices[i] += lineasB[i];
+
+            textoMatricesFinal += textoMatrices[i] + "\n";
+        }
+        return textoMatricesFinal;
+    }
+
+    private static int anchoMaximo(String[] lineas) {
+        int max = 0;
+        for (String linea : lineas) {
+            if (linea.length() > max)
+                max = linea.length();
+        }
+        return max;
     }
 
     static String crearStringArrayConBordes(int[] array) {
@@ -114,27 +174,27 @@ public class EjercicioBordes {
 
     private static char[] establecerEsquinas(char[] bordeIntermedio, int anchoFilaActual, int anchoFilaInferior) {
 
-        //casos con arrays sin elementos
-        if(anchoFilaActual == 1 || anchoFilaInferior == 1) {
+        // casos con arrays sin elementos
+        if (anchoFilaActual == 1 || anchoFilaInferior == 1) {
 
-            //si ambos tienen un array sin elementos
-            if(anchoFilaActual == 1 && anchoFilaInferior == 1) {
+            // si ambos tienen un array sin elementos
+            if (anchoFilaActual == 1 && anchoFilaInferior == 1) {
                 bordeIntermedio = new char[2];
                 bordeIntermedio[0] = SEPARADOR_IZQ;
                 bordeIntermedio[1] = SEPARADOR_DER;
             }
-            //si la fila de arriba tiene elementos y la de bajo no
-            else if(anchoFilaActual > 1 && anchoFilaInferior == 1) {
+            // si la fila de arriba tiene elementos y la de bajo no
+            else if (anchoFilaActual > 1 && anchoFilaInferior == 1) {
                 bordeIntermedio[1] = SEPARADOR_SUP;
-                bordeIntermedio[bordeIntermedio.length-1] = ESQUINA_INF_DER;
+                bordeIntermedio[bordeIntermedio.length - 1] = ESQUINA_INF_DER;
             }
-            //si la fila de bajo tiene elementos y la de arriba no
-            else if(anchoFilaActual == 1 && anchoFilaInferior > 1) {
+            // si la fila de bajo tiene elementos y la de arriba no
+            else if (anchoFilaActual == 1 && anchoFilaInferior > 1) {
                 bordeIntermedio[1] = SEPARADOR_INF;
-                bordeIntermedio[bordeIntermedio.length-1] = ESQUINA_SUP_DER;
+                bordeIntermedio[bordeIntermedio.length - 1] = ESQUINA_SUP_DER;
             }
         }
-        //casos con arrays con elementos
+        // casos con arrays con elementos
         else if (anchoFilaActual > anchoFilaInferior)
             bordeIntermedio[bordeIntermedio.length - 1] = ESQUINA_INF_DER;
         else if (anchoFilaActual < anchoFilaInferior)
@@ -276,6 +336,9 @@ public class EjercicioBordes {
         return borde;
     }
 
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     static void mostrarTextoConBordes(String texto) {
 
         // pasamos a mayúsculas
@@ -349,4 +412,5 @@ public class EjercicioBordes {
             return 1;
         return 1 + digitos(n / 10);
     }
+
 }
