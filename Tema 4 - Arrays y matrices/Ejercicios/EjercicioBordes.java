@@ -33,7 +33,6 @@ public class EjercicioBordes {
         mostrarMatricesConBordes(nums2, nums3, 5);
         mostrarMatricesConBordes(nums1, nums3, 5);
         mostrarMatricesConBordes(nums2, nums3, 5);
-
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
