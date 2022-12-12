@@ -39,52 +39,17 @@ public class EjercicioBordes {
         System.out.println(crearStringMatrizConBordes(matriz));
     }
 
-    static void mostrarMatricesConBordes(int[][] a, int[][] b, int separacion) {
-        System.out.println(crearStringMatricesConBordes(a, b, separacion));
-
-        // línea horizontal para separar las filas
-        for (int i = 0; i < 100; i++)
-            System.out.print(SEPARADOR_FILAS_MATRICES);
-        System.out.println("\n");
-    }
-
     static void mostrarMatricesConBordes(int separacion, int[][]... matrices) {
         System.out.println(crearStringMatricesConBordes(separacion, matrices));
 
         // línea horizontal para separar las filas
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 120; i++)
             System.out.print(SEPARADOR_FILAS_MATRICES);
         System.out.println("\n");
     }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    private static String crearStringMatricesConBordes(int[][] a, int[][] b, int separacion) {
-
-        // obtenemos Arrays con una String por línea
-        String[] lineasA = crearStringMatrizConBordes(a).split("\n");
-        String[] lineasB = crearStringMatrizConBordes(b).split("\n");
-        String[] textoMatrices = new String[lineasA.length > lineasB.length ? lineasA.length : lineasB.length];
-        String textoMatricesFinal = "";
-        for (int i = 0; i < textoMatrices.length; i++) {
-
-            textoMatrices[i] = "";
-
-            if (i < lineasA.length) // añadimos línea de A
-                textoMatrices[i] += lineasA[i];
-
-            int espacios = obtenerAnchoMaximo(lineasA) - textoMatrices[i].length() + separacion;
-            for (int j = 0; j < espacios; j++) // añadimos los espacios
-                textoMatrices[i] += " ";
-
-            if (i < lineasB.length) // añadimos la línea de B
-                textoMatrices[i] += lineasB[i];
-
-            textoMatricesFinal += textoMatrices[i] + "\n";
-        }
-        return textoMatricesFinal;
-    }
 
     private static String crearStringMatricesConBordes(int separacion, int[][]... matrices) {
 
