@@ -74,7 +74,7 @@ public class EjercicioBordes {
             if (i < lineasA.length) // añadimos línea de A
                 textoMatrices[i] += lineasA[i];
 
-            int espacios = anchoMaximo(lineasA) - textoMatrices[i].length() + separacion;
+            int espacios = obtenerAnchoMaximo(lineasA) - textoMatrices[i].length() + separacion;
             for (int j = 0; j < espacios; j++) // añadimos los espacios
                 textoMatrices[i] += " ";
 
@@ -88,20 +88,9 @@ public class EjercicioBordes {
 
     private static String crearStringMatricesConBordes(int separacion, int[][]... matrices) {
 
-        // obtenemos Arrays con una String por línea
-        String[][] lineasMatrices = new String[matrices.length][];
-        int[] cantidadLineasMatrices = new int[matrices.length];
-        int lineasMax = 0;
-
-        // creamos los String[] de líneas de cada matriz
-        for (int i = 0; i < matrices.length; i++) {
-
-            lineasMatrices[i] = crearStringMatrizConBordes(matrices[i]).split("\n");
-            cantidadLineasMatrices[i] = lineasMatrices[i].length;
-            if (cantidadLineasMatrices[i] > lineasMax)
-                lineasMax = cantidadLineasMatrices[i];
-        }
-        String[] textoMatrices = new String[lineasMax];
+        String[][] lineasMatrices = obtenerLineasMatrices(matrices);
+        int[] cantidadLineasMatrices = obtenerCantidadesLineasMatrices(lineasMatrices);
+        String[] textoMatrices = new String[obtenerCantidadLineasMaxima(lineasMatrices)];
         String textoFinal = "";
 
         // por cada línea, debemos obtener la línea de cada una de las matrices
@@ -109,7 +98,6 @@ public class EjercicioBordes {
 
             textoMatrices[i] = "";
             int anchoAcumulado = 0;
-
             for (int j = 0; j < matrices.length; j++) {
 
                 // si existe la línea en la matriz
@@ -127,13 +115,34 @@ public class EjercicioBordes {
         return textoFinal;
     }
 
-    private static int anchoMaximo(String[] lineas) {
-        int max = 0;
-        for (String linea : lineas) {
-            if (linea.length() > max)
-                max = linea.length();
+    static String[][] obtenerLineasMatrices(int[][]... matrices) {
+
+        String[][] lineasMatrices = new String[matrices.length][];
+        for (int i = 0; i < matrices.length; i++)
+            lineasMatrices[i] = crearStringMatrizConBordes(matrices[i]).split("\n");
+        return lineasMatrices;
+    }
+
+    static int[] obtenerCantidadesLineasMatrices(String[][] lineasMatrices) {
+
+        int[] cantidadLineasMatrices = new int[lineasMatrices.length];
+        int lineasMax = 0;
+        for (int i = 0; i < lineasMatrices.length; i++) {
+
+            cantidadLineasMatrices[i] = lineasMatrices[i].length;
+            if (cantidadLineasMatrices[i] > lineasMax)
+                lineasMax = cantidadLineasMatrices[i];
         }
-        return max;
+        return cantidadLineasMatrices;
+    }
+
+    static int obtenerCantidadLineasMaxima(String[][] lineasMatrices) {
+
+        int lineasMax = 0;
+        for (int i = 0; i < lineasMatrices.length; i++)
+            if (lineasMatrices[i].length > lineasMax)
+                lineasMax = lineasMatrices[i].length;
+        return lineasMax;
     }
 
     static String crearStringArrayConBordes(int[] array) {
