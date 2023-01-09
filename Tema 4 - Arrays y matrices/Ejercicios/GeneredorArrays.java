@@ -5,10 +5,55 @@ public class GeneredorArrays {
 
     public static void main(String[] args) {
 
-        int[][] nums = generarMatriz(10, 5, 9);
+        int[][] nums = generarMatriz(3, 8, 5, 9, 99);
+
+        System.out.println("\nMatriz original:");
         for (int[] fila : nums) {
             System.out.println(Arrays.toString(fila));
         }
+
+        int[] maximosColumnas = maximosColumnas(nums);
+        System.out.println("\nMáximos columnas:\n"+Arrays.toString(maximosColumnas));
+
+        int[] maximosFilas = maximosFilas(nums);
+        System.out.println("\nMáximos filas:\n"+Arrays.toString(maximosFilas));
+    }
+
+    static int[] maximosColumnas(int[][] matriz) {
+
+        int anchoMax = 0;
+        for (int[] fila : matriz) {
+            if (fila.length > anchoMax)
+                anchoMax = fila.length;
+        }
+        int[] arrayMaximos = new int[anchoMax];
+        for (int i = 0; i < arrayMaximos.length; i++) {
+            arrayMaximos[i] = Integer.MIN_VALUE;            
+        }
+
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {                
+                if (matriz[i][j] > arrayMaximos[j])
+                    arrayMaximos[j] = matriz[i][j];
+            }
+        }
+        return arrayMaximos;
+    }
+
+    static int[] maximosFilas(int[][] matriz) {
+        
+        int maxFila;
+        int[] arrayMaximos = new int[matriz.length];        
+
+        for (int i = 0; i < matriz.length; i++) {
+            maxFila = Integer.MIN_VALUE;
+            for (int j = 0; j < matriz[i].length; j++) {                
+                if (matriz[i][j] > maxFila)
+                    maxFila = matriz[i][j];
+            }
+            arrayMaximos[i] = maxFila;
+        }
+        return arrayMaximos;
     }
 
     static int[][] generarMatriz(int lado, int numMax) {
