@@ -1,45 +1,51 @@
-public class EjercicioBordes {
+public class BordesMatrices {
 
-    static final char LINEA_VERTICAL = '║';
-    static final char LINEA_HORIZONTAL = '═';
-    static final char ESQUINA_SUP_IZQ = '╔';
-    static final char ESQUINA_INF_IZQ = '╚';
-    static final char ESQUINA_SUP_DER = '╗';
-    static final char ESQUINA_INF_DER = '╝';
-    static final char SEPARADOR_SUP = '╦';
-    static final char SEPARADOR_INF = '╩';
+    private static final char LINEA_VERTICAL = '║';
+    private static final char LINEA_HORIZONTAL = '═';
+    private static final char ESQUINA_SUP_IZQ = '╔';
+    private static final char ESQUINA_INF_IZQ = '╚';
+    private static final char ESQUINA_SUP_DER = '╗';
+    private static final char ESQUINA_INF_DER = '╝';
+    private static final char SEPARADOR_SUP = '╦';
+    private static final char SEPARADOR_INF = '╩';
 
-    static final char SEPARADOR_IZQ = '╠';
-    static final char SEPARADOR_DER = '╣';
-    static final char SEPARADOR_CRUZ = '╬';
+    private static final char SEPARADOR_IZQ = '╠';
+    private static final char SEPARADOR_DER = '╣';
+    private static final char SEPARADOR_CRUZ = '╬';
 
-    static final char SEPARADOR_FILAS_MATRICES = '■';
+    private static final char SEPARADOR_FILAS_MATRICES = '■';
 
-    static final int BORDE_SUP = 0;
-    static final int BORDE_INF = 1;
+    private static final int BORDE_SUP = 0;
+    private static final int BORDE_INF = 1;
+   
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //MÉTODOS PÚBLICOS   
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public static void main(String[] args) {
+    public static void mostrarTextoConBordes(String texto) {
 
-        mostrarTextoConBordes("BORDES EN MATRICES");
-        int[][] nums1 = { { 14, 9, 18, 0, 17 }, { 15, 3 }, { 11, 1, 15, 2 }, { 11 } };
-        int[][] nums2 = { { 8, 6, 14 }, { 11, 0, 4, 13, 7 }, {}, {}, { 3 } };
-        int[][] nums3 = { { 14, 10 }, { 18 }, { 12, 1, 0 }, { 13, 17, 11, 15, 10 } };
-        int[][] nums4 = { { 4, 19, 4 }, { 3, 5, 15, 3 } };
-        mostrarMatricesConBordes(5, nums1, nums2, nums3, nums4);
+        // pasamos a mayúsculas
+        texto = texto.toUpperCase();
+
+        // obtenemos un array de Strings
+        String[] lineas = texto.split("\n");
+
+        // obtenemos la longitud de la línea más larga
+        int ancho = obtenerAnchoMaximo(lineas);
+
+        // imprimimos el texto con los bordes
+        imprimirLetrasBordes(lineas, ancho);
     }
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    static void mostrarArrayConBordes(int[] array) {
+    
+    public static void mostrarArrayConBordes(int[] array) {
         System.out.println(crearStringArrayConBordes(array));
     }
 
-    static void mostrarMatrizConBordes(int[][] matriz) {
+    public static void mostrarMatrizConBordes(int[][] matriz) {
         System.out.println(crearStringMatrizConBordes(matriz));
     }
 
-    static void mostrarMatricesConBordes(int separacion, int[][]... matrices) {
+    public static void mostrarMatricesConBordes(int separacion, int[][]... matrices) {
         System.out.println(crearStringMatricesConBordes(separacion, matrices));
 
         // línea horizontal para separar las filas
@@ -80,7 +86,7 @@ public class EjercicioBordes {
         return textoFinal;
     }
 
-    static String[][] obtenerLineasMatrices(int[][]... matrices) {
+    private static String[][] obtenerLineasMatrices(int[][]... matrices) {
 
         String[][] lineasMatrices = new String[matrices.length][];
         for (int i = 0; i < matrices.length; i++)
@@ -88,7 +94,7 @@ public class EjercicioBordes {
         return lineasMatrices;
     }
 
-    static int[] obtenerCantidadesLineasMatrices(String[][] lineasMatrices) {
+    private static int[] obtenerCantidadesLineasMatrices(String[][] lineasMatrices) {
 
         int[] cantidadLineasMatrices = new int[lineasMatrices.length];
         int lineasMax = 0;
@@ -101,7 +107,7 @@ public class EjercicioBordes {
         return cantidadLineasMatrices;
     }
 
-    static int obtenerCantidadLineasMaxima(String[][] lineasMatrices) {
+    private static int obtenerCantidadLineasMaxima(String[][] lineasMatrices) {
 
         int lineasMax = 0;
         for (int i = 0; i < lineasMatrices.length; i++)
@@ -110,7 +116,7 @@ public class EjercicioBordes {
         return lineasMax;
     }
 
-    static String crearStringArrayConBordes(int[] array) {
+    private static String crearStringArrayConBordes(int[] array) {
 
         String arrayConBordes = "";
 
@@ -123,7 +129,7 @@ public class EjercicioBordes {
         return arrayConBordes;
     }
 
-    static String crearStringMatrizConBordes(int[][] matriz) {
+    private static String crearStringMatrizConBordes(int[][] matriz) {
 
         String matrizConBordes = "";
 
@@ -136,7 +142,7 @@ public class EjercicioBordes {
         return matrizConBordes;
     }
 
-    static String obtenerParteCentralMatriz(int[][] matriz) {
+    private static String obtenerParteCentralMatriz(int[][] matriz) {
 
         String parteCentralMatriz = "";
 
@@ -156,7 +162,7 @@ public class EjercicioBordes {
         return parteCentralMatriz;
     }
 
-    static String obtenerBordeIntermedio(int[] filaActual, int[] filaInferior) {
+    private static String obtenerBordeIntermedio(int[] filaActual, int[] filaInferior) {
 
         // array con los separadores de la fila actual
         int[] posicionesSeparadoresInferiores = posicionarSeparadores(filaActual);
@@ -275,7 +281,7 @@ public class EjercicioBordes {
         return bordeIntermedio;
     }
 
-    static int[] posicionarSeparadores(int[] fila) {
+    private static int[] posicionarSeparadores(int[] fila) {
 
         // colocamos un índice en la posición de cada separador
         int[] posicionesSeparadores = new int[fila.length];
@@ -287,7 +293,7 @@ public class EjercicioBordes {
         return posicionesSeparadores;
     }
 
-    static int obtenerAnchoFila(int[] posicionesSeparadores) {
+    private static int obtenerAnchoFila(int[] posicionesSeparadores) {
 
         int anchoFila = 1; // carácter inicial, separador vertical
         for (int i = 0; i < posicionesSeparadores.length; i++) {
@@ -296,7 +302,7 @@ public class EjercicioBordes {
         return anchoFila;
     }
 
-    static String obtenerStringEnteros(int[] array) {
+    private static String obtenerStringEnteros(int[] array) {
 
         String enterosFila = "";
 
@@ -313,15 +319,15 @@ public class EjercicioBordes {
         return enterosFila;
     }
 
-    static String obtenerBordeSuperiorArray(int[] array) {
+    private static String obtenerBordeSuperiorArray(int[] array) {
         return obtenerBordeArray(array, BORDE_SUP);
     }
 
-    static String obtenerBordeInferiorArray(int[] array) {
+    private static String obtenerBordeInferiorArray(int[] array) {
         return obtenerBordeArray(array, BORDE_INF);
     }
 
-    static String obtenerBordeArray(int[] array, int tipoBorde) {
+    private static String obtenerBordeArray(int[] array, int tipoBorde) {
 
         String borde = "";
 
@@ -352,22 +358,7 @@ public class EjercicioBordes {
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    static void mostrarTextoConBordes(String texto) {
-
-        // pasamos a mayúsculas
-        texto = texto.toUpperCase();
-
-        // obtenemos un array de Strings
-        String[] lineas = texto.split("\n");
-
-        // obtenemos la longitud de la línea más larga
-        int ancho = obtenerAnchoMaximo(lineas);
-
-        // imprimimos el texto con los bordes
-        imprimirLetrasBordes(lineas, ancho);
-    }
-
-    static void imprimirLetrasBordes(String[] lineas, int ancho) {
+    private static void imprimirLetrasBordes(String[] lineas, int ancho) {
 
         // borde superior
         imprimirBordeSuperior(ancho);
@@ -380,15 +371,15 @@ public class EjercicioBordes {
 
     }
 
-    static void imprimirBordeSuperior(int ancho) {
+    private static void imprimirBordeSuperior(int ancho) {
         imprimirBorde(BORDE_SUP, ancho);
     }
 
-    static void imprimirBordeInferior(int ancho) {
+    private static void imprimirBordeInferior(int ancho) {
         imprimirBorde(BORDE_INF, ancho);
     }
 
-    static int obtenerAnchoMaximo(String[] lineas) {
+    private static int obtenerAnchoMaximo(String[] lineas) {
         int anchoMax = 0;
         for (String lineaActual : lineas) {
             if (lineaActual.length() > anchoMax)
@@ -397,7 +388,7 @@ public class EjercicioBordes {
         return anchoMax;
     }
 
-    static void imprimirLineas(String[] lineas, int lineaMax) {
+    private static void imprimirLineas(String[] lineas, int lineaMax) {
         for (int i = 0; i < lineas.length; i++) {
             System.out.print(LINEA_VERTICAL + "  ");
             for (int j = 0; j < lineaMax; j++) {
@@ -410,7 +401,7 @@ public class EjercicioBordes {
         }
     }
 
-    static void imprimirBorde(int tipoBorde, int ancho) {
+    private static void imprimirBorde(int tipoBorde, int ancho) {
 
         System.out.print(tipoBorde == BORDE_SUP ? ESQUINA_SUP_IZQ : ESQUINA_INF_IZQ);
         for (int i = 0; i < ancho * 2 + 3; i++)
@@ -419,7 +410,7 @@ public class EjercicioBordes {
 
     }
 
-    static int digitos(int n) {
+    private static int digitos(int n) {
 
         if (n < 10)
             return 1;

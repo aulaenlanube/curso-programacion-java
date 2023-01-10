@@ -1,82 +1,12 @@
-import java.util.Arrays;
 import java.util.Random;
 
-public class GeneredorArrays {
+public class GeneredorMatrices {
 
-    public static void main(String[] args) {
-
-        int[][] nums = generarMatriz(3, 2, 9);
-
-        System.out.println("\nMatriz original:");
-        for (int[] fila : nums) {
-            System.out.println(Arrays.toString(fila));
-        }
-
-        mostrarMatrizTranspuesta(nums);
-
-    }
-
-    static void mostrarMatrizTranspuesta(int[][] matriz) {
-
-        for (int i = 0; i < matriz.length - 1; i++) {
-            if (matriz[i].length != matriz[i + 1].length) {
-                System.out.println("\nERROR: No se puede obtener la transpuesta, la matriz no es válida");
-                return;
-            }
-        }
-
-        System.out.println("\nMatriz transpuesta:");
-        int[][] transpuesta = new int[matriz.length == 0 ? 0 : matriz[0].length][matriz.length];
-        for (int i = 0; i < transpuesta.length; i++) {
-            for (int j = 0; j < transpuesta[i].length; j++) {
-                transpuesta[i][j] = matriz[j][i];
-            }
-            System.out.println(Arrays.toString(transpuesta[i]));
-        }
-    }
-
-    static int[] maximosColumnas(int[][] matriz) {
-
-        int anchoMax = 0;
-        for (int[] fila : matriz) {
-            if (fila.length > anchoMax)
-                anchoMax = fila.length;
-        }
-        int[] arrayMaximos = new int[anchoMax];
-        for (int i = 0; i < arrayMaximos.length; i++) {
-            arrayMaximos[i] = Integer.MIN_VALUE;
-        }
-
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                if (matriz[i][j] > arrayMaximos[j])
-                    arrayMaximos[j] = matriz[i][j];
-            }
-        }
-        return arrayMaximos;
-    }
-
-    static int[] maximosFilas(int[][] matriz) {
-
-        int maxFila;
-        int[] arrayMaximos = new int[matriz.length];
-
-        for (int i = 0; i < matriz.length; i++) {
-            maxFila = Integer.MIN_VALUE;
-            for (int j = 0; j < matriz[i].length; j++) {
-                if (matriz[i][j] > maxFila)
-                    maxFila = matriz[i][j];
-            }
-            arrayMaximos[i] = maxFila;
-        }
-        return arrayMaximos;
-    }
-
-    static int[][] generarMatriz(int lado, int numMax) {
+    public static int[][] generarMatriz(int lado, int numMax) {
         return generarMatriz(lado, lado, lado, lado, numMax);
     }
 
-    static int[][] generarMatriz(int ancho, int alto, int numMax) {
+    public static int[][] generarMatriz(int ancho, int alto, int numMax) {
         return generarMatriz(ancho, ancho, alto, alto, numMax);
     }
 
@@ -105,7 +35,7 @@ public class GeneredorArrays {
      *                 valores posibles serán desde 0 hasta numMax
      * @return Matriz con enteros generados de forma aleatoria
      */
-    static int[][] generarMatriz(int anchoMin, int anchoMax, int altoMin, int altoMax, int numMax) {
+    public static int[][] generarMatriz(int anchoMin, int anchoMax, int altoMin, int altoMax, int numMax) {
 
         // si hay negativos los convertimos a 0
         if (anchoMin < 0)
