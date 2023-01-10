@@ -8,13 +8,10 @@ public class BordesMatrices {
     private static final char ESQUINA_INF_DER = '╝';
     private static final char SEPARADOR_SUP = '╦';
     private static final char SEPARADOR_INF = '╩';
-
     private static final char SEPARADOR_IZQ = '╠';
     private static final char SEPARADOR_DER = '╣';
     private static final char SEPARADOR_CRUZ = '╬';
-
     private static final char SEPARADOR_FILAS_MATRICES = '■';
-
     private static final int BORDE_SUP = 0;
     private static final int BORDE_INF = 1;
 
