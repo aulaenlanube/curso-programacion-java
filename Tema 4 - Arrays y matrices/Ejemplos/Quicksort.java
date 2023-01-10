@@ -1,6 +1,3 @@
-import java.time.Duration;
-import java.time.Instant;
-import java.util.Arrays;
 import java.util.Random;
 
 public class Quicksort {
