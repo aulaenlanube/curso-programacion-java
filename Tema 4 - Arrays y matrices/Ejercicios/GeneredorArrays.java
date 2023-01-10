@@ -5,18 +5,34 @@ public class GeneredorArrays {
 
     public static void main(String[] args) {
 
-        int[][] nums = generarMatriz(3, 8, 5, 9, 99);
+        int[][] nums = generarMatriz(3, 2, 9);
 
         System.out.println("\nMatriz original:");
         for (int[] fila : nums) {
             System.out.println(Arrays.toString(fila));
         }
 
-        int[] maximosColumnas = maximosColumnas(nums);
-        System.out.println("\nMáximos columnas:\n"+Arrays.toString(maximosColumnas));
+        mostrarMatrizTranspuesta(nums);
 
-        int[] maximosFilas = maximosFilas(nums);
-        System.out.println("\nMáximos filas:\n"+Arrays.toString(maximosFilas));
+    }
+
+    static void mostrarMatrizTranspuesta(int[][] matriz) {
+
+        for (int i = 0; i < matriz.length - 1; i++) {
+            if (matriz[i].length != matriz[i + 1].length) {
+                System.out.println("\nERROR: No se puede obtener la transpuesta, la matriz no es válida");
+                return;
+            }
+        }
+
+        System.out.println("\nMatriz transpuesta:");
+        int[][] transpuesta = new int[matriz.length == 0 ? 0 : matriz[0].length][matriz.length];
+        for (int i = 0; i < transpuesta.length; i++) {
+            for (int j = 0; j < transpuesta[i].length; j++) {
+                transpuesta[i][j] = matriz[j][i];
+            }
+            System.out.println(Arrays.toString(transpuesta[i]));
+        }
     }
 
     static int[] maximosColumnas(int[][] matriz) {
@@ -28,11 +44,11 @@ public class GeneredorArrays {
         }
         int[] arrayMaximos = new int[anchoMax];
         for (int i = 0; i < arrayMaximos.length; i++) {
-            arrayMaximos[i] = Integer.MIN_VALUE;            
+            arrayMaximos[i] = Integer.MIN_VALUE;
         }
 
         for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {                
+            for (int j = 0; j < matriz[i].length; j++) {
                 if (matriz[i][j] > arrayMaximos[j])
                     arrayMaximos[j] = matriz[i][j];
             }
@@ -41,13 +57,13 @@ public class GeneredorArrays {
     }
 
     static int[] maximosFilas(int[][] matriz) {
-        
+
         int maxFila;
-        int[] arrayMaximos = new int[matriz.length];        
+        int[] arrayMaximos = new int[matriz.length];
 
         for (int i = 0; i < matriz.length; i++) {
             maxFila = Integer.MIN_VALUE;
-            for (int j = 0; j < matriz[i].length; j++) {                
+            for (int j = 0; j < matriz[i].length; j++) {
                 if (matriz[i][j] > maxFila)
                     maxFila = matriz[i][j];
             }
