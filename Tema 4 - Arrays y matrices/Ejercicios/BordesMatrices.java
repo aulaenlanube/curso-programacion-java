@@ -17,11 +17,17 @@ public class BordesMatrices {
 
     private static final int BORDE_SUP = 0;
     private static final int BORDE_INF = 1;
-   
+
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
-    //MÉTODOS PÚBLICOS   
+    // MÉTODOS PÚBLICOS
     /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    /**
+     * Imprime por pantalla un texto dentro de un rectángulo con bordes unicode
+     * 
+     * @param texto - Cadena de texto incluida dentro de los bordes, será pasada a
+     *              mayúsculas
+     */
     public static void mostrarTextoConBordes(String texto) {
 
         // pasamos a mayúsculas
@@ -36,15 +42,35 @@ public class BordesMatrices {
         // imprimimos el texto con los bordes
         imprimirLetrasBordes(lineas, ancho);
     }
-    
+
+    /**
+     * Imprime por pantalla un Array de enteros dentro de un rectángulo con bordes
+     * unicode
+     * 
+     * @param array - Array de enteros que imprimirá por pantalla
+     */
     public static void mostrarArrayConBordes(int[] array) {
         System.out.println(crearStringArrayConBordes(array));
     }
 
+    /**
+     * Imprime por pantalla una matriz de enteros con bordes unicode
+     * 
+     * @param matriz - Matriz de enteros que imprimirá por pantalla
+     */
     public static void mostrarMatrizConBordes(int[][] matriz) {
         System.out.println(crearStringMatrizConBordes(matriz));
     }
 
+    /**
+     * Imprime por pantalla una cantidad indeterminada de matrices de enteros con
+     * bordes unicode en una misma fila
+     * 
+     * @param separacion - Distancia de separación horizontal entre cada una de las
+     *                   matrices
+     * @param matrices   - Matrices que se imprimirán una al lado de la otra, se
+     *                   pueden añadir tantas como sean necesarias
+     */
     public static void mostrarMatricesConBordes(int separacion, int[][]... matrices) {
         System.out.println(crearStringMatricesConBordes(separacion, matrices));
 
@@ -354,9 +380,6 @@ public class BordesMatrices {
 
         return borde;
     }
-
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     private static void imprimirLetrasBordes(String[] lineas, int ancho) {
 
