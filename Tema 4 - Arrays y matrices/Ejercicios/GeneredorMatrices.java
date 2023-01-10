@@ -2,10 +2,28 @@ import java.util.Random;
 
 public class GeneredorMatrices {
 
+    /**
+     * Genera una matriz cuadrada con enteros aleatorios
+     * 
+     * @param lado   - Anchura y altura de la matriz
+     * @param numMax - Valor máximo para cada uno de los enteros de la matriz, los
+     *               valores posibles serán desde 0 hasta numMax
+     * @return Matriz con enteros generados de forma aleatoria
+     */
     public static int[][] generarMatriz(int lado, int numMax) {
         return generarMatriz(lado, lado, lado, lado, numMax);
     }
 
+    /**
+     * Genera una matriz regular con un ancho y alto predefinidos con enteros
+     * aleatorios
+     * 
+     * @param ancho  - Cantidad de elementos de cada una de las filas de la matriz
+     * @param alto   - Cantidad de filas de la matriz
+     * @param numMax - Valor máximo para cada uno de los enteros de la matriz, los
+     *               valores posibles serán desde 0 hasta numMax
+     * @return Matriz con enteros generados de forma aleatoria
+     */
     public static int[][] generarMatriz(int ancho, int alto, int numMax) {
         return generarMatriz(ancho, ancho, alto, alto, numMax);
     }

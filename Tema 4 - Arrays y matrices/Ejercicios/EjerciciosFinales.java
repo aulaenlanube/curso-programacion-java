@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class EjerciciosFinales {    
 
     public static void mostrarMatrizTranspuesta(int[][] matriz) {
