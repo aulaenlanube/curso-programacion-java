@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Random;
 
 public class GeneredorMatrices {
@@ -73,9 +74,9 @@ public class GeneredorMatrices {
 
         // generamos matriz
         Random r = new Random();
-        int[][] matriz = new int[r.nextInt(altoMin, altoMax + 1)][];
+        int[][] matriz = new int[r.nextInt(altoMin, altoMax+1)][];
         for (int i = 0; i < matriz.length; i++) {
-            matriz[i] = new int[r.nextInt(anchoMin, anchoMax + 1)];
+            matriz[i] = new int[r.nextInt(anchoMin, anchoMax+1)];
             for (int j = 0; j < matriz[i].length; j++) {
                 matriz[i][j] = r.nextInt(numMax + 1);
             }
