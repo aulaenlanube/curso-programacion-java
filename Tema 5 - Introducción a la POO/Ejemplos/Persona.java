@@ -25,5 +25,16 @@ public class Persona {
         System.out.println("--------------------------------");
 
     }
+
+    public void mostrarDatosConBordes() {
+
+        String datos = "";
+        datos+="Nombre: "+nombre+"\n";
+        datos+="DNI: "+dni+"\n";
+        datos+="Edad: "+edad+"\n";
+        datos+="Ciudad: "+ciudadResidencia+"\n";
+        datos+="Profesión: "+profesion+"\n";
+        BordesMatrices.mostrarTextoConBordes(datos);
+    }
     
 }

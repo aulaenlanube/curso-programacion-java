@@ -1,7 +1,7 @@
 public class CuentaBancaria {
 
     int id;
-    private double saldo;
+    double saldo;
     Persona propietario;
     String tipo;
 
@@ -26,7 +26,7 @@ public class CuentaBancaria {
     }
 
     public void mostrarDatos(){  
-        propietario.mostrarDatos();
+        propietario.mostrarDatosConBordes();
         verSaldo();
         System.out.println("--------------------------------");
     }
