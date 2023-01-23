@@ -34,7 +34,7 @@ public class Persona {
         datos+="Edad: "+edad+"\n";
         datos+="Ciudad: "+ciudadResidencia+"\n";
         datos+="Profesión: "+profesion+"\n";
-        BordesMatrices.mostrarTextoConBordes(datos);
+        System.out.println(datos);
     }
     
 }

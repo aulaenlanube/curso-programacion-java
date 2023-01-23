@@ -3,14 +3,14 @@ public class Circulo {
     private String color;
     private int centroX, centroY;
 
-    public Circulo() { // crea un círculo de radio 50, negro y centro en (100,100)
+    Circulo() { // crea un círculo de radio 50, negro y centro en (100,100)
         radio = 50;
         color = "negro";
         centroX = 100;
         centroY = 100;
     }
 
-    public Circulo(double r) { // crea un círculo de radio 50, negro y centro en (100,100)
+    Circulo(double r) { // crea un círculo de radio 50, negro y centro en (100,100)
         setRadio(r);
         color = "blanco";
         centroX = 0;
