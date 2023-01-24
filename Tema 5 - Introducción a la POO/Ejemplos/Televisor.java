@@ -2,10 +2,29 @@ public class Televisor {
 
     private int canal;
     private int volumen;
+    private int color;
 
     public Televisor() {
         canal = 1;
         volumen = 5;
+        color = 7;
+    }
+
+    public void subirColor() {
+        setColor(color + 1);
+    }
+
+    public void bajarColor() {
+        setColor(color - 1);
+    }
+
+    public void setColor(int valorColor) {
+        if (valorColor > 7)
+            color = 7;
+        else if (valorColor < 1)
+            color = 1;
+        else
+            color = valorColor;
     }
 
     public void subirVolumen() {
@@ -17,9 +36,12 @@ public class Televisor {
     }
 
     public void setVolumen(int valorVolumen) {
-        if (valorVolumen >= 0 && valorVolumen < 100)
+        if (valorVolumen > 15)
+            volumen = 15;
+        else if (valorVolumen < 0)
+            volumen = 0;
+        else
             volumen = valorVolumen;
-        System.out.println("Volumen:" + volumen);
     }
 
     public void subirCanal() {
@@ -35,9 +57,20 @@ public class Televisor {
     }
 
     public void setCanal(int valorCanal) {
-        if (valorCanal > 0 && valorCanal < 100)
+        if (valorCanal > 10)
+            canal = 0;
+        else if (valorCanal < 0)
+            canal = 10;
+        else
             canal = valorCanal;
-        System.out.println("Canal:" + canal);
+    }
+
+    public void mostrarDatos(String nombre) {
+        System.out.println("La televisión " + nombre + ":");
+        System.out.println("Canal actual = " + canal);
+        System.out.println("Volumen actual = " + volumen);
+        System.out.println("Color actual = " + color);
+        System.out.println("----------------------------");
     }
 
 }

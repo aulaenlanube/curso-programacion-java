@@ -1,4 +1,4 @@
-public class Ejemplo1OO {
+public class AplicacionCuenta{
 
     public static void main(String[] args) {
 

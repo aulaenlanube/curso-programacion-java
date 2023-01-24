@@ -7,8 +7,14 @@ public class AplicacionTv {
 
         tv1.subirVolumen();
         tv1.bajarCanal();
+        tv1.subirColor();
+        tv1.bajarCanal();
         tv2.bajarVolumen();
         tv2.subirCanal();
+
+
+        tv1.mostrarDatos("tv1");
+        tv2.mostrarDatos("tv2");
 
     }
 

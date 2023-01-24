@@ -1,4 +1,4 @@
-public class EjemploCirculo {
+public class AplicacionCirculo {
 
     public static void main(String[] args) {
 
