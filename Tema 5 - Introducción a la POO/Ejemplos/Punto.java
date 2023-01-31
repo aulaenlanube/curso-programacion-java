@@ -1,6 +1,5 @@
 public class Punto {
-
-    private static int puntos = 1;
+    
     public int x;
     public int y;
     public String nombre;
@@ -40,15 +39,7 @@ public class Punto {
         System.out.println("Y=" + y);
         System.out.println("La distancia respecto al centro es " + calcularDistanciaCentro());
         System.out.println("--------------------------------------------------------------");
-    }
-
-    public static void getPuntos() {
-        System.out.println("Puntos=" + puntos);
-    }
-
-    public static void setPuntos(int puntos) {
-        Punto.puntos = puntos;
-    }
+    }    
 
     public int getX() {
         return x;
@@ -79,7 +70,7 @@ public class Punto {
 
     @Override
     public String toString() {
-        return "Punto [x=" + x + ", y=" + y + ", nombre=" + nombre + "]";
+        return "[" + nombre + "]";
     }
 
 }

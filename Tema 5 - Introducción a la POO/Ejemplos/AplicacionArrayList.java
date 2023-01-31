@@ -5,16 +5,26 @@ public class AplicacionArrayList {
     public static void main(String[] args) {
 
         ArrayList<Punto> puntos = new ArrayList();
-        Punto p1 = new Punto(1,2);
-        Punto p2 = new Punto(1);
-        Punto p3 = new Punto(1,3);
-        Punto p4 = new Punto(3,3);
+        puntos.add(new Punto(1,"p1"));
+        puntos.add(new Punto(2,3,"p2"));
+        puntos.add(new Punto(3,"p3"));        
+        puntos.add(0, new Punto(4,5,"p4"));
 
-        puntos.add(p1);
-        puntos.add(p2);
-        puntos.add(p3);
-        puntos.add(1, p4);       
-        puntos.remove(2);
-        puntos.remove(p1);
+        puntos.remove(2);        
+        borrarPunto(puntos, new Punto(4, 5, "p4"));
+
+        System.out.println(puntos.toString());
     }
+
+    static void borrarPunto(ArrayList<Punto> puntos, Punto punto) {
+        for (Punto p : puntos) {
+            if (p.getX() == punto.getX()
+                    && p.getY() == punto.getY()
+                    && p.getNombre().equals(punto.getNombre())) {
+                puntos.remove(p);
+                return;
+            }
+        }
+    }
+
 }
