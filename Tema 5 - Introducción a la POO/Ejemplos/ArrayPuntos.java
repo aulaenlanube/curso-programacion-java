@@ -20,5 +20,6 @@ public class ArrayPuntos {
                 max = puntos[i].calcularDistanciaCentro();
         }
         System.out.println("La distancia máxima del centro es " + max);
+        System.out.println(puntos);
     }
 }

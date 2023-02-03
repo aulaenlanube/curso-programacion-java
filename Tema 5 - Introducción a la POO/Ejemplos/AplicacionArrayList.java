@@ -4,7 +4,7 @@ public class AplicacionArrayList {
 
     public static void main(String[] args) {
 
-        ArrayList<Punto> puntos = new ArrayList();
+        ArrayList<Punto> puntos = new ArrayList<>();
         puntos.add(new Punto(1,"p1"));
         puntos.add(new Punto(2,3,"p2"));
         puntos.add(new Punto(3,"p3"));        

@@ -8,9 +8,9 @@ public class AplicacionPunto {
         Punto p2 = new Punto(1, 3, "p2");
         Punto p3 = new Punto(1, "p3");
 
-        // p1.mostrarDatos();
-        // p2.mostrarDatos();
-        // p3.mostrarDatos();
+        p1.mostrarDatos();
+        p2.mostrarDatos();
+        p3.mostrarDatos();
 
         modificarPunto(p1);
         modificarEntero(num);

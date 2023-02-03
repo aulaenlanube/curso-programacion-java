@@ -1,9 +1,9 @@
-public final class ObjetoInmutable {
+public final class ObjetoInmutable1 {
     private final int n;
     private final String s;
     private final Punto p;
 
-    public ObjetoInmutable(int n, String s, Punto p) {
+    public ObjetoInmutable1(int n, String s, Punto p) {
         this.n = n;
         this.s = s;
         this.p = new Punto(p.getX(), p.getY());
