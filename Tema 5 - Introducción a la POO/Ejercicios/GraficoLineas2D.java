@@ -7,12 +7,16 @@ public class GraficoLineas2D {
     public GraficoLineas2D() {
         this.puntos = new ArrayList<>();
     }
+    public GraficoLineas2D(ArrayList<Punto> puntos) {
+        this();
+        setPuntos(puntos);
+    }
 
     public boolean esPositivo(Punto p) {
         return p.getX() >= 0 && p.getY() >= 0;
     }
 
-    public void eliminarPunto(Punto p) {
+    public void eliminarPunto() {
 
         if (!puntos.isEmpty()) {
             puntos.remove(puntos.size() - 1);
@@ -27,6 +31,7 @@ public class GraficoLineas2D {
         if (puntos.isEmpty()) {
             puntos.add(p);
             System.out.println("Primer punto agregado correctamente");
+            return;
         }
 
         // si hay algún punto
@@ -48,7 +53,7 @@ public class GraficoLineas2D {
             System.out.println("ERROR: no se ha podido modificar la lista de puntos");
     }
 
-    private boolean validarPuntos(ArrayList<Punto> puntos) {
+    private boolean validarPuntosOld(ArrayList<Punto> puntos) {
 
         // lista con puntos
         if (!puntos.isEmpty()) {
@@ -78,7 +83,7 @@ public class GraficoLineas2D {
         return true;
     }
 
-    private boolean validarPuntosv2(ArrayList<Punto> puntos) {
+    private boolean validarPuntos(ArrayList<Punto> puntos) {
 
         // lista con puntos, válida
         if (puntos.isEmpty())

@@ -118,16 +118,13 @@ public class Punto {
         double area = (Math.sqrt(s * (s - a) * (s - b) * (s - c)));
 
         if (area != 0) {
-            String tipo = "";
+            String tipo = "isósceles";
             if (a == b && b == c)
                 tipo = "equilátero";
             else if (a != b && b != c && a != c)
-                tipo = "escaleno";
-            else
-                tipo = "isósceles";
+                tipo = "escaleno";            
 
-            System.out.println("El triángulo es " + tipo + " y su área es "
-                    + (Math.sqrt(s * (s - a) * (s - b) * (s - c))));
+            System.out.println("El triángulo es " + tipo + " y su área es " + area);
         } else
             System.out.println("ERROR: los puntos no forman un triángulo");
     }
