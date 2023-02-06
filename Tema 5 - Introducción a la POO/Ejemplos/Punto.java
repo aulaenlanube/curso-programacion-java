@@ -1,7 +1,11 @@
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Punto {
-    
-    public int x;
-    public int y;
+
+    private int x;
+    private int y;
     public String nombre;
 
     public Punto(int x) {
@@ -23,24 +27,7 @@ public class Punto {
         this(x, y);
         this.nombre = nombre;
     }
-
-    public double calcularDistanciaCentro() {
-        double z;
-        z = Math.sqrt((x * x) + (y * y));
-        return z;
-    }
-
-    public void mostrarDatos() {
-        if (this.nombre == null)
-            System.out.println("El punto no tiene nombre, sus datos son:");
-        else
-            System.out.println("El punto de nombre " + nombre + " tiene los siguientes datos:");
-        System.out.println("X=" + x);
-        System.out.println("Y=" + y);
-        System.out.println("La distancia respecto al centro es " + calcularDistanciaCentro());
-        System.out.println("--------------------------------------------------------------");
-    }    
-
+    
     public int getX() {
         return x;
     }
@@ -53,9 +40,6 @@ public class Punto {
         return y;
     }
 
-    /**
-     * @param y the y to set
-     */
     public void setY(int y) {
         this.y = y;
     }
@@ -79,4 +63,72 @@ public class Punto {
         return super.clone();
     }
 
+    public void mostrarDatos() {
+        if (this.nombre == null)
+            System.out.println("El punto no tiene nombre, sus datos son:");
+        else
+            System.out.println("El punto de nombre " + nombre + " tiene los siguientes datos:");
+        System.out.println("X=" + x);
+        System.out.println("Y=" + y);
+        System.out.println("La distancia respecto al centro es " + calcularDistanciaCentro());
+        System.out.println("--------------------------------------------------------------");
+    }
+
+    public double calcularDistanciaCentro() {
+        double z;
+        z = Math.sqrt((x * x) + (y * y));
+        return z;
+    }
+
+
+
+
+
+
+    public static boolean distintos(Punto p1, Punto p2) {
+        return p1.getX() != p2.getX() || p1.getY() != p2.getY();
+    }
+
+    public static boolean distintos(Punto... puntos) {
+        for (int i = 0; i < puntos.length; i++) {
+            for (int j = i + 1; j < puntos.length; j++) {
+                if (puntos[i].getX() == puntos[j].getX() && puntos[i].getY() == puntos[j].getY()) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    public static boolean distintosV2(Punto... puntos) {
+        Set<Punto> conjuntoPuntos = new HashSet<>(Arrays.asList(puntos));
+        return conjuntoPuntos.size() == puntos.length;
+    }
+
+    public static double distancia(Punto p1, Punto p2) {
+        return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
+    }
+
+    public static void areaTriangulo(Punto p1, Punto p2, Punto p3) {
+
+        double a = distancia(p1, p2);
+        double b = distancia(p2, p3);
+        double c = distancia(p3, p1);
+        double s = (a + b + c) / 2;
+        double area = (Math.sqrt(s * (s - a) * (s - b) * (s - c)));
+
+        if (area != 0) {
+            String tipo = "";
+            if (a == b && b == c)
+                tipo = "equilátero";
+            else if (a != b && b != c && a != c)
+                tipo = "escaleno";
+            else
+                tipo = "isósceles";
+
+            System.out.println("El triángulo es " + tipo + " y su área es "
+                    + (Math.sqrt(s * (s - a) * (s - b) * (s - c))));
+        } else
+            System.out.println("ERROR: los puntos no forman un triángulo");
+    }
 }
