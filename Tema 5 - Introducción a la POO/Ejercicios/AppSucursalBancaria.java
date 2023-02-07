@@ -50,6 +50,7 @@ public class AppSucursalBancaria {
         String fecha = entrada.nextLine();
 
         clientes.add(new Cliente(nombre, apellidos, direccion, ciudad, LocalDate.parse(fecha)));
+        System.out.println("El cliente de nombre "+nombre+" "+apellidos+" se ha creado correctamente");
     }
 
     static void crearCuenta() {
@@ -73,6 +74,7 @@ public class AppSucursalBancaria {
         } while (cliente == null);
 
         cuentas.add(new Cuenta(contadorCuenta++, 0, cliente));
+        System.out.println("La cuenta a nombre de "+cliente.nombreCompleto()+" se ha creado correctamente");
     }
 
     static Cliente validarCliente(String nombre) {
@@ -171,7 +173,7 @@ public class AppSucursalBancaria {
 
         String s = """
 
-                MENU PRINCIPAL
+                MENU CUENTA
                 1 - Ingresar
                 2 - Retirar
                 3 - Ver datos cuenta
