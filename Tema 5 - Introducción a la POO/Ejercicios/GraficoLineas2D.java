@@ -53,36 +53,6 @@ public class GraficoLineas2D {
             System.out.println("ERROR: no se ha podido modificar la lista de puntos");
     }
 
-    private boolean validarPuntosOld(ArrayList<Punto> puntos) {
-
-        // lista con puntos
-        if (!puntos.isEmpty()) {
-            // más de un punto
-            if (puntos.size() > 1) {
-
-                for (int i = 0; i < puntos.size() - 1; i++) {
-                    Punto punto = puntos.get(i);
-                    Punto siguiente = puntos.get(i + 1);
-
-                    // si alguno de los puntos no es válido
-                    if (!esPositivo(punto) || !esPositivo(siguiente) || !Punto.distintos(punto, siguiente)
-                            || punto.getX() > siguiente.getX())
-                        return false;
-                }
-                // todos los puntos son válidos
-                return true;
-            }
-            // si el punto es positivos
-            else if (esPositivo(puntos.get(0)))
-                return true;
-            // si el punto no es positivo
-            else
-                return false;
-        }
-        // lista sin puntos
-        return true;
-    }
-
     private boolean validarPuntos(ArrayList<Punto> puntos) {
 
         // lista con puntos, válida

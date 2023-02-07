@@ -26,10 +26,7 @@ public class BordesMatrices {
      *              mayúsculas
      */
     public static void mostrarTextoConBordes(String texto) {
-
-        // pasamos a mayúsculas
-        texto = texto.toUpperCase();
-
+     
         // obtenemos un array de Strings
         String[] lineas = texto.split("\n");
 
@@ -413,9 +410,9 @@ public class BordesMatrices {
             System.out.print(LINEA_VERTICAL + "  ");
             for (int j = 0; j < lineaMax; j++) {
                 if (j < lineas[i].length())
-                    System.out.print(lineas[i].charAt(j) + " ");
+                    System.out.print(lineas[i].charAt(j) + "");
                 else
-                    System.out.print("  ");
+                    System.out.print(" ");
             }
             System.out.println(" " + LINEA_VERTICAL);
         }
@@ -424,7 +421,7 @@ public class BordesMatrices {
     private static void imprimirBorde(int tipoBorde, int ancho) {
 
         System.out.print(tipoBorde == BORDE_SUP ? ESQUINA_SUP_IZQ : ESQUINA_INF_IZQ);
-        for (int i = 0; i < ancho * 2 + 3; i++)
+        for (int i = 0; i < ancho + 3; i++)
             System.out.print(LINEA_HORIZONTAL);
         System.out.println(tipoBorde == BORDE_SUP ? ESQUINA_SUP_DER : ESQUINA_INF_DER);
 
