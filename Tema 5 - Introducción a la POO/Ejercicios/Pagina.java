@@ -41,7 +41,7 @@ public class Pagina {
             System.out.println("ERROR: No se puede agregar la cita, hora ocupada");
         else {
             this.citas.add(c);
-            System.out.println("Cita agregada correctamente");
+            System.out.println("Cita agregada correctamente el día "+dia+" de "+Agenda.meses[mes-1]+" a las "+c.getHora()+":"+c.getMinutos());
         }
     }
 
