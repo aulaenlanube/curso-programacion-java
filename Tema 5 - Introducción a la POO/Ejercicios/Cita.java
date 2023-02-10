@@ -38,7 +38,7 @@ public class Cita {
     public void setHora(int hora) {
 
         // hora no válida, ponemos a cero
-        if (minutos >= 24 && minutos < 0) {
+        if (hora > 23 || hora < 0) {
             this.hora = 0;
             System.out.println("Hora nó válida, fijada a 0");
         }
@@ -50,7 +50,7 @@ public class Cita {
     public void setMinutos(int minutos) {
 
         // minutos no válidos, ponemos a cero
-        if (minutos >= 60 && minutos < 0) {
+        if (minutos >= 60 || minutos < 0) {
             this.minutos = 0;
             System.out.println("Minutos nó válidos, fijados a 0");
             return;
@@ -65,7 +65,7 @@ public class Cita {
             case 4:  this.minutos = ++minutos;   break;
         }
         if(this.minutos == 60) this.minutos = 55;
-        System.out.println("Minutos nó válidos, fijados a " + this.minutos);
+        System.out.println("Minutos fijados a " + this.minutos);
     }
 
     @Override

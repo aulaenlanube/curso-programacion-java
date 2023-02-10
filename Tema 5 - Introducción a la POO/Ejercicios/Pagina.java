@@ -56,7 +56,7 @@ public class Pagina {
 
     public void verCitas() {
         String s = "ESTAS SON LAS CITAS DEL "+dia+" de "+Agenda.meses[mes-1]+"\n";
-        for (Cita c : citas) {
+        for (Cita c : this.citas) {
             s+= c.toString();
         }
         BordesMatrices.mostrarTextoConBordes(s);
