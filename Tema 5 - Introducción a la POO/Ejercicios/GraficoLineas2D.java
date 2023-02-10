@@ -7,6 +7,7 @@ public class GraficoLineas2D {
     public GraficoLineas2D() {
         this.puntos = new ArrayList<>();
     }
+
     public GraficoLineas2D(ArrayList<Punto> puntos) {
         this();
         setPuntos(puntos);
@@ -60,9 +61,8 @@ public class GraficoLineas2D {
             return true;
 
         // primer punto, si no es positivo
-        if (puntos.get(0).getX() < 0 || puntos.get(0).getY() < 0) {
+        if (!esPositivo(puntos.get(0)))
             return false;
-        }
 
         // más de un punto
         for (int i = 1; i < puntos.size(); i++) {

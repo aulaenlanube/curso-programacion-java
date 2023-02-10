@@ -80,11 +80,6 @@ public class Punto {
         return z;
     }
 
-
-
-
-
-
     public static boolean distintos(Punto p1, Punto p2) {
         return p1.getX() != p2.getX() || p1.getY() != p2.getY();
     }
@@ -98,11 +93,6 @@ public class Punto {
             }
         }
         return true;
-    }
-
-    public static boolean distintosV2(Punto... puntos) {
-        Set<Punto> conjuntoPuntos = new HashSet<>(Arrays.asList(puntos));
-        return conjuntoPuntos.size() == puntos.length;
     }
 
     public static double distancia(Punto p1, Punto p2) {
