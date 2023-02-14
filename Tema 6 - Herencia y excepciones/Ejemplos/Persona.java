@@ -19,4 +19,9 @@ public class Persona {
         System.out.println("Nombre: "+nombre);
     }
 
+    @Override
+    public String toString() {
+        return "Persona [nombre=" + nombre + ", edad=" + edad + "]";
+    }
+
 }

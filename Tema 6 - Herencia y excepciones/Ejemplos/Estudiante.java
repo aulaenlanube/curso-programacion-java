@@ -4,15 +4,19 @@ public class Estudiante extends Persona {
 
     public Estudiante(String nombre, int edad) {
         super(nombre, edad);
-        this.creditos = 60;
     }
 
-    public int getCreditos() {
-        return this.creditos;
+    public Estudiante(String nombre, int edad, int creditos) {
+        super(nombre, edad);
+        this.creditos = creditos;
     }
 
-    public void mostrarDatos() {
-        super.mostrarDatos();
-        System.out.println("Estudiante matriculado de "+creditos+" créditos");
+    
+    @Override
+    public String toString() {
+        return super.toString() + " Estudiante [creditos=" + creditos + "]";
     }
+    
+
+    
 }
