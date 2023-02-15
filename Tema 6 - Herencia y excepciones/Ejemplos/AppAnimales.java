@@ -3,30 +3,39 @@ import java.util.ArrayList;
 public class AppAnimales {
 
     public static void main(String[] args) {
-        ArrayList<Animal> animales = new ArrayList<>();
+        
+        ArrayList<Object> animales = new ArrayList<>();
         animales.add(new Animal());
         animales.add(new Perro());
         animales.add(new Pitbull());
-        for (Animal a : animales)
-            a.hacerRuido();
-    }
 
+        for (Object a : animales) {
+            System.out.println("La clase del objeto es: "+a.getClass().getName());
+            System.out.println(a);
+        }           
+    }
 }
 
 class Animal {
-    public void hacerRuido() {
-        System.out.println("El animal hace un ruido");
+    
+    @Override
+    public String toString() {
+        return "El animal hace un ruido";
     }
 }
 
 class Perro extends Animal {
-    public void hacerRuido() {
-        System.out.println("El perro ladra");
+
+    @Override
+    public String toString() {
+        return "El perro ladra";
     }
 }
 
 class Pitbull extends Perro {
-    public void hacerRuido() {
-        System.out.println("El pitbull tiene un ladrido profundo");
+        
+    @Override
+    public String toString() {
+        return "El pitbull tiene un ladrido profundo";
     }
 }
