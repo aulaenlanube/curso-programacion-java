@@ -21,7 +21,7 @@ public class AppEquals {
         puntos.add(p3);
         puntos.add(p4);
 
-        puntos.remove(new Punto2D(0, 0));
+        puntos.remove(new Punto2D(3, 3));
         System.out.println(puntos);
     }    
 

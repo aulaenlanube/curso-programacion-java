@@ -49,10 +49,6 @@ public class Punto2D {
         return Math.sqrt(Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2));
     }
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#hashCode()
-     */
-    
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -65,10 +61,6 @@ public class Punto2D {
         return result;
     }
 
-    /* (non-Javadoc)
-     * @see java.lang.Object#equals(java.lang.Object)
-     */
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -88,9 +80,7 @@ public class Punto2D {
             return false;
         }
         return true;
-    }
-
-    
+    }    
 
 
 }
