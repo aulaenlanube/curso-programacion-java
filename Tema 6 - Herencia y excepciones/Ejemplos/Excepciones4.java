@@ -15,7 +15,10 @@ public class Excepciones4 {
             }
             System.out.println("El número introducido es válido");
         } catch (Exception e) {
-            System.out.println("ERROR: El número introducido NO es válido");
+            if (e.getMessage() == null)
+                System.out.println("ERROR: El número introducido NO es válido");
+            else
+                System.out.println("ERROR: " + e.getMessage());
         }
     }
 }

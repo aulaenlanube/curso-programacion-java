@@ -7,7 +7,7 @@ public class Excepciones3 {
         try {
             int a = 1 / 0;
             System.out.println(a);
-        } catch (IndexOutOfBoundsException e) {
+        } catch (InputMismatchException e) {
             System.out.println("No se puede dividir un número entre cero");
         }
         finally {

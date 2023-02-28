@@ -12,6 +12,10 @@ public class Cliente {
     // CONSTRUCTORES
     //////////////////////////////////////////////////////
 
+    public Cliente(String nombre) {
+        this.nombre = nombre;
+    }
+
     public Cliente(String nombre, String apellidos, String direccion,
             String localidad, LocalDate fechaDeNacimiento) {
         this.nombre = nombre;
@@ -75,5 +79,10 @@ public class Cliente {
 
     public String direccionCompleta() {
         return direccion + ", " + localidad;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente [nombre=" + nombre + "]";
     }
 }

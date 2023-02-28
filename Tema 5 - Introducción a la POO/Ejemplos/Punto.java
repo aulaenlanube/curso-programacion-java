@@ -48,10 +48,6 @@ public class Punto {
         this.nombre = nombre;
     }
 
-    @Override
-    public String toString() {
-        return "[" + nombre + "]";
-    }
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
@@ -113,5 +109,10 @@ public class Punto {
             System.out.println("El triángulo es " + tipo + " y su área es " + area);
         } else
             System.out.println("ERROR: los puntos no forman un triángulo");
+    }
+
+    @Override
+    public String toString() {
+        return "Punto [x=" + x + ", y=" + y + "]";
     }
 }

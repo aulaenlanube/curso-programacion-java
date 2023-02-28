@@ -4,9 +4,8 @@ import java.util.Scanner;
 public class Excepciones6 {
 
     public static void ejemplo(int x, int[] v) throws ArrayIndexOutOfBoundsException {
-        if (x < 0 || x >= v.length) {
+        if (x < 0 || x >= v.length)
             throw new ArrayIndexOutOfBoundsException("Posición no válida");
-        }
         System.out.println(v[x]);
     }
 
@@ -18,17 +17,16 @@ public class Excepciones6 {
         do {
             try {
                 System.out.println("Dime una posición para saber su valor: 0-2");
-                pos = entrada.nextInt();                
+                pos = entrada.nextInt();
                 ejemplo(pos, elArray);
                 salir = true;
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("ERROR: " + e.getMessage());
             } catch (InputMismatchException e) {
-                System.out.println("ERROR: el número introducido no es válido");
+                System.out.println("ERROR: el número introducido no es válido " + e.getMessage());
                 entrada.next();
             }
         } while (!salir);
         entrada.close();
     }
-
 }
