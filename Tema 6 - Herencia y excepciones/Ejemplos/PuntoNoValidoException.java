@@ -2,12 +2,12 @@ public class PuntoNoValidoException extends Exception {
 
     private Punto punto;
 
-    public PuntoNoValidoException(Punto punto) { // constructor utilizado en throw
+    public PuntoNoValidoException(Punto punto) {
         this.punto = punto;
     }
 
     public String toString() {
-        return "Punto(" + this.punto.getX() + ", " + this.punto.getY() + ") no válido";
+        return "ERROR, las coordenadas ("+punto.getX()+", "+punto.getY()+") no son válidas";
     }
 
 }

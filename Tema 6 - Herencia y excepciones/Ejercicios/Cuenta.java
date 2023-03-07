@@ -3,11 +3,11 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.ArrayList;
 
-public class Cuenta {
+public abstract class Cuenta {
 
-    private int numeroCuenta;
-    private double saldo;
-    private Cliente titular;
+    protected int numeroCuenta;
+    protected double saldo;
+    protected Cliente titular;
     private ArrayList<Movimiento> movimientos;
 
     //////////////////////////////////////////////////////
@@ -51,16 +51,20 @@ public class Cuenta {
     }
 
     //////////////////////////////////////////////////////
+    // MÉTODOS ABSTRACTOS
+    //////////////////////////////////////////////////////
+
+    public abstract void verDatos(); 
+
+    public abstract void retiro(double cantidad) throws RetiroNoValidoException;
+
+    public abstract void ingreso(double cantidad) throws IngresoNoValidoException;
+
+    //////////////////////////////////////////////////////
     // MÉTODOS
     //////////////////////////////////////////////////////
 
-    public void ingreso(double cantidad) {
-
-        // el ingreso debe ser positivo
-        if (cantidad < 0) {
-            System.out.println("ERROR: No se puede ingresar una cantidad negativa");
-            return;
-        }
+    public void confirmarIngreso(double cantidad) {
 
         // se ingresa y se registra
         saldo += cantidad;
@@ -68,53 +72,29 @@ public class Cuenta {
         System.out.println("Se han ingresado correctamente "+cantidad+"€ en la cuenta "+numeroCuenta);
     }
 
-    public void retiro(double cantidad) {
-
-        // el retiro debe ser positivo
-        if (cantidad < 0) {
-            System.out.println("ERROR: No se puede retirar una cantidad negativa");
-            return;
-        }
-
-        // si no hay suficiente saldo
-        if (cantidad > saldo) {
-            System.out.println("ERROR: No hay suficiente saldo");
-            return;
-        }
-
-        // se retira y se registra
+    protected void confirmarRetiro(double cantidad) {
         saldo -= cantidad;
         movimientos.add(new Movimiento(LocalDateTime.now(), cantidad, Movimiento.RETIRO));
         System.out.println("Se han retirado correctamente "+cantidad+"€ de la cuenta "+numeroCuenta);
     }
 
-    private String obtenerMovimientos() {
+    protected String obtenerMovimientos() {
         String s = "";
         for (Movimiento m : movimientos) {
             s += m.toString() + "\n";
         }
         return s;
     }
-
-    public void verDatos() {
-
-        String s = "";
-        s += "Nºcuenta: " + numeroCuenta + "\n";
-        s += "Titular: " + titular.nombreCompleto() + ", domicilio en " + titular.direccionCompleta() + "\n";
-        s += "Saldo actual: " + saldo + "€\n";
-        s += "------------------------  M O V I M I E N T O S  ------------------------\n";
-        s += obtenerMovimientos();
-        BordesMatrices.mostrarTextoConBordes(s);
-    }
-
+ 
     @Override
     public String toString() {
-        return "Cuenta [numeroCuenta=" + numeroCuenta + ", titular=" + titular.nombreCompleto() + "]";
+        return "[numeroCuenta=" + numeroCuenta + ", titular=" + titular.nombreCompleto() + "]";
     }
 
     //////////////////////////////////////////////////////
     // CLASE MOVIMIENTO
     //////////////////////////////////////////////////////
+    
     private class Movimiento {
 
         private static final byte INGRESO = 0;

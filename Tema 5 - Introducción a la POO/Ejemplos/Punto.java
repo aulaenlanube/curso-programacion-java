@@ -4,6 +4,10 @@ public class Punto {
     private int y;
     public String nombre;
 
+    //////////////////////////////////////////////////////
+    // CONSTRUCTORES
+    //////////////////////////////////////////////////////
+
     public Punto(int x) {
         this.x = x;
         this.y = x;
@@ -14,16 +18,22 @@ public class Punto {
         this.nombre = nombre;
     }
 
-    public Punto(int x, int y) {
+    public Punto(int x, int y) throws PuntoNoValidoException {        
         this.x = x;
         this.y = y;
+        if (x < 0 || y < 0)
+            throw new PuntoNoValidoException(this);
     }
 
-    public Punto(int x, int y, String nombre) {
+    public Punto(int x, int y, String nombre) throws PuntoNoValidoException {
         this(x, y);
         this.nombre = nombre;
     }
-    
+
+    //////////////////////////////////////////////////////
+    // GETTERS & SETTERS
+    //////////////////////////////////////////////////////
+
     public int getX() {
         return x;
     }
@@ -48,11 +58,19 @@ public class Punto {
         this.nombre = nombre;
     }
 
+    //////////////////////////////////////////////////////
+    // MÉTODOS
+    //////////////////////////////////////////////////////
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
         // TODO Auto-generated method stub
         return super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return "Punto [x=" + x + ", y=" + y + "]";
     }
 
     public void mostrarDatos() {
@@ -71,6 +89,10 @@ public class Punto {
         z = Math.sqrt((x * x) + (y * y));
         return z;
     }
+
+    //////////////////////////////////////////////////////
+    // MÉTODOS ESTÁTICOS
+    //////////////////////////////////////////////////////
 
     public static boolean distintos(Punto p1, Punto p2) {
         return p1.getX() != p2.getX() || p1.getY() != p2.getY();
@@ -104,15 +126,11 @@ public class Punto {
             if (a == b && b == c)
                 tipo = "equilátero";
             else if (a != b && b != c && a != c)
-                tipo = "escaleno";            
+                tipo = "escaleno";
 
             System.out.println("El triángulo es " + tipo + " y su área es " + area);
         } else
             System.out.println("ERROR: los puntos no forman un triángulo");
     }
 
-    @Override
-    public String toString() {
-        return "Punto [x=" + x + ", y=" + y + "]";
-    }
 }
