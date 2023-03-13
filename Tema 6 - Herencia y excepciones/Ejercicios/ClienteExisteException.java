@@ -10,5 +10,8 @@ public class ClienteExisteException extends Exception{
     public String toString() {
         return "El cliente de nombre " + cliente.getNombre() + " ya existe";
     }
+
+    public void mostrarDatos() {
+    }
     
 }
