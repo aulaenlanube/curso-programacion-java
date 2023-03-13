@@ -1,5 +1,3 @@
-import java.util.Iterator;
-
 public class Instituto {
 
     public static void main(String[] args) {
