@@ -1,8 +1,4 @@
-import java.util.Deque;
 import java.util.LinkedList;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Queue;
 
 public class Instituto6 {
 
@@ -31,6 +27,7 @@ public class Instituto6 {
         System.out.println(dam.removeLast());
 
         System.out.println(dam);
+        
     }
 
 }
