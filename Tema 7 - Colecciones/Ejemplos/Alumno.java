@@ -33,16 +33,14 @@ public class Alumno implements Comparable<Alumno>, PersonaCentroEducativo {
         this.edad = edad;
     }
 
-    @Override
-    public String toString() {
-        return "Alumno [nombre=" + nombre + ", edad=" + edad + "]";
-    }
-
-    @Override
     public int compareTo(Alumno a) {
-        int comparacion = Integer.compare(a.getEdad(), this.edad);
+        if (this.nia.compareTo(a.getNia()) == 0)
+            return 0;
+        int comparacion = Integer.compare(this.edad, a.getEdad());
         if (comparacion == 0)
-            comparacion = nombre.compareTo(a.getNombre());
+            comparacion = this.nombre.compareTo(a.getNombre());
+        if (comparacion == 0)
+            comparacion = this.nia.compareTo(a.getNia());
         return comparacion;
     }
 
@@ -56,24 +54,23 @@ public class Alumno implements Comparable<Alumno>, PersonaCentroEducativo {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
+        if (this == obj)
             return true;
-        }
-        if (obj == null) {
+        if (obj == null)
             return false;
-        }
-        if (getClass() != obj.getClass()) {
+        if (getClass() != obj.getClass())
             return false;
-        }
         Alumno other = (Alumno) obj;
-        if (nia == null) {
-            if (other.nia != null) {
-                return false;
-            }
-        } else if (!nia.equals(other.nia)) {
+        if (nia == null && other.nia != null)
             return false;
-        }
+        else if (!nia.equals(other.nia))
+            return false;
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return nombre;
     }
 
 }

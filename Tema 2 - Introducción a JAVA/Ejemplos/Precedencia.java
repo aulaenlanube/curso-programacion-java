@@ -9,6 +9,7 @@ public class Precedencia {
         n = 2;
         int x = ++n+2+3*(n+++1); //3+2+3*(3+1)=17
         System.out.println(n);
+        System.out.println(x);
     }
     
 }

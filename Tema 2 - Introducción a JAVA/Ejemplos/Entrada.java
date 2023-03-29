@@ -14,6 +14,7 @@ public class Entrada {
         System.out.print("Introduzca su nombre: ");       
         nombre = entrada.nextLine();  
         System.out.println("Hola " + nombre + "!!");  
+        entrada.close();
     }
     
 }
