@@ -23,7 +23,7 @@ public class EjemploHashMap {
             System.out.println("La nota de " + pares.getKey() + " es " + pares.getValue());
         }
         // Mostramos nombres de los alumnos con keySet() y nota media
-        System.out.println("Alumnos:" + notasDeAlumnos.keySet().toString()); // Alumnos:[Bob, Kal, Jon, Tim]
+        System.out.println("Alumnos:" + notasDeAlumnos.keySet()); // Alumnos:[Bob, Kal, Jon, Tim]
         double sumaNotas = 0;
         for (Double nota : notasDeAlumnos.values())
             sumaNotas += nota;

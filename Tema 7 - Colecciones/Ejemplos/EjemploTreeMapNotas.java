@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Map;
-import java.util.TreeMap;
+import java.util.TreeMap; 
 
 public class EjemploTreeMapNotas {
 
@@ -26,8 +26,8 @@ public class EjemploTreeMapNotas {
 
         // Mostrar todas las notas de los alumnos en cada asignatura
         System.out.println("Notas de los alumnos:");
-        for (Map.Entry<Alumno, ArrayList<Double>> entry : notasDam.entrySet()) {
-            System.out.println(entry.getKey() + " --> Notas: " + entry.getValue());
+        for (Map.Entry<Alumno, ArrayList<Double>> pares : notasDam.entrySet()) {
+            System.out.println(pares.getKey() + " --> Notas: " + pares.getValue());
         }
     }
 
@@ -36,5 +36,6 @@ public class EjemploTreeMapNotas {
         ArrayList<Double> notas = notasDam.getOrDefault(a, new ArrayList<>());
         notas.add(nota);
         notasDam.put(a, notas);
+        
     }
 }
