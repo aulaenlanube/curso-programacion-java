@@ -1,3 +1,5 @@
+import java.util.function.Function;
+
 public class EjemploMetodosReferenciados {
 
     public static void main(String[] args) {
@@ -18,6 +20,14 @@ public class EjemploMetodosReferenciados {
         System.out.println("A / B = " + division.operacion(NUM_1, NUM_2));
         System.out.println("A^2 + B^2 + 2*A*B = " + cuadradoSuma.operacion(NUM_1, NUM_2));
         System.out.println("Cálculo = " + calculoComplejo.operacion(NUM_1, NUM_2));
+
+        Function<String, Integer> longitudCadena = String::length;
+        Function<Integer, Integer> cuadrado = x -> x * x;
+        int longitud = longitudCadena.apply("Hola");
+        int cuadradoLongitud = cuadrado.apply(longitud);
+        System.out.println("Longitud de 'Hola': " + longitud);
+        System.out.println("Cuadrado de longitud: " + cuadradoLongitud);
+
     }
 
     static int suma(int a, int b) {

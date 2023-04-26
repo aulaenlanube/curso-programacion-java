@@ -6,6 +6,19 @@ public class Trabajador {
     private int edad;
     private double salario;
 
+    /**
+     * @param nombre
+     */
+    public Trabajador(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * 
+     */
+    public Trabajador() {
+    }
+
     public Trabajador(String nombre, int edad, double salario) {
         this.nombre = nombre;
         this.edad = edad;
@@ -29,4 +42,8 @@ public class Trabajador {
         System.out.println("Se han creado " + cantidadTrabajadores + " trabajadores");
     }
 
+    @Override
+    public String toString() {
+        return "[nombre=" + nombre + "]";
+    }
 }

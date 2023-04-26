@@ -18,6 +18,8 @@ public class EjemploLambdas {
             return a * b;
         };
 
+        
+
         System.out.println("A + B = " + suma.operacion(NUM_1, NUM_2));
         System.out.println("A - B = " + resta.operacion(NUM_1, NUM_2));
         System.out.println("A X B = " + multiplicacion.operacion(NUM_1, NUM_2));
