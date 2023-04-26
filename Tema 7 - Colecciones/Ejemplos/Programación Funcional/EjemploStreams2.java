@@ -5,14 +5,14 @@ public class EjemploStreams2 {
 
     public static void main(String[] args) {
 
-        List<String> palabras = Arrays.asList("a", "ab", "abc", "abcd");
+        List<Integer> numeros = Arrays.asList(1, 2, 3, 4);
 
-        String frase = palabras.stream()
-                .filter(palabra -> palabra.length() > 2)
-                .map(palabra -> palabra += "_")
-                .reduce("Frase: ", String::concat);
+        int sumaCuadradosPares = numeros.stream()
+                .filter(n -> n % 2 == 0)
+                .map(n -> n * n)
+                .reduce(0, Integer::sum);
 
-        System.out.println(frase);
+        System.out.println(sumaCuadradosPares); 
 
     }
 }
