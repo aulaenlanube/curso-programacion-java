@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Trabajador {
 
     private static int cantidadTrabajadores = 0;
@@ -6,16 +8,16 @@ public class Trabajador {
     private int edad;
     private double salario;
 
-    /**
-     * @param nombre
-     */
-    public Trabajador(String nombre) {
-        this.nombre = nombre;
+    public Trabajador(int edad) {
+        this.edad = edad;
     }
 
-    /**
-     * 
-     */
+    public Trabajador(String nombre) {
+        this.nombre = nombre;
+        Random r = new Random();
+        this.edad = r.nextInt(48)+18;
+    }
+
     public Trabajador() {
     }
 
@@ -44,6 +46,8 @@ public class Trabajador {
 
     @Override
     public String toString() {
-        return "[nombre=" + nombre + "]";
+        return "Trabajador [nombre=" + nombre + ", edad=" + edad + "]";
     }
+
+
 }

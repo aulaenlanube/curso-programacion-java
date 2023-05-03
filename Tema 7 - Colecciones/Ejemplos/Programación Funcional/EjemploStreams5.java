@@ -13,7 +13,7 @@ public class EjemploStreams5 {
         List<String> palabrasOrdenadasPorLongitud = Arrays.stream(texto.split("\\s+"))
                 .distinct()
                 .sorted(Comparator.comparingInt(String::length).reversed())
-                .collect(Collectors.toList());
+                .toList();
         System.out.println("Palabras ordenadas por longitud: " + palabrasOrdenadasPorLongitud);
 
     }
