@@ -1,26 +1,25 @@
 import java.io.File;
 
 public class EjemplosCarpetas {
-public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    String rutaCarpeta = "";
-    listarArchivos(rutaCarpeta);
-}
-
-public static void listarArchivos(String rutaCarpeta) {
-    File carpeta = new File(rutaCarpeta);
-
-    if (carpeta.isDirectory()) {
-        File[] archivos = carpeta.listFiles();
-
-        for (File archivo : archivos) {
-            if (archivo.isFile()) {
-                System.out.println(archivo.getName() + " - " + archivo.length() + "bytes");
+        String rutaCarpeta = ".";
+        listarArchivos(new File(rutaCarpeta));
+    }
+    
+    // método que lista todos los archivos de un carpeta y sus subcarpetas, con su ruta desde la ubicación actual. No deben aparecer las carpetas
+    public static void listarArchivos(File carpeta) {
+        
+        if (carpeta.isDirectory()) {
+            File[] archivos = carpeta.listFiles();
+    
+            for (File archivo : archivos) {
+                if (archivo.isFile()) System.out.println(archivo.getPath());
+                else if (archivo.isDirectory()) {
+                    System.out.println(archivo.getPath());
+                    listarArchivos(archivo);  
+                }          
             }
-        }
-    } else
-        System.err.println("La ruta proporcionada no es una carpeta.");
-
-}
-
+        } 
+    }  
 }
