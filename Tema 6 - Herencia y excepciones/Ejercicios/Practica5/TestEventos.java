@@ -28,6 +28,7 @@ public class TestEventos {
             System.out.println(e);
         }
 
+        //ganador carrera
         maratonValencia.obtenerGanador();
 
         // TORNEO DE FÚTBOL
@@ -36,24 +37,29 @@ public class TestEventos {
         Equipo vlc = new Equipo("Valencia C.F.");
         Equipo bcn = new Equipo("Barcelona F.C");
 
-        Participante p1 = new Participante("Pep", "Gómez");
-        Participante p2 = new Participante("Tom", "García");
-        Participante p3 = new Participante("Jon", "Pérez");
-        Participante p4 = new Participante("Kal", "Martínez");
+        try {
+            Participante p1 = new Participante("Pep", "Gómez");
+            Participante p2 = new Participante("Tom", "García");
+            Participante p3 = new Participante("Jon", "Pérez");
+            Participante p4 = new Participante("Kal", "Martínez");
 
-        torneoDeFutbol.inscribirEquipo(vlc);
-        torneoDeFutbol.inscribirEquipo(bcn);
+            torneoDeFutbol.inscribirEquipo(vlc);
+            torneoDeFutbol.inscribirEquipo(bcn);
 
-        vlc.añadirJugador(p1);
-        vlc.añadirJugador(p2);
-        bcn.añadirJugador(p3);
-        bcn.añadirJugador(p4);
+            vlc.añadirJugador(p1);
+            vlc.añadirJugador(p2);
+            bcn.añadirJugador(p3);
+            bcn.añadirJugador(p4);
 
-        vlc.setPuntos(82);
-        bcn.setPuntos(80);
+            vlc.setPuntos(82);
+            bcn.setPuntos(80);
 
+        } catch (ParticipanteNoValidoException e) {
+            System.out.println(e);
+        }
+
+        //ganador torneo de fútbol
         System.out.println(torneoDeFutbol.obtenerGanador());
-
     }
 
 }

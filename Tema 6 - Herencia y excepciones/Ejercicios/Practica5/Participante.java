@@ -3,7 +3,10 @@ public class Participante {
     private String nombre; 
     private String apellido;   
 
-    public Participante(String nombre, String apellido) {
+    public Participante(String nombre, String apellido) throws ParticipanteNoValidoException{
+        if (nombre == null || apellido == null ) {
+            throw new ParticipanteNoValidoException("Los atributos de un participante no pueden ser nulos.");
+        }
         this.nombre = nombre;
         this.apellido = apellido;
     }

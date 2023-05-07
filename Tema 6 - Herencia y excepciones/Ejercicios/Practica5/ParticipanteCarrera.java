@@ -6,10 +6,7 @@ public class ParticipanteCarrera extends Participante {
     private Duration tiempo;
 
     public ParticipanteCarrera(String nombre, String apellido, int edad) throws ParticipanteNoValidoException {
-        super(nombre, apellido);
-        if (nombre == null || apellido == null || edad == 0) {
-            throw new ParticipanteNoValidoException("Los atributos de un participante no pueden ser nulos.");
-        }
+        super(nombre, apellido);        
         this.edad = edad;
     }  
 
