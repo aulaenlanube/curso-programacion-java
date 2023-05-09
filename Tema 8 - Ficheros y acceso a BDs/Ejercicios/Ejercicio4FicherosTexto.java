@@ -4,52 +4,70 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Ejercicio4FicherosTexto {
 
     public static void main(String[] args) {
-        String nombreArchivo = "archivo.txt";
+        List<String> archivos = Arrays.asList("archivo1.txt", "archivo2.txt", "archivo3.txt");
+        String nombreArchivoResultado = "archivoCombinado.txt";
+
         try {
-            capitalizarPalabras(nombreArchivo);
-            System.out.println("Se ha modificado el contenido del archivo " + nombreArchivo);
+            combinarArchivos(archivos, nombreArchivoResultado);
+            System.out.println("Se ha combinado el contenido de los archivos en el archivo " + nombreArchivoResultado);
         } catch (IOException e) {
-            System.out.println("Error al leer o escribir en el archivo: " + e.getMessage());
+            System.out.println("Error al leer o escribir en los archivos: " + e.getMessage());
         }
     }
 
-    // Crea un método que reciba un archivo de texto y modifique su contenido, de
-    // modo que cada palabra del archivo deberá empezar en mayúscula
-    public static void capitalizarPalabras(String nombreArchivo) throws IOException {
-        List<String> lineasModificadas = new ArrayList<>();
+    // Crea un método que reciba una lista archivos de texto y combine el contenido
+    // de los archivos de dicha lista. Para ello, se creará un nuevo archivo donde se debe añadir una
+    // palabra de cada archivo de forma consecutiva mientras queden palabras en cada
+    // uno de los archivos, si algún archivo se queda sin palabras se deben añadir
+    // las palabras del resto de archivos
+    public static void combinarArchivos(List<String> nombresArchivos, String nombreArchivoResultado)
+            throws IOException {
+        List<List<String>> palabrasArchivos = new ArrayList<>();
+
+        for (String nombreArchivo : nombresArchivos) {
+            palabrasArchivos.add(obtenerPalabrasDeArchivo(nombreArchivo));
+        }
+
+        try (FileWriter escritorArchivo = new FileWriter(nombreArchivoResultado);
+                BufferedWriter escritorBuffer = new BufferedWriter(escritorArchivo)) {
+
+            boolean hayPalabras = true;
+            while (hayPalabras) {
+                hayPalabras = false;
+                for (List<String> palabrasArchivo : palabrasArchivos) {
+                    if (!palabrasArchivo.isEmpty()) {
+                        escritorBuffer.write(palabrasArchivo.remove(0) + " ");
+                        hayPalabras = true;
+                    }
+                }
+            }
+        }
+    }
+
+    public static List<String> obtenerPalabrasDeArchivo(String nombreArchivo) throws IOException {
+        List<String> palabras = new ArrayList<>();
 
         try (FileReader lectorArchivo = new FileReader(nombreArchivo);
                 BufferedReader lectorBuffer = new BufferedReader(lectorArchivo)) {
 
             String linea;
             while ((linea = lectorBuffer.readLine()) != null) {
-                String[] palabras = linea.split("\\s+");
-                StringBuilder lineaModificada = new StringBuilder();
-
-                for (String palabra : palabras) {
+                String[] palabrasLinea = linea.split("\\s+");
+                for (String palabra : palabrasLinea) {
                     if (!palabra.isEmpty()) {
-                        lineaModificada.append(Character.toUpperCase(palabra.charAt(0)))
-                                .append(palabra.substring(1))
-                                .append(" ");
+                        palabras.add(palabra);
                     }
                 }
-
-                lineasModificadas.add(lineaModificada.toString().trim());
+                palabras.add("\n");// se añade el salto de línea (opcional)
             }
         }
 
-        try (FileWriter escritorArchivo = new FileWriter(nombreArchivo);
-                BufferedWriter escritorBuffer = new BufferedWriter(escritorArchivo)) {
-
-            for (String lineaModificada : lineasModificadas) {
-                escritorBuffer.write(lineaModificada);
-                escritorBuffer.newLine();
-            }
-        }
+        return palabras;
     }
 }

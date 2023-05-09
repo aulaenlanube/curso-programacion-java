@@ -1,33 +1,37 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.File;
 
 public class Ejercicio1FicherosTexto {
 
     public static void main(String[] args) {
-        String fileName = "archivo.txt";
-        int lines = 10;
 
-        createFileWithLines(fileName, lines);
+        String ruta = ".";
+        String extension = "txt";
+
+        // Llamar al método con una extensión personalizada
+        listarPorExtension(ruta, extension);
     }
 
-    // Crea un método que reciba el nombre de un archivo, y un entero. El método
-    // deberá crear el archivo y escribir ‘n’ líneas dentro. Cada línea deberá tener
-    // escrito “Esta es la línea n”, sustituyendo ‘n’ por el número de la línea.
-    public static void createFileWithLines(String fileName, int numLines) {
-        try {
-            FileWriter fileWriter = new FileWriter(fileName);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+    // Crea un método que reciba una carpeta y liste el contenido de dicha carpeta
+    // de aquellos archivos cuya extensión sea .txt. Crea una sobrecarga para que 
+    // el método reciba el tipo de archivo a listar
+    public static void listarPorExtension(String ruta, String extension) {
 
-            for (int i = 1; i <= numLines; i++) {
-                bufferedWriter.write("Esta es la línea " + i);
-                bufferedWriter.newLine();
+        File carpeta = new File(ruta);
+
+        if (carpeta.isDirectory()) {
+            File[] archivos = carpeta
+                    .listFiles((dir, name) -> name.toLowerCase().endsWith("." + extension.toLowerCase()));
+
+            if (archivos != null) {
+                for (File f : archivos) {
+                    System.out.println("Archivo encontrado: " + f.getName());
+                }
+            } else {
+                System.out
+                        .println("No se encontraron archivos con la extensión " + extension + " en la carpeta " + ruta);
             }
-
-            bufferedWriter.close();
-            System.out.println("Archivo " + fileName + " creado con " + numLines + " líneas.");
-        } catch (IOException e) {
-            System.out.println("Error al crear o escribir en el archivo: " + e.getMessage());
+        } else {
+            System.out.println("La ruta proporcionada no es una carpeta válida");
         }
     }
 }
