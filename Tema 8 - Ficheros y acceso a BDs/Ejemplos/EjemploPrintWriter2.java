@@ -12,7 +12,16 @@ public class EjemploPrintWriter2 {
 
         try {
             
+            PrintWriter pwr = new PrintWriter(nombreFichero);
 
+            for (int i = 1; i <= 1000; i++) {
+                pwr.print(i + " ");
+                if (i % 100 == 0) {
+                    pwr.println();
+                    pwr.println(frase);
+                }
+            }
+            pwr.close();
 
             Scanner scn = new Scanner(new FileReader(nombreFichero ));
             while (scn.hasNext()) {
