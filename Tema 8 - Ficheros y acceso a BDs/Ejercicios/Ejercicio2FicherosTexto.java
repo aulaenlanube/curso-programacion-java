@@ -1,55 +1,51 @@
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+
 
 public class Ejercicio2FicherosTexto {
 
     public static void main(String[] args) {
+
         String nombreArchivo = "archivo.txt";
-        try {
-            capitalizarPalabras(nombreArchivo);
-            System.out.println("Se ha modificado el contenido del archivo " + nombreArchivo);
-        } catch (IOException e) {
-            System.out.println("Error al leer o escribir en el archivo: " + e.getMessage());
-        }
+        convertirPrimeraLetraAMayuscula(nombreArchivo);
     }
 
     // Crea un método que reciba un archivo de texto y modifique su contenido, de
     // modo que cada palabra del archivo deberá empezar en mayúscula
-    public static void capitalizarPalabras(String nombreArchivo) throws IOException {
-        List<String> lineasModificadas = new ArrayList<>();
-
-        try (FileReader lectorArchivo = new FileReader(nombreArchivo);
-                BufferedReader lectorBuffer = new BufferedReader(lectorArchivo)) {
-
+    public static void convertirPrimeraLetraAMayuscula(String rutaArchivo) {
+        
+        File archivo = new File(rutaArchivo);
+        StringBuilder contenidoModificado = new StringBuilder();
+    
+        try (BufferedReader lector = new BufferedReader(new FileReader(archivo))) {
             String linea;
-            while ((linea = lectorBuffer.readLine()) != null) {
-                String[] palabras = linea.split("\\s+");
-                StringBuilder lineaModificada = new StringBuilder();
-
+    
+            while ((linea = lector.readLine()) != null) {
+                String[] palabras = linea.split(" ");
                 for (String palabra : palabras) {
                     if (!palabra.isEmpty()) {
-                        lineaModificada.append(Character.toUpperCase(palabra.charAt(0)))
+                        contenidoModificado.append(Character.toUpperCase(palabra.charAt(0)))
                                 .append(palabra.substring(1))
                                 .append(" ");
+                    } else {
+                        contenidoModificado.append(" ");
                     }
                 }
-
-                lineasModificadas.add(lineaModificada.toString().trim());
+                contenidoModificado.append(System.lineSeparator());
             }
+        } catch (IOException e) {
+            System.out.println("Error al leer el archivo: " + e.getMessage());
         }
-
-        try (FileWriter escritorArchivo = new FileWriter(nombreArchivo);
-                BufferedWriter escritorBuffer = new BufferedWriter(escritorArchivo)) {
-
-            for (String lineaModificada : lineasModificadas) {
-                escritorBuffer.write(lineaModificada);
-                escritorBuffer.newLine();
-            }
+    
+        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(archivo))) {
+            escritor.write(contenidoModificado.toString());
+        } catch (IOException e) {
+            System.out.println("Error al escribir en el archivo: " + e.getMessage());
         }
     }
+    
 }

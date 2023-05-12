@@ -5,27 +5,28 @@ import java.io.IOException;
 public class EjercicioBufferedWriter {
 
     public static void main(String[] args) {
-        String nombreFichero = "archivo.txt";
-        int numLineas = 10;
 
-        createFileWithLines(nombreFichero, numLineas);
+        String nombreFichero = "archivo.txt";
+        int numLineas = 100;
+
+        crearLineas(nombreFichero, numLineas);
     }
 
     // Crea un método que reciba el nombre de un archivo, y un entero. El método
     // deberá crear el archivo y escribir ‘n’ líneas dentro. Cada línea deberá tener
     // escrito “Esta es la línea n”, sustituyendo ‘n’ por el número de la línea.
-    public static void createFileWithLines(String nombreFichero, int numLineas) {
+    public static void crearLineas(String nombreFichero, int numLineas) {
         try {
-            FileWriter fileWriter = new FileWriter(nombreFichero);
-            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            FileWriter fw = new FileWriter(nombreFichero);
+            BufferedWriter bw = new BufferedWriter(fw);
 
             for (int i = 1; i <= numLineas; i++) {
-                bufferedWriter.write("Esta es la línea " + i);
-                bufferedWriter.newLine();
+                bw.write("Esta es la línea " + i);
+                bw.newLine();
             }
 
             //al cerrar el BufferedWriter se cierra también el FileWriter
-            bufferedWriter.close();
+            bw.close();
 
             System.out.println("Archivo " + nombreFichero + " creado con " + numLineas + " líneas.");
         } catch (IOException e) {
