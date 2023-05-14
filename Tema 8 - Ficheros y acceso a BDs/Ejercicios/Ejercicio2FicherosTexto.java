@@ -1,51 +1,26 @@
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
 
 public class Ejercicio2FicherosTexto {
 
     public static void main(String[] args) {
 
-        String nombreArchivo = "archivo.txt";
-        convertirPrimeraLetraAMayuscula(nombreArchivo);
+        crearFicheros(".", 5);
     }
 
-    // Crea un método que reciba un archivo de texto y modifique su contenido, de
-    // modo que cada palabra del archivo deberá empezar en mayúscula
-    public static void convertirPrimeraLetraAMayuscula(String rutaArchivo) {
-        
-        File archivo = new File(rutaArchivo);
-        StringBuilder contenidoModificado = new StringBuilder();
-    
-        try (BufferedReader lector = new BufferedReader(new FileReader(archivo))) {
-            String linea;
-    
-            while ((linea = lector.readLine()) != null) {
-                String[] palabras = linea.split(" ");
-                for (String palabra : palabras) {
-                    if (!palabra.isEmpty()) {
-                        contenidoModificado.append(Character.toUpperCase(palabra.charAt(0)))
-                                .append(palabra.substring(1))
-                                .append(" ");
-                    } else {
-                        contenidoModificado.append(" ");
-                    }
-                }
-                contenidoModificado.append(System.lineSeparator());
+    // Crea un método que debe crear n archivos, nombre(1).txt, nombre(2).txt,....
+    // nombre(n).txt en la carpeta que se solicita al usuario. Dentro de cada
+    // archivo deberá escribirse la frase “Este es el fichero nombre(n).txt”.
+    public static void crearFicheros(String ruta, int n) {
+        for (int i = 1; i <= n; i++) {
+            String nombreFichero = ruta + "/nombre(" + i + ").txt";
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter(nombreFichero))) {
+                writer.write("Este es el fichero " + nombreFichero + i + ".txt");
+            } catch (IOException e) {
+                System.out.println("Ocurrió un error al crear el archivo " + nombreFichero);
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            System.out.println("Error al leer el archivo: " + e.getMessage());
-        }
-    
-        try (BufferedWriter escritor = new BufferedWriter(new FileWriter(archivo))) {
-            escritor.write(contenidoModificado.toString());
-        } catch (IOException e) {
-            System.out.println("Error al escribir en el archivo: " + e.getMessage());
         }
     }
-    
 }

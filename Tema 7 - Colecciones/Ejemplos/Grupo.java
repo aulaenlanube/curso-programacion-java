@@ -14,7 +14,10 @@ public class Grupo implements Iterable<Alumno> {
     public String getNombre() {
         return nombre;
     }
-    
+
+    public ArrayList<Alumno> getAlumnos() {
+        return alumnos;
+    }    
 
     public void agregarAlumno(Alumno a) {
         alumnos.add(a);
