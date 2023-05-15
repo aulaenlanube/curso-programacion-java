@@ -11,7 +11,10 @@ public class Instituto {
         dam.agregarAlumno(new Alumno("Sam", null, 15));
         dam.agregarAlumno(new Alumno("Tim", null, 15));
 
-        dam.listarAlumnos();
-
+        dam.eliminarPorEdad(17);
+        
+        for (Alumno alumno : dam.getAlumnos()) {
+            System.out.println(alumno);            
+        }
     }
 }

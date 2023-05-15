@@ -47,6 +47,17 @@ public class Grupo implements Iterable<Alumno> {
             public Alumno next() {
                 return alumnos.get(posicion++);
             }
+
+            public void remove() {
+                alumnos.remove(--posicion);
+            }
         };
+    }
+
+    public void eliminarPorEdad(int n) {      
+        Iterator<Alumno> iteradorGrupo = this.iterator();
+        while(iteradorGrupo.hasNext()) {
+            if(iteradorGrupo.next().getEdad() < n) iteradorGrupo.remove();
+        }          
     }
 }

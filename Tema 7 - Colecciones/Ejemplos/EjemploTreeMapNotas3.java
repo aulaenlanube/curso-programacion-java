@@ -63,7 +63,7 @@ public class EjemploTreeMapNotas3 {
                 ArrayList<Double> notas = calificacion.getNotas();
                 s += modulo + " " + notas + "\n";
             }
-            BordesMatrices.mostrarTextoConBordes(s);
+            System.out.println("\n"+s);
         }
     }
 }
