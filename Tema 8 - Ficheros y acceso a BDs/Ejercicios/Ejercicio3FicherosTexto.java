@@ -7,7 +7,7 @@ public class Ejercicio3FicherosTexto {
 
     public static void main(String[] args) {
 
-        cantidadPalabras("archivo.txt", "programación");
+        cantidadPalabras("archivo.txt", "88");
     }
 
     // Crea un método que debe crear n archivos, nombre(1).txt, nombre(2).txt,....

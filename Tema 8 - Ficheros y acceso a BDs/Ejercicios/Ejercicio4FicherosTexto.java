@@ -11,7 +11,7 @@ public class Ejercicio4FicherosTexto {
 
     public static void main(String[] args) {
 
-        eliminarPalabras("fichero.txt", "palabraABorrar");
+        eliminarPalabras("archivo.txt", "Sd");
     }
 
     // Crea un método que permita eliminar todas las ocurrencias de una palabra dada
@@ -36,11 +36,9 @@ public class Ejercicio4FicherosTexto {
 
             String linea;
             while (scn.hasNextLine()) {
-                linea = scn.nextLine().replaceAll("\\b" + palabra + "\\b", "");
-                bw.write(linea);
-                bw.newLine();
+                linea = scn.nextLine().replaceAll(palabra, "");
+                bw.write(linea+"\n");
             }
-
             scn.close();
             bw.close();
 

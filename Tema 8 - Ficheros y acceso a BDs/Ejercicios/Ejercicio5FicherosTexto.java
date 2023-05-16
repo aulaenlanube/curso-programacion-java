@@ -19,21 +19,20 @@ public class Ejercicio5FicherosTexto {
 
     // método que desencripta datos en el archivo con código césar = DESPLAZAMIENTO
     public static void desencriptarArchivo(String rutaEntrada, String rutaSalida) {
-        procesarArchivo(rutaEntrada, rutaSalida, false);
+        procesarArchivo(rutaEntrada, rutaSalida, true);
     }
 
     // método que encripta datos en el archivo con código césar = DESPLAZAMIENTO
     public static void encriptarArchivo(String rutaEntrada, String rutaSalida) {
-        procesarArchivo(rutaEntrada, rutaSalida, true);
+        procesarArchivo(rutaEntrada, rutaSalida, false);
     }
 
     // método que encripta/desencripta en base al booleano
     public static void procesarArchivo(String rutaEntrada, String rutaSalida, boolean estaEncriptado) {
         try {
-
             File archivoEntrada = new File(rutaEntrada);
             if (!archivoEntrada.exists() || !archivoEntrada.isFile()) {
-                throw new FileNotFoundException("El archivo " + rutaEntrada + " no existe o no es un archivo válido.");
+                throw new FileNotFoundException();
             }
 
             File archivoSalida = new File(rutaSalida);
@@ -44,9 +43,9 @@ public class Ejercicio5FicherosTexto {
             while ((datos = lector.read()) != -1) {
                 char c = (char) datos;
                 if (estaEncriptado)
-                    escritor.write(c + DESPLAZAMIENTO); // encriptamos
-                else
                     escritor.write(c - DESPLAZAMIENTO); // desencriptamos
+                else
+                    escritor.write(c + DESPLAZAMIENTO); // encriptamos
             }
             lector.close();
             escritor.close();
