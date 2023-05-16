@@ -24,7 +24,7 @@ public class Grupo {
     }
 
     public void listarAlumnos() {
-        Iterator<Alumno> iteradorGrupo = new IteratorGrupoNia(alumnos).iterator();
+        Iterator<Alumno> iteradorGrupo = new IteratorGrupoNia();
         while(iteradorGrupo.hasNext()) {
             System.out.println(iteradorGrupo.next());
         }
@@ -38,4 +38,19 @@ public class Grupo {
             if(iteradorGrupo.next().getEdad() < n) iteradorGrupo.remove();
         }          
     }
+
+    private class IteratorGrupoNia implements Iterator<Alumno> {       
+        private int posicion = 0;
+        
+             @Override
+             public boolean hasNext() {
+                return posicion < alumnos.size();
+             }
+        
+             @Override
+             public Alumno next() {
+                return alumnos.get(posicion++);               
+             }
+        }
+        
 }
