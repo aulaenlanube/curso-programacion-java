@@ -13,8 +13,8 @@ public class ParticipanteNoValidoException extends Exception {
     public String toString() {
         String s = "";
         switch(tipoError) {
-            case NOMBRE_NO_VALIDO -> s = "El nombre del participante no és válido";
-            case APELLIDO_NO_VALIDO -> s = "El nombre del participante no és válido";
+            case NOMBRE_NO_VALIDO: s = "El nombre del participante no és válido"; break;
+            case APELLIDO_NO_VALIDO: s = "El nombre del participante no és válido"; break;
         }
         return s;
     }
