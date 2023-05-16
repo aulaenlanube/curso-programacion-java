@@ -8,13 +8,11 @@ public class Instituto {
         dam.agregarAlumno(new Alumno("Tom", "2222A", 17));
         dam.agregarAlumno(new Alumno("Jon", "3333A", 14));
         dam.agregarAlumno(new Alumno("Kal", null, 13));
-        dam.agregarAlumno(new Alumno("Sam", null, 15));
+        dam.agregarAlumno(new Alumno("Sam", null, 18));
         dam.agregarAlumno(new Alumno("Tim", null, 15));
 
         dam.eliminarPorEdad(17);
-        
-        for (Alumno alumno : dam.getAlumnos()) {
-            System.out.println(alumno);            
-        }
+        dam.listarAlumnos();
+
     }
 }

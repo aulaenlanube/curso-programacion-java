@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Grupo implements Iterable<Alumno> {
+public class Grupo {
 
     private String nombre;
     private ArrayList<Alumno> alumnos;
@@ -24,38 +24,16 @@ public class Grupo implements Iterable<Alumno> {
     }
 
     public void listarAlumnos() {
-        Iterator<Alumno> iteradorGrupo = iterator();
+        Iterator<Alumno> iteradorGrupo = new IteratorGrupoNia(alumnos).iterator();
         while(iteradorGrupo.hasNext()) {
             System.out.println(iteradorGrupo.next());
         }
     }
 
-    @Override
-    public Iterator<Alumno> iterator() {
-        return new Iterator<Alumno>() {
-            private int posicion = 0;
 
-            @Override
-            public boolean hasNext() {
-                while (posicion < alumnos.size() && alumnos.get(posicion).getNia() == null) {
-                    posicion++;
-                }
-                return posicion < alumnos.size();
-            }
-
-            @Override
-            public Alumno next() {
-                return alumnos.get(posicion++);
-            }
-
-            public void remove() {
-                alumnos.remove(--posicion);
-            }
-        };
-    }
 
     public void eliminarPorEdad(int n) {      
-        Iterator<Alumno> iteradorGrupo = this.iterator();
+        Iterator<Alumno> iteradorGrupo = new IteratorGrupo(alumnos).iterator();
         while(iteradorGrupo.hasNext()) {
             if(iteradorGrupo.next().getEdad() < n) iteradorGrupo.remove();
         }          

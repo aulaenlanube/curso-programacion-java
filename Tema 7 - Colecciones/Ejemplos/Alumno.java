@@ -1,4 +1,5 @@
 public class Alumno implements Comparable<Alumno>, PersonaCentroEducativo {
+
     private String nombre;
     private String nia;
     private int edad;
@@ -70,7 +71,7 @@ public class Alumno implements Comparable<Alumno>, PersonaCentroEducativo {
 
     @Override
     public String toString() {
-        return nombre;
+        return "Alumno [nombre=" + nombre + ", nia=" + nia + ", edad=" + edad + "]";
     }
 
 }
