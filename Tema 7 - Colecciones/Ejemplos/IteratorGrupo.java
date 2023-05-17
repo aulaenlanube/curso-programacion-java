@@ -1,33 +1,27 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class IteratorGrupo implements Iterable<Alumno>{
+public class IteratorGrupo implements Iterator<Alumno>{
 
-    ArrayList<Alumno> alumnos;
+    private int posicion = 0;
+    private ArrayList<Alumno> alumnos;
 
     public IteratorGrupo(ArrayList<Alumno> alumnos) {
         this.alumnos = alumnos;
+    }    
+
+    @Override
+    public boolean hasNext() {               
+        return posicion < alumnos.size();
     }
 
     @Override
-    public Iterator<Alumno> iterator() {
-        return new Iterator<Alumno>() {
-            private int posicion = 0;
+    public Alumno next() {
+        return alumnos.get(posicion++);
+    }
 
-            @Override
-            public boolean hasNext() {               
-                return posicion < alumnos.size();
-            }
-
-            @Override
-            public Alumno next() {
-                return alumnos.get(posicion++);
-            }
-
-            public void remove() {
-                alumnos.remove(--posicion);
-            }
-        };
+    public void remove() {
+        alumnos.remove(--posicion);
     }
     
 }
