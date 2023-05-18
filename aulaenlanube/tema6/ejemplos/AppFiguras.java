@@ -1,6 +1,6 @@
 package aulaenlanube.tema6.ejemplos;
 
-import aulaenlanube.tema4.bordes.*;
+import aulaenlanube.tema4.bordes.Bordes;
 
 public class AppFiguras {
 
@@ -12,23 +12,23 @@ public class AppFiguras {
 
         // no triángulo
         Triangulo t1 = new Triangulo(p1, p2, p3);
-        BordesMatrices.mostrarTextoConBordes(t1.toString());
+        Bordes.mostrarTextoConBordes(t1.toString());
 
         // isósceles
         p2 = new Punto2D(1, 0);
         p3 = new Punto2D(0, 1);
         t1 = new Triangulo(p1, p2, p3);
-        BordesMatrices.mostrarTextoConBordes(t1.toString());
+        Bordes.mostrarTextoConBordes(t1.toString());
 
         // escaleno
         p3 = new Punto2D(0, 2);
         t1 = new Triangulo(p1, p2, p3);
-        BordesMatrices.mostrarTextoConBordes(t1.toString());
+        Bordes.mostrarTextoConBordes(t1.toString());
 
         // equilátero
         p3 = new Punto2D(0.5, 0.5 * Math.sqrt(3));
         t1 = new Triangulo(p1, p2, p3);
-        BordesMatrices.mostrarTextoConBordes(t1.toString());
+        Bordes.mostrarTextoConBordes(t1.toString());
     }
 
 }

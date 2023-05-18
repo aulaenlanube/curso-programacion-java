@@ -1,6 +1,6 @@
 package aulaenlanube.tema4.ejercicios;
 
-import aulaenlanube.tema4.bordes.BordesMatrices;
+import aulaenlanube.tema4.bordes.Bordes;
 
 public class EjerciciosFinales {
 
@@ -20,7 +20,7 @@ public class EjerciciosFinales {
                 transpuesta[i][j] = matriz[j][i];
             }
         }
-        BordesMatrices.mostrarMatrizConBordes(transpuesta);
+        Bordes.mostrarMatrizConBordes(transpuesta);
     }
 
     public static int[] maximosColumnas(int[][] matriz) {

@@ -64,8 +64,7 @@ public class Punto {
     //////////////////////////////////////////////////////
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        // TODO Auto-generated method stub
+    protected Object clone() throws CloneNotSupportedException {       
         return super.clone();
     }
 

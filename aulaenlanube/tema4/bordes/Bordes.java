@@ -1,6 +1,6 @@
 package aulaenlanube.tema4.bordes;
 
-public class BordesMatrices {
+public class Bordes {
 
     private static final char LINEA_VERTICAL = '║';
     private static final char LINEA_HORIZONTAL = '═';

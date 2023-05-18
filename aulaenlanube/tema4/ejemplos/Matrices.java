@@ -1,6 +1,6 @@
 package aulaenlanube.tema4.ejemplos;
 
-import aulaenlanube.tema4.bordes.BordesMatrices;
+import aulaenlanube.tema4.bordes.Bordes;
 import aulaenlanube.tema4.generadores.*;
 import aulaenlanube.tema4.ejercicios.*;
 
@@ -18,13 +18,13 @@ public class Matrices {
             }
         }
 
-        BordesMatrices.mostrarTextoConBordes("matriz cuadrada");
-        BordesMatrices.mostrarMatrizConBordes(matriz);
+        Bordes.mostrarTextoConBordes("matriz cuadrada");
+        Bordes.mostrarMatrizConBordes(matriz);
 
         int[][] matrizA = GeneredorMatrices.generarMatriz(7, 5, 1000);
         int[][] matrizB = GeneredorMatrices.generarMatriz(6, 7, 1000);
 
-        BordesMatrices.mostrarMatricesConBordes(5, matriz, matrizA, matrizB);
+        Bordes.mostrarMatricesConBordes(5, matriz, matrizA, matrizB);
 
         EjerciciosFinales.mostrarMatrizTranspuesta(matrizA);
         EjerciciosFinales.mostrarMatrizTranspuesta(matrizB);

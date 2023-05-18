@@ -1,7 +1,7 @@
 package aulaenlanube.tema5.ejercicios;
 
 import java.util.ArrayList;
-import aulaenlanube.tema4.bordes.BordesMatrices;
+import aulaenlanube.tema4.bordes.Bordes;
 
 public class Pagina {
     private int dia;
@@ -63,6 +63,6 @@ public class Pagina {
         for (Cita c : this.citas) {
             s += c.toString();
         }
-        BordesMatrices.mostrarTextoConBordes(s);
+        Bordes.mostrarTextoConBordes(s);
     }
 }

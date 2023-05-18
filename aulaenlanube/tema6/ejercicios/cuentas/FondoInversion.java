@@ -1,6 +1,6 @@
 package aulaenlanube.tema6.ejercicios.cuentas;
 
-import aulaenlanube.tema4.bordes.BordesMatrices;
+import aulaenlanube.tema4.bordes.Bordes;
 
 public class FondoInversion extends Cuenta {
 
@@ -33,7 +33,7 @@ public class FondoInversion extends Cuenta {
         s += "Saldo actual: " + saldo + "€\n";
         s += "------------------------  M O V I M I E N T O S  ------------------------\n";
         s += obtenerMovimientos();
-        BordesMatrices.mostrarTextoConBordes(s);
+        Bordes.mostrarTextoConBordes(s);
     }
 
     @Override
