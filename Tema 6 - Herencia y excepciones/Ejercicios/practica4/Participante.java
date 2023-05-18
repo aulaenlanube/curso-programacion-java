@@ -1,3 +1,4 @@
+package practica4;
 public class Participante {
 
     private String nombre;

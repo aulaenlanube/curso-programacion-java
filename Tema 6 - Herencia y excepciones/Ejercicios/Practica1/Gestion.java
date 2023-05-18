@@ -1,3 +1,4 @@
+package practica1;
 public abstract class Gestion extends Trabajador {
     protected int antiguedad;
 

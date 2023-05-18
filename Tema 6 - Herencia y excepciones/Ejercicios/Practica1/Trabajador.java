@@ -1,3 +1,4 @@
+package practica1;
 public abstract class Trabajador {
     protected String dni;
     protected String nombre;

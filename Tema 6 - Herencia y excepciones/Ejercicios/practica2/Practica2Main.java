@@ -1,4 +1,5 @@
-public class Practica3Main {
+package practica2;
+public class Practica2Main {
 
     public static void main(String[] args) {
 

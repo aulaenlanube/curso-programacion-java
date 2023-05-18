@@ -1,3 +1,4 @@
+package practica1;
 public abstract class Informatico extends Trabajador {
     
     protected String titulacion;

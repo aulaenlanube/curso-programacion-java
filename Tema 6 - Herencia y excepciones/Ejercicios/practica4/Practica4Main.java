@@ -1,6 +1,7 @@
+package practica4;
 import java.time.Duration;
 
-public class TestEventos {
+public class Practica4Main {
 
     public static void main(String[] args) {
 

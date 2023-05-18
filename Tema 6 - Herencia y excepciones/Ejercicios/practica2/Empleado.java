@@ -1,3 +1,4 @@
+package practica2;
 public abstract class Empleado {
     protected String nombre;
     protected String apellidos;

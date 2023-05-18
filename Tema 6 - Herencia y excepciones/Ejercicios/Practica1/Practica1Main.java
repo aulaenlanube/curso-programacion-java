@@ -1,3 +1,4 @@
+package practica1;
 public class Practica1Main {
     
     public static void main(String[] args) {

@@ -1,3 +1,4 @@
+package practica4;
 public class ParticipanteNoValidoException extends Exception {
 
     public static final byte NOMBRE_NO_VALIDO = 0;

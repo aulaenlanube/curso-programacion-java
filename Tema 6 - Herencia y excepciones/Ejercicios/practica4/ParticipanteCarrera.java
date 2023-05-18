@@ -1,3 +1,4 @@
+package practica4;
 import java.time.Duration;
 
 public class ParticipanteCarrera extends Participante {    

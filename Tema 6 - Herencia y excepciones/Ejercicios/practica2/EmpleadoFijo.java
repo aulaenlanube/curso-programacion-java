@@ -1,3 +1,4 @@
+package practica2;
 public class EmpleadoFijo extends Empleado {
     private double salarioMensual;
 
