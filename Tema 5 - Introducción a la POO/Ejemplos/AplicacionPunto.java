@@ -2,25 +2,30 @@ public class AplicacionPunto {
 
     public static void main(String[] args) {
 
-        int num = 1;
-        String nombre = "Los Strings son inmutables";
-        Punto p1 = new Punto(2, "p1");
-        Punto p2 = new Punto(1, 3, "p2");
-        Punto p3 = new Punto(1, "p3");
+        try {
+            int num = 1;
+            String nombre = "Los Strings son inmutables";
+            Punto p1 = new Punto(2, "p1");
+            Punto p2 = new Punto(1, 3, "p2");
+            Punto p3 = new Punto(1, "p3");
 
-        p1.mostrarDatos();
-        p2.mostrarDatos();
-        p3.mostrarDatos();
+            p1.mostrarDatos();
+            p2.mostrarDatos();
+            p3.mostrarDatos();
 
-        modificarPunto(p1);
-        modificarEntero(num);
-        modificarString(nombre);
+            modificarPunto(p1);
+            modificarEntero(num);
+            modificarString(nombre);
 
-        System.out.println("Punto.x=" + p1.getX());
-        System.out.println("num=" + num);
-        System.out.println("nombre="+nombre);
+            System.out.println("Punto.x=" + p1.getX());
+            System.out.println("num=" + num);
+            System.out.println("nombre="+nombre);
 
-        System.out.println(p1);
+            System.out.println(p1);
+            
+        } catch (PuntoNoValidoException e) {
+            System.out.println(e);
+        }
     }
 
     public static void mostrarPuntos(Punto... puntos) {
