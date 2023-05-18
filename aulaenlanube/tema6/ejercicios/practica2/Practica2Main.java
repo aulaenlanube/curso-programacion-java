@@ -13,7 +13,7 @@ public class Practica2Main {
         empresa.agregarEmpleado(empleado2);
 
         for (Empleado empleado : empresa.getEmpleados()) {
-            System.out.println(empleado.toString());
+            System.out.println(empleado);
         }
 
         try {
