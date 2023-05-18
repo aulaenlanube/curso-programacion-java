@@ -1,5 +1,7 @@
 package aulaenlanube.tema6.ejercicios.practica2;
+
 public abstract class Empleado {
+    
     protected String nombre;
     protected String apellidos;
     protected String dni;
@@ -12,7 +14,7 @@ public abstract class Empleado {
         this.salario = salario;
     }
 
-    //método abstracto
+    // método abstracto
     public abstract double calcularSalario();
 
     // Getters y setters
@@ -46,12 +48,11 @@ public abstract class Empleado {
 
     public void setSalario(double salario) {
         this.salario = salario;
-    }    
-       
+    }
+
     @Override
     public String toString() {
         return "Nombre: " + nombre + ", Apellidos: " + apellidos + ", DNI: " + dni;
     }
-
 
 }

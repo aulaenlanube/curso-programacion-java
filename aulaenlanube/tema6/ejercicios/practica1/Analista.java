@@ -1,5 +1,7 @@
 package aulaenlanube.tema6.ejercicios.practica1;
+
 public class Analista extends Informatico {
+    
     public Analista(String dni, String nombre, double salarioBase, String titulacion) {
         super(dni, nombre, salarioBase, titulacion);
     }
@@ -11,6 +13,7 @@ public class Analista extends Informatico {
 
     @Override
     public String toString() {
-        return "Analista: {dni="+dni+", nombre="+nombre+", salarioB="+salarioBase+", salarioF="+calcularSalarioFinal()+"}";
+        return "Analista: {dni=" + dni + ", nombre=" + nombre + ", salarioB=" + salarioBase + ", salarioF="
+                + calcularSalarioFinal() + "}";
     }
 }

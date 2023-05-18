@@ -1,8 +1,10 @@
 package aulaenlanube.tema6.ejercicios.practica2;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Empresa {
+    
     private List<Empleado> empleados;
 
     public Empresa() {
@@ -28,4 +30,3 @@ public class Empresa {
     }
 
 }
-

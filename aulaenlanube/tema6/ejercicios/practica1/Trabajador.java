@@ -1,5 +1,7 @@
 package aulaenlanube.tema6.ejercicios.practica1;
+
 public abstract class Trabajador {
+
     protected String dni;
     protected String nombre;
     protected double salarioBase;

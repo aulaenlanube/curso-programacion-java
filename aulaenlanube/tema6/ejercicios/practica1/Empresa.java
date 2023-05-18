@@ -1,8 +1,9 @@
 package aulaenlanube.tema6.ejercicios.practica1;
+
 import java.util.ArrayList;
 
 public class Empresa {
-    
+
     private String cif;
     private String nombre;
     private ArrayList<Trabajador> trabajadores;

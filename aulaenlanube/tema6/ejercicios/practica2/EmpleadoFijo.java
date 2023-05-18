@@ -1,19 +1,19 @@
 package aulaenlanube.tema6.ejercicios.practica2;
-public class EmpleadoFijo extends Empleado {
-    private double salarioMensual;
 
-    public EmpleadoFijo(String nombre, String apellidos, String dni, double salario, double salarioMensual) {
-        super(nombre, apellidos, dni, salario);
-        this.salarioMensual = salarioMensual;
+public class EmpleadoFijo extends Empleado {
+
+
+    public EmpleadoFijo(String nombre, String apellidos, String dni, double salario) {
+        super(nombre, apellidos, dni, salario);        
     }
 
     @Override
     public double calcularSalario() {
-        return salarioMensual;
+        return salario;
     }
 
     @Override
     public String toString() {
-        return super.toString()+", Salario: "+calcularSalario();
+        return super.toString() + ", Salario: " + calcularSalario();
     }
 }

@@ -1,5 +1,7 @@
 package aulaenlanube.tema6.ejercicios.practica1;
+
 public class Auxiliar extends Gestion {
+    
     public Auxiliar(String dni, String nombre, double salarioBase, int antiguedad) {
         super(dni, nombre, salarioBase, antiguedad);
     }
@@ -11,6 +13,7 @@ public class Auxiliar extends Gestion {
 
     @Override
     public String toString() {
-        return "Auxiliar: {dni="+dni+", nombre="+nombre+", salarioB="+salarioBase+", salarioF="+calcularSalarioFinal()+"}";
+        return "Auxiliar: {dni=" + dni + ", nombre=" + nombre + ", salarioB=" + salarioBase + ", salarioF="
+                + calcularSalarioFinal() + "}";
     }
 }
