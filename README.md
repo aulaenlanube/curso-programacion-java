@@ -1,10 +1,10 @@
-# Curso de JAVA ☕ [ DAM - DAW ] ☕🔥🏆
+# Curso de JAVA ☕ [ DAM - DAW ] ☕
 
 Este repositorio contiene todos los recursos y materiales del curso JAVA impartido en el módulo de programación de los ciclos formativos de grado superior de DAM y DAW. Cada uno de los temas ha sido meticulosamente dividido y estructurado en su propia carpeta, de manera que sea fácil de seguir y entender.
 
 ## 📚 Índice de Temas
 
-1️⃣ &#8658; [**`Introducción a la programación`**](aulaenlanube/tema1) - Veremos los fundamentos básicos de la programación sin orientarlos a ningún lenguaje de programación.
+1️⃣ &#8658; [**`Introducción a la programación`**](aulaenlanube/tema1) - Veremos los fundamentos básicos de la programación sin orientarlos a ningún lenguaje.
 
 2️⃣ &#8658; [**`Introducción a JAVA`**](aulaenlanube/tema2) - Entra en el mundo de JAVA, aprende sobre su sintaxis, y por qué es uno de los lenguajes de programación más populares.
 
@@ -22,7 +22,7 @@ Este repositorio contiene todos los recursos y materiales del curso JAVA imparti
 
 9️⃣ &#8658; [**`Interfaz gráfica en JAVA`**](aulaenlanube/tema9) - Crea aplicaciones con interfaces gráficas de usuario utilizando awt, swing y JavaFX.
 
-1️⃣0️⃣ &#8658; [**`Mejorando el código y buenas prácticas`**](aulaenlanube/tema10) - Finaliza el curso aprendiendo sobre los patrones de diseño más comunes y las mejores prácticas en JAVA.
+🔄 &#8658; [**`Mejorando el código y buenas prácticas`**](aulaenlanube/tema10) - Finaliza el curso aprendiendo sobre los patrones de diseño más comunes, clean code, buenas prácticas, documentación del código, etc.
 
 ## 👨‍💻 Uso
 
