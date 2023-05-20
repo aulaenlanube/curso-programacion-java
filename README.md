@@ -1,6 +1,6 @@
 # Curso de JAVA ☕ [ DAM - DAW ] ☕
 
-Este repositorio contiene todos los recursos y materiales del curso JAVA impartido en el módulo de programación de los ciclos formativos de grado superior de DAM y DAW. Cada uno de los temas ha sido meticulosamente dividido y estructurado en su propia carpeta, de manera que sea fácil de seguir y entender.
+Este repositorio contiene todos los recursos y materiales del curso JAVA impartido en el módulo de programación de los ciclos formativos de grado superior de **DAM** y **DAW**. Cada uno de los temas ha sido meticulosamente dividido y estructurado en su propia carpeta, de manera que sea fácil de seguir y entender.
 
 ## 📚 Índice de Temas
 
@@ -42,10 +42,10 @@ Para comenzar, simplemente navega a la carpeta del tema que deseas estudiar. Den
 
 Se recomienda tener conocimientos básicos de informática. No necesitas tener experiencia previa en programación, ¡este curso te guiará completamente desde cero!
 
-## 🎉 Contribuir
+## 💡 Contribuir
 
 ¿Te gustaría contribuir a este curso? ¡Excelente! Las Pull Requests son bienvenidas. Se aceptaran todo tipo de ejercicios resueltos que se consideren interesantes y distintos a los mostrados en cada una de las unidades, siempre y cuando sean soluciones dignas de ser mostradas al mundo!!
 
 ## 📖 Licencia
 
-Este proyecto es Open Source
+Este proyecto es Open Source y está bajo la Licencia [MIT](LICENSE.md).
