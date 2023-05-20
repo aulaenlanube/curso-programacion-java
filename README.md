@@ -48,4 +48,4 @@ Se recomienda tener conocimientos básicos de informática. No necesitas tener e
 
 ## 📖 Licencia
 
-Este proyecto es Open Source y está bajo la Licencia [MIT](LICENSE.md).
+Este proyecto es Open Source y está bajo la Licencia [MIT](https://es.wikipedia.org/wiki/Licencia_MIT).
