@@ -1,8 +1,10 @@
 package aulaenlanube.tema6.ejercicios.practica4;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class TorneoDeFutbol extends EventoDeportivo {
+
     private List<Equipo> equipos;
 
     public TorneoDeFutbol(String nombre, String fecha, String lugar) {
@@ -29,9 +31,9 @@ public class TorneoDeFutbol extends EventoDeportivo {
                 ganador = e;
             }
         }
-        //recorremos los jugadores del equipo ganador
+        // recorremos los jugadores del equipo ganador
         for (Participante p : ganador.getJugadores()) {
-            ganadores.add(p);            
+            ganadores.add(p);
         }
         return ganadores;
     }

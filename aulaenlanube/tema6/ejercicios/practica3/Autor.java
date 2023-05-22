@@ -4,7 +4,7 @@ import java.time.LocalDate;
 
 public class Autor extends Persona {
 
-    public enum GeneroLiterario {POETICO, NARRATIVO, DRAMATICO, DIDACTICO, LIRICO};
+    
     private GeneroLiterario generoLiterario;
 
     public Autor(String nombre, String apellido, LocalDate fechaNacimiento, GeneroLiterario generoLiterario) {

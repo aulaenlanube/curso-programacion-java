@@ -1,4 +1,5 @@
 package aulaenlanube.tema6.ejercicios.practica4;
+
 import java.util.ArrayList;
 
 public abstract class EventoDeportivo implements Ganador {
@@ -43,10 +44,10 @@ public abstract class EventoDeportivo implements Ganador {
         return participantes;
     }
 
-    public void inscribirParticipante(Participante p) {     
+    public void inscribirParticipante(Participante p) {
         participantes.add(p);
     }
 
     public abstract ArrayList<Participante> obtenerGanador();
-    
+
 }

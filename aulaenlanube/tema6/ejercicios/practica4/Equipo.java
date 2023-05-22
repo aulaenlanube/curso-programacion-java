@@ -1,7 +1,8 @@
 package aulaenlanube.tema6.ejercicios.practica4;
+
 import java.util.ArrayList;
 
-public class Equipo  {
+public class Equipo {
 
     private String nombre;
     private ArrayList<Participante> jugadores;
@@ -10,7 +11,7 @@ public class Equipo  {
     public Equipo(String nombre) {
         this.nombre = nombre;
         this.puntos = 0;
-        this.jugadores = new ArrayList<>();        
+        this.jugadores = new ArrayList<>();
     }
 
     public ArrayList<Participante> getJugadores() {

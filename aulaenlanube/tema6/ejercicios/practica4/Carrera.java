@@ -1,8 +1,9 @@
 package aulaenlanube.tema6.ejercicios.practica4;
+
 import java.time.Duration;
 import java.util.ArrayList;
 
-public class Carrera extends EventoDeportivo{
+public class Carrera extends EventoDeportivo {
 
     private double distancia;
 
@@ -26,8 +27,8 @@ public class Carrera extends EventoDeportivo{
         Participante ganador = null;
         Duration menorTiempo = null;
 
-        for (Participante participante : getParticipantes()) {  
-            ParticipanteCarrera p = (ParticipanteCarrera)participante;         
+        for (Participante participante : getParticipantes()) {
+            ParticipanteCarrera p = (ParticipanteCarrera) participante;
             if (menorTiempo == null || p.getTiempo().compareTo(menorTiempo) < 0) {
                 menorTiempo = p.getTiempo();
                 ganador = p;
@@ -36,5 +37,5 @@ public class Carrera extends EventoDeportivo{
         ganadores.add(ganador);
         return ganadores;
     }
-    
+
 }

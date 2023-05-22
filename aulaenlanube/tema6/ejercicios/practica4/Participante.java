@@ -1,4 +1,5 @@
 package aulaenlanube.tema6.ejercicios.practica4;
+
 public class Participante {
 
     private String nombre;

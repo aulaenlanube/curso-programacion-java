@@ -1,15 +1,16 @@
 package aulaenlanube.tema6.ejercicios.practica4;
+
 import java.time.Duration;
 
-public class ParticipanteCarrera extends Participante {    
-    
+public class ParticipanteCarrera extends Participante {
+
     private int edad;
     private Duration tiempo;
 
     public ParticipanteCarrera(String nombre, String apellido, int edad) throws ParticipanteNoValidoException {
-        super(nombre, apellido);        
+        super(nombre, apellido);
         this.edad = edad;
-    }  
+    }
 
     public int getEdad() {
         return edad;
@@ -33,7 +34,7 @@ public class ParticipanteCarrera extends Participante {
                 "nombre=" + super.getNombre() + " " +
                 ", apellido=" + super.getApellido() + " " +
                 ", edad=" + edad +
-                ", tiempo=" + tiempo.toHoursPart() + "h "+tiempo.toMinutesPart()+"min"+
+                ", tiempo=" + tiempo.toHoursPart() + "h " + tiempo.toMinutesPart() + "min" +
                 "}";
     }
 

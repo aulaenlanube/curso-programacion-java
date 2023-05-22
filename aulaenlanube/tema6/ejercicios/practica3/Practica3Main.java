@@ -7,7 +7,7 @@ public class Practica3Main {
         public static void main(String[] args) {
 
                 Autor autor1 = new Autor("Edu", "Torregrosa", LocalDate.of(1981, 9, 1),
-                                Autor.GeneroLiterario.DIDACTICO);
+                                GeneroLiterario.DIDACTICO);
 
                 Libro libro1 = new Libro("Programación en JAVA", autor1, "aulaenlanube", LocalDate.of(2023, 1, 1),
                                 "111-22-333-4444-1", 0.0);

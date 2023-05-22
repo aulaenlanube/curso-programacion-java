@@ -1,4 +1,5 @@
 package aulaenlanube.tema6.ejercicios.practica4;
+
 public class ParticipanteNoValidoException extends Exception {
 
     public static final byte NOMBRE_NO_VALIDO = 0;
@@ -7,15 +8,19 @@ public class ParticipanteNoValidoException extends Exception {
     private byte tipoError;
 
     public ParticipanteNoValidoException(byte tipoError) {
-       this.tipoError = tipoError;
+        this.tipoError = tipoError;
     }
 
     @Override
     public String toString() {
         String s = "";
-        switch(tipoError) {
-            case NOMBRE_NO_VALIDO: s = "El nombre del participante no és válido"; break;
-            case APELLIDO_NO_VALIDO: s = "El nombre del participante no és válido"; break;
+        switch (tipoError) {
+            case NOMBRE_NO_VALIDO:
+                s = "El nombre del participante no és válido";
+                break;
+            case APELLIDO_NO_VALIDO:
+                s = "El nombre del participante no és válido";
+                break;
         }
         return s;
     }

@@ -1,4 +1,5 @@
 package aulaenlanube.tema6.ejercicios.practica4;
+
 import java.time.Duration;
 
 public class Practica4Main {
@@ -29,7 +30,7 @@ public class Practica4Main {
             System.out.println(e);
         }
 
-        //ganador carrera
+        // ganador carrera
         maratonValencia.obtenerGanador();
 
         // TORNEO DE FÚTBOL
@@ -59,7 +60,7 @@ public class Practica4Main {
             System.out.println(e);
         }
 
-        //ganador torneo de fútbol
+        // ganador torneo de fútbol
         System.out.println(torneoDeFutbol.obtenerGanador());
     }
 
