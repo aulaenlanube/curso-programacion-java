@@ -47,4 +47,15 @@ public class TorneoDeFutbol extends EventoDeportivo {
             System.out.println(p.getNombre() + " " + p.getApellido());
         }
     }
+
+    @Override
+    public ArrayList<Participante> getParticipantes() { 
+        ArrayList<Participante> participantesTorneo = new ArrayList<>();
+        for (Equipo equipo : equipos) {
+            for (Participante p : equipo.getJugadores()) {
+                participantesTorneo.add(p);                
+            }            
+        }
+        return participantesTorneo;
+    }
 }
