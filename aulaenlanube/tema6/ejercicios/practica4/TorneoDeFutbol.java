@@ -25,7 +25,7 @@ public class TorneoDeFutbol extends EventoDeportivo {
     public ArrayList<Participante> obtenerGanador() {
         ArrayList<Participante> ganadores = new ArrayList<>();
         Equipo ganador = null;
-        int maxPuntos = Integer.MIN_VALUE;
+        int maxPuntos = 0;
         for (Equipo e : equipos) {
             if (e.getPuntos() > maxPuntos) {
                 maxPuntos = e.getPuntos();

@@ -27,7 +27,10 @@ public class Participante {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        if (nombre == null || nombre.length() == 0)
+            System.out.println("ERROR al modificar el nombre");
+        else
+            this.nombre = nombre;
     }
 
     public String getApellido() {
@@ -35,7 +38,10 @@ public class Participante {
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        if (apellido == null || apellido.length() == 0)
+            System.out.println("ERROR al modificar el apellido");
+        else
+            this.apellido = apellido;
     }
 
     public int getEdad() {
@@ -43,7 +49,10 @@ public class Participante {
     }
 
     public void setEdad(int edad) {
-        this.edad = edad;
+        if (edad < 14)
+            System.out.println("ERROR al modificar la edad, edad mínima 14 años");
+        else
+            this.edad = edad;
     }
 
     @Override

@@ -42,7 +42,7 @@ public class Equipo {
     public String toString() {
         String s = "Equipo: " + nombre + "\n";
         for (Participante p : jugadores) {
-            s += p.toString();
+            s += p.toString() + "\n";
         }
         return s;
     }
