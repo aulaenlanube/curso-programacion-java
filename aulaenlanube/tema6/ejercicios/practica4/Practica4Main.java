@@ -1,13 +1,14 @@
 package aulaenlanube.tema6.ejercicios.practica4;
 
 import java.time.Duration;
+import java.time.LocalDate;
 
 public class Practica4Main {
 
     public static void main(String[] args) {
 
         // CARRERA
-        Carrera maratonValencia = new Carrera("Maratón de Valencia", "03-12-2023", "Valencia", 42.195);
+        Carrera maratonValencia = new Carrera("Maratón de Valencia", LocalDate.of(2023, 12, 3), "Valencia", 42.195);
         try {
             ParticipanteCarrera p1 = new ParticipanteCarrera("Pep", "Gómez", 20);
             ParticipanteCarrera p2 = new ParticipanteCarrera("Tom", "García", 25);
@@ -24,26 +25,23 @@ public class Practica4Main {
             p3.setTiempo(Duration.ofHours(2).plusMinutes(25));
             p4.setTiempo(Duration.ofHours(2).plusMinutes(55));
 
-            System.out.println(maratonValencia.obtenerGanador());
+            maratonValencia.mostrarGanador();
 
-        } catch (ParticipanteNoValidoException e) {
-            System.out.println(e);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
 
-        // ganador carrera
-        maratonValencia.obtenerGanador();
-
         // TORNEO DE FÚTBOL
-        TorneoDeFutbol torneoDeFutbol = new TorneoDeFutbol("Liga", "01-01-2023", "España");
+        TorneoDeFutbol torneoDeFutbol = new TorneoDeFutbol("Liga", LocalDate.of(2023, 1, 1), "España");
 
         Equipo vlc = new Equipo("Valencia C.F.");
         Equipo bcn = new Equipo("Barcelona F.C");
 
         try {
-            Participante p1 = new Participante("Pep", "Gómez");
-            Participante p2 = new Participante("Tom", "García");
-            Participante p3 = new Participante("Jon", "Pérez");
-            Participante p4 = new Participante("Kal", "Martínez");
+            Participante p1 = new Participante("Pep", "Gómez", 20);
+            Participante p2 = new Participante("Tom", "García", 22);
+            Participante p3 = new Participante("Jon", "Pérez", 23);
+            Participante p4 = new Participante("Kal", "Martínez", 19);
 
             torneoDeFutbol.inscribirEquipo(vlc);
             torneoDeFutbol.inscribirEquipo(bcn);
@@ -56,12 +54,12 @@ public class Practica4Main {
             vlc.setPuntos(82);
             bcn.setPuntos(80);
 
-        } catch (ParticipanteNoValidoException e) {
-            System.out.println(e);
-        }
+            // ganador torneo de fútbol
+            torneoDeFutbol.mostrarGanador();
 
-        // ganador torneo de fútbol
-        System.out.println(torneoDeFutbol.obtenerGanador());
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }

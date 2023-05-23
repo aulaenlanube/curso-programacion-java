@@ -1,10 +1,11 @@
 package aulaenlanube.tema6.ejercicios.practica3;
+
 import java.util.ArrayList;
 import java.util.List;
 import aulaenlanube.tema4.bordes.Bordes;
 
 public class Biblioteca {
-    
+
     private List<Libro> libros;
 
     public Biblioteca() {
@@ -15,27 +16,26 @@ public class Biblioteca {
         libros.add(libro);
     }
 
-    public void eliminarLibro(String titulo) {
+    public void eliminarLibro(String isbn) {
         try {
             for (Libro libro : libros) {
-                if (libro.getTitulo().equals(titulo)) {
+                if (libro.getIsbn().equals(isbn)) {
                     libros.remove(libro);
-                    System.out.println("El libro '"+titulo+"' se ha eliminado de la biblioteca");
+                    System.out.println("El libro con isbn '" + isbn + "' se ha eliminado de la biblioteca");
                     return;
                 }
             }
-            throw new LibroNoEncontradoException(titulo);
+            throw new LibroNoEncontradoException(isbn);
 
         } catch (LibroNoEncontradoException e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
     }
 
     public void mostrarBiblioteca() {
         for (Libro l : libros) {
             Bordes.mostrarTextoConBordes(l.toString());
-            System.out.println();            
+            System.out.println();
         }
     }
 }
-

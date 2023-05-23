@@ -22,8 +22,8 @@ public class Practica3Main {
                 biblioteca.mostrarBiblioteca();
 
                 // eliminamos libros
-                biblioteca.eliminarLibro("Programación en JAVA");
-                biblioteca.eliminarLibro("Programación en JAVA"); // Lanza una excepción porque el libro ya no existe
+                biblioteca.eliminarLibro("111-22-333-4444-3");
+                biblioteca.eliminarLibro("111-22-333-4444-3"); // Lanza una excepción porque el libro ya no existe
                 System.out.println();
                 biblioteca.mostrarBiblioteca();
         }

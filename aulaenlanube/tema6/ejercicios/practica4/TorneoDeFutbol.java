@@ -1,5 +1,6 @@
 package aulaenlanube.tema6.ejercicios.practica4;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +8,7 @@ public class TorneoDeFutbol extends EventoDeportivo {
 
     private List<Equipo> equipos;
 
-    public TorneoDeFutbol(String nombre, String fecha, String lugar) {
+    public TorneoDeFutbol(String nombre, LocalDate fecha, String lugar) {
         super(nombre, fecha, lugar);
         this.equipos = new ArrayList<>();
     }
@@ -36,5 +37,14 @@ public class TorneoDeFutbol extends EventoDeportivo {
             ganadores.add(p);
         }
         return ganadores;
+    }
+
+    @Override
+    public void mostrarGanador() {
+
+        System.out.println("Los ganadores del torneo de fútbol han sido:");
+        for (Participante p : obtenerGanador()) {
+            System.out.println(p.getNombre() + " " + p.getApellido());
+        }
     }
 }

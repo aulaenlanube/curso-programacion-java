@@ -1,15 +1,16 @@
 package aulaenlanube.tema6.ejercicios.practica4;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public abstract class EventoDeportivo implements Ganador {
 
     private String nombre;
-    private String fecha;
+    private LocalDate fecha;
     private String lugar;
     private ArrayList<Participante> participantes;
 
-    public EventoDeportivo(String nombre, String fecha, String lugar) {
+    public EventoDeportivo(String nombre, LocalDate fecha, String lugar) {
         this.nombre = nombre;
         this.fecha = fecha;
         this.lugar = lugar;
@@ -24,11 +25,11 @@ public abstract class EventoDeportivo implements Ganador {
         this.nombre = nombre;
     }
 
-    public String getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
@@ -49,5 +50,7 @@ public abstract class EventoDeportivo implements Ganador {
     }
 
     public abstract ArrayList<Participante> obtenerGanador();
+
+    public abstract void mostrarGanador();
 
 }

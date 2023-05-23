@@ -12,8 +12,8 @@ public class Autor extends Persona {
         this.generoLiterario = generoLiterario;
     }
 
-    public GeneroLiterario getGeneroLiterario() {
-        return generoLiterario;
+    public String getGeneroLiterario() {
+        return generoLiterario.getNombre();
     }
 
     public void setGeneroLiterario(GeneroLiterario generoLiterario) {
@@ -22,7 +22,7 @@ public class Autor extends Persona {
 
     @Override
     public String toString() {
-        return "Autor [generoLiterario=" + generoLiterario + ", " + super.toString() + "]";
+        return "Autor [generoLiterario=" + generoLiterario.getNombre() + ", " + super.toString() + "]";
     }
 }
 

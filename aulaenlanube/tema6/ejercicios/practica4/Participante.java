@@ -2,17 +2,24 @@ package aulaenlanube.tema6.ejercicios.practica4;
 
 public class Participante {
 
-    private String nombre;
-    private String apellido;
+    protected String nombre;
+    protected String apellido;
+    protected int edad;
 
-    public Participante(String nombre, String apellido) throws ParticipanteNoValidoException {
+    public Participante(String nombre, String apellido, int edad) throws Exception {
+
         if (nombre == null || nombre.length() == 0)
-            throw new ParticipanteNoValidoException(ParticipanteNoValidoException.NOMBRE_NO_VALIDO);
+            throw new ParticipanteNombreNoValidoException();
+
         if (apellido == null || apellido.length() == 0)
-            throw new ParticipanteNoValidoException(ParticipanteNoValidoException.APELLIDO_NO_VALIDO);
+            throw new ParticipanteApellidoNoValidoException();
+
+        if (edad < 14)
+            throw new ParticipanteEdadNoValidaException();
 
         this.nombre = nombre;
         this.apellido = apellido;
+        this.edad = edad;
     }
 
     public String getNombre() {
@@ -31,9 +38,17 @@ public class Participante {
         this.apellido = apellido;
     }
 
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
     @Override
     public String toString() {
-        return "Participante [nombre=" + nombre + "]";
+        return "[nombre=" + nombre + "]";
     }
 
 }
