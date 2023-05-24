@@ -1,6 +1,6 @@
 package aulaenlanube.tema7.ejercicios.practica1;
 
-public class AppEquipos {
+public class Practica1Main {
 
     public static void main(String[] args) {
 
