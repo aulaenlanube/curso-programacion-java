@@ -61,9 +61,7 @@ public class Futbolista implements Deportista {
 
     @Override
     public String toString() {
-        return "Futbolista " + nombre + " con edad " + edad + " que ocupa la posición " + posicion.getNombrePosicion()
-                + ". Su rango salarial estará entre " + posicion.getSalarioMinimo() + " y "
-                + posicion.getSalarioMaximo();
+        return "Futbolista " + nombre + " con edad " + edad + " que ocupa la posición " + posicion.getNombrePosicion();
     }
 
     // Métodos abstractos

@@ -3,6 +3,7 @@ package aulaenlanube.tema7.ejercicios.practica2;
 import java.util.*;
 
 public class AnalizadorTextos {
+    
     private String texto;
     private Map<String, Integer> palabras;
 
@@ -38,8 +39,10 @@ public class AnalizadorTextos {
             if (!longitudPalabras.containsKey(longitud)) {
                 longitudPalabras.put(longitud, new ArrayList<>());
             }
-            longitudPalabras.get(longitud).add(palabra);
-            Collections.sort(longitudPalabras.get(longitud));
+            longitudPalabras.get(longitud).add(palabra);           
+        }
+        for (Map.Entry<Integer,List<String>> longitudActual : longitudPalabras.entrySet()) {
+            Collections.sort(longitudActual.getValue());            
         }
         return longitudPalabras;
     }
