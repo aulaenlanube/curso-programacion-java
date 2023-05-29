@@ -9,12 +9,15 @@ public class EjemploWriteUTF {
     public static void main(String[] args) {
 
         String fichero = "datos.dat";
-        char letra1 = '\u0000';
-        char letra2 = '\u0800';
-        char letra3 = '\u0800';
-        String datos1 = "aa" + letra1;
-        String datos2 = "aa" + letra2;
-        String datos3 = "aa" + letra3;
+
+        String datos1 = "a\u0056";
+        System.out.println(datos1);
+
+        String datos2 = "a\u0159";
+        System.out.println(datos2);
+        
+        String datos3 = "a\u1000";
+        System.out.println(datos3);
 
         try {
             DataOutputStream out = new DataOutputStream(new FileOutputStream(fichero));

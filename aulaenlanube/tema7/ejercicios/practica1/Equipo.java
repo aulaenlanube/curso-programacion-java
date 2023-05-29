@@ -52,22 +52,16 @@ public class Equipo {
 
         //ordenamos jugadores del equipo por posición
         futbolistas.sort(new Comparator<Futbolista>() {
-
             @Override
             public int compare(Futbolista o1, Futbolista o2) {
                 return Integer.compare(prioridadPosicion(o1.getPosicion()), prioridadPosicion(o2.getPosicion()));
             }
-
             public int prioridadPosicion(Posicion posicion) {
                 switch (posicion) {
-                    case PORTERO:
-                        return 1;
-                    case DEFENSA:
-                        return 2;
-                    case CENTROCAMPISTA:
-                        return 3;
-                    case DELANTERO:
-                        return 4;
+                    case PORTERO:         return 1;
+                    case DEFENSA:         return 2;
+                    case CENTROCAMPISTA:  return 3;
+                    case DELANTERO:       return 4;
                 }
                 return 0;
             }

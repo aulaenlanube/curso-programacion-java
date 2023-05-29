@@ -11,21 +11,27 @@ public class EjemploBinarios {
     public static void main(String[] args) {
 
         String fichero = "ejemplo.dat";
-        String nombre = "PRG";
-        int conv = 1;
-        double nota = 7.8;
+        boolean aprobado = false;
+        String nombreAlumno = "Pepe";
+        int conv = Integer.MAX_VALUE;
+        float nota = 7.8f;
+       
         
         try {
+            //escribimos datos en el fichero binario
             DataOutputStream out = new DataOutputStream(new FileOutputStream(fichero));
-            out.writeUTF(nombre);
+            out.writeBoolean(aprobado);
+            out.writeUTF(nombreAlumno);
             out.writeInt(conv);
-            out.writeDouble(nota);
+            out.writeFloat(nota);
             out.close();
 
+            //leemos datos del fichero binario
             DataInputStream in = new DataInputStream(new FileInputStream(fichero));
-            System.out.println("Valor leído de nombre: " + in.readUTF());
+            System.out.println("Valor leído de aprobado: " + in.readBoolean());
+            System.out.println("Valor leído de nombreAlumno: " + in.readUTF());
             System.out.println("Valor leído de convocatoria: " + in.readInt());
-            System.out.println("Valor leído de nota: " + in.readDouble());
+            System.out.println("Valor leído de nota: " + in.readFloat());
             in.close();
             out.close();
 
