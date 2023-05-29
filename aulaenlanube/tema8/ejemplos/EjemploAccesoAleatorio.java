@@ -14,7 +14,7 @@ public class EjemploAccesoAleatorio {
                 raf.writeInt(i);
             }
 
-            raf.seek(5);
+            raf.seek(19);
             //1-4:   (num=0) 00000000 00000000 00000000 00000000
             //5-8:   (num=1) 00000000 00000000 00000000 00000001
             //9-12:  (num=2) 00000000 00000000 00000000 00000010
@@ -27,7 +27,7 @@ public class EjemploAccesoAleatorio {
             //37-40: (num=9) 00000000 00000000 00000000 00001001
             
             int sexto = raf.readInt(); //19: 00000100 00000000 00000000 00000000
-            System.out.println("El sexto entero es: " + sexto);
+            System.out.println("El entero es: " + sexto);
 
             raf.close();
 
