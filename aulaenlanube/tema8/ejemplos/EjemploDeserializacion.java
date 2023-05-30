@@ -11,13 +11,12 @@ public class EjemploDeserializacion {
 
         try {
 
-            Grupo dam = null;
             FileInputStream fis = new FileInputStream("archivo.dat");
             ObjectInputStream in = new ObjectInputStream(fis);
 
-            dam = (Grupo) in.readObject();
-            dam.mostrarAlumnos();
-            System.out.println(dam.getNombre());
+            System.out.println((Grupo)in.readObject());
+            System.out.println("El entero es: "+(int)in.readInt());
+            System.out.println((Alumno)in.readObject());
 
             in.close();
 

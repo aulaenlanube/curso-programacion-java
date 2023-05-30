@@ -21,13 +21,22 @@ public class Grupo implements Serializable {
         return alumnos;
     }
 
-    public void agregarAlumno(Alumno a){
+    public void agregarAlumno(Alumno a) {
         alumnos.add(a);
     }
 
     public void mostrarAlumnos() {
         for (Alumno a : alumnos) {
-            System.out.println(a);            
+            System.out.println(a);
         }
+    }
+
+    @Override
+    public String toString() {
+        String s = "El nombre del Grupo es: " + getNombre() + "\n";
+        for (Alumno alumno : alumnos) {
+            s += alumno.toString() + "\n";
+        }
+        return s;
     }
 }
