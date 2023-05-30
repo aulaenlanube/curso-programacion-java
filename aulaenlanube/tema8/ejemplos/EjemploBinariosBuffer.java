@@ -30,7 +30,6 @@ public class EjemploBinariosBuffer {
             System.out.println("Valor leído de convocatoria: " + in.readInt());
             System.out.println("Valor leído de nota: " + in.readDouble());
             in.close();
-            out.close();
 
         } catch (IOException e) {
             System.out.println("ERROR");

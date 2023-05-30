@@ -1,14 +1,13 @@
 package aulaenlanube.tema8.ejemplos;
-import java.io.DataOutputStream;
-import java.io.File;
+
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class EjemplosFicherosBinarios {
+public class EjemploBinarios2 {
 
     public static void main(String[] args) throws IOException {
+
         String fileName = "archivoBinario.dat";
         int[] nums = { 1, 2, 3, 4, 5 };
 
@@ -36,16 +35,5 @@ public class EjemplosFicherosBinarios {
         } catch (IOException e) {
             System.err.println("Error al leer desde el archivo: " + e.getMessage());
         }
-
-File fichero = new File("fichero.dat");
-try {
-    DataOutputStream out = new DataOutputStream(new FileOutputStream(fichero));
-    out.writeUTF("abc");
-    out.close();
-} catch (FileNotFoundException e) {
-    e.printStackTrace();
-}
-
     }
-
 }

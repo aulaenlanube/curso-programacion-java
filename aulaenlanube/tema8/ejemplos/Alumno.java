@@ -29,7 +29,5 @@ public class Alumno implements Serializable {
     @Override
     public String toString() {
         return "Alumno [nombre=" + nombre + ", nia=" + nia + ", edad=" + edad + "]";
-    }
-    
-    
+    }   
 }
