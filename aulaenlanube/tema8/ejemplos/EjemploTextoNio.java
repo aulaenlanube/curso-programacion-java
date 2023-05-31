@@ -10,6 +10,7 @@ import java.util.List;
 
 public class EjemploTextoNio {
     public static void main(String[] args) {
+        
         try {
 
             List<String> lineasEscritas = Arrays.asList("Hola", "Mundo", "Desde", "Java", "NIO");

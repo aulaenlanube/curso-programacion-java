@@ -6,6 +6,7 @@ import java.io.*;
 
 public class EjemploBinariosNio {
     public static void main(String[] args) {
+        
         try {
 
             //ESCRITURA UTILIZANDO UN CANAL

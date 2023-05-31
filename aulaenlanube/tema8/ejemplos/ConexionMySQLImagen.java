@@ -34,16 +34,17 @@ public class ConexionMySQLImagen {
 
             // insertamos contacto
             String queryInsert = "INSERT INTO contacto(nombre, correo, telf, imagen) VALUES (?,?,?,?)";
-            PreparedStatement queryFinal = conex.prepareStatement(queryInsert);
-            queryFinal.setString(1, NOMBRE);
-            queryFinal.setString(2, CORREO);
-            queryFinal.setInt(3, TELF);
-            queryFinal.setBytes(4, DATOS_IMAGEN);
-            queryFinal.executeUpdate();
+            PreparedStatement queryFinalInsert = conex.prepareStatement(queryInsert);
+            queryFinalInsert.setString(1, NOMBRE);
+            queryFinalInsert.setString(2, CORREO);
+            queryFinalInsert.setInt(3, TELF);
+            queryFinalInsert.setBytes(4, DATOS_IMAGEN);
+            queryFinalInsert.executeUpdate();
 
             // consultamos contactos
             String querySelect = "SELECT nombre, correo, telf FROM contacto";
-            ResultSet resultado = conex.createStatement().executeQuery(querySelect);
+            PreparedStatement queryFinalSelect = conex.prepareStatement(querySelect);
+            ResultSet resultado = queryFinalSelect.executeQuery();
 
             // recorremos los datos obtenidos
             while (resultado.next()) {
@@ -53,6 +54,7 @@ public class ConexionMySQLImagen {
                 datosContactoActual += "TELF: " + resultado.getInt("telf") + "\n";
                 Bordes.mostrarTextoConBordes(datosContactoActual);
             }
+            
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (IOException e) {
