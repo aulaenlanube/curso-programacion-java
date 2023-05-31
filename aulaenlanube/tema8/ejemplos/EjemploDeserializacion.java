@@ -1,7 +1,6 @@
 package aulaenlanube.tema8.ejemplos;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
@@ -20,11 +19,8 @@ public class EjemploDeserializacion {
 
             in.close();
 
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        } 
     }
 }
