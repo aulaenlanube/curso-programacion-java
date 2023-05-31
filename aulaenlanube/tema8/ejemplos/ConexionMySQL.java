@@ -7,12 +7,12 @@ import java.sql.SQLException;
 
 public class ConexionMySQL {
 
-    //Datos conexión con la BD
+    // Datos conexión con la BD
     public static final String USER = "root";
     public static final String PWD = "";
     public static final String URL = "jdbc:MySQL://localhost/agenda";
 
-    //Datos del contacto a insertar
+    // Datos del contacto a insertar
     public static final String NOMBRE = "Pepe";
     public static final String CORREO = "Pepe@pepe.com";
     public static final int TELF = 123456789;
@@ -21,11 +21,11 @@ public class ConexionMySQL {
 
         try {
 
-            //realizamos connexión
-            Connection conex = DriverManager.getConnection(URL, USER, PWD);        
+            // realizamos connexión
+            Connection conex = DriverManager.getConnection(URL, USER, PWD);
 
             // insertamos contacto
-            String queryInsert = "INSERT INTO contacto(nombre, correo) VALUES ('"+NOMBRE+"', '"+CORREO+"')";
+            String queryInsert = "INSERT INTO contacto(nombre, correo) VALUES ('" + NOMBRE + "', '" + CORREO + "')";
             conex.createStatement().executeUpdate(queryInsert);
 
             // consultamos contactos
@@ -40,9 +40,8 @@ public class ConexionMySQL {
                 System.out.println("CORREO: " + correo);
             }
 
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println(e);
-        }       
+        }
     }
 }

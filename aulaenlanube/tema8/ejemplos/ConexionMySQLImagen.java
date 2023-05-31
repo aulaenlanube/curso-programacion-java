@@ -54,10 +54,8 @@ public class ConexionMySQLImagen {
                 datosContactoActual += "TELF: " + resultado.getInt("telf") + "\n";
                 Bordes.mostrarTextoConBordes(datosContactoActual);
             }
-            
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+
+        } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
     }
