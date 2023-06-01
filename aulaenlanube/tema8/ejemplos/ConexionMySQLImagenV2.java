@@ -15,6 +15,7 @@ import java.sql.SQLException;
 import java.util.Random;
 
 import aulaenlanube.tema4.bordes.Bordes;
+import aulaenlanube.tema4.generadores.GeneredorNombres;;
 
 public class ConexionMySQLImagenV2 {
 
@@ -137,7 +138,7 @@ public class ConexionMySQLImagenV2 {
     
             for (File archivo : archivos) {
                 if (archivo.isFile()) {
-                    String nombre = generarNombre();
+                    String nombre = GeneredorNombres.generarConApellido();
                     String correo = nombre.replaceAll(" ", "_").toLowerCase() +"@aulaenlanube.com";
                     String imagen = archivo.getPath();
                     int telefono = new Random().nextInt(600000000,700000000);
@@ -150,21 +151,4 @@ public class ConexionMySQLImagenV2 {
 
     }
 
-
-    public static String generarNombre() {
-
-        // Listas de nombres y apellidos
-        String[] nombres = {"Carlos", "María", "Juan", "Ana", "Luis", "Carmen", "José", "Isabel", "Francisco", "Pilar"};
-        String[] apellidos = {"García", "Rodríguez", "Martínez", "López", "Fernández", "Sánchez", "Pérez", "González", "Hernández", "Ruiz"};
-
-        // Crea un objeto Random
-        Random random = new Random();
-
-        // Selecciona aleatoriamente un nombre y un apellido
-        String nombre = nombres[random.nextInt(nombres.length)];
-        String apellido = apellidos[random.nextInt(apellidos.length)];
-
-        // Devuelve el nombre y apellido seleccionados
-        return nombre + " " + apellido;
-    }
 }

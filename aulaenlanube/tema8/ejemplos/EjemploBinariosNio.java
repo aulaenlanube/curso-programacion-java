@@ -39,7 +39,18 @@ public class EjemploBinariosNio {
             // Lee del archivo en el buffer
             canal.read(buffer);
             // Prepara el buffer para la lectura
-            buffer.flip();
+            buffer.position(1);
+
+            //buffer
+            // bytes 1-4(int=0):   00000000 00000000 00000000 00000000 
+            // bytes 5-8(int=1):   00000000 00000000 00000000 00000001 
+            // bytes 9-12(int=2):  00000000 00000000 00000000 00000010 
+            // bytes 13-16(int=3): 00000000 00000000 00000000 00000011 
+
+            //(0)   --> 00000000 00000000 00000000 00000000
+            //(256) --> 00000000 00000000 00000001 00000000
+            //(512) --> 00000000 00000000 00000010 00000000
+            //error --> 00000000 00000000 00000011 --------
 
             // Lee los enteros del buffer
             while (buffer.hasRemaining()) {
