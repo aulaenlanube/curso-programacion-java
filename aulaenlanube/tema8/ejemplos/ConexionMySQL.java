@@ -15,7 +15,6 @@ public class ConexionMySQL {
     // Datos del contacto a insertar
     public static final String NOMBRE = "Pepe";
     public static final String CORREO = "Pepe@pepe.com";
-    public static final int TELF = 123456789;
 
     public static void main(String[] args) {
 

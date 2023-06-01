@@ -32,17 +32,23 @@ public class ConexionMySQLImagen {
             // imagen
             final byte[] DATOS_IMAGEN = Files.readAllBytes(Paths.get(RUTA_IMAGEN));
 
-            // insertamos contacto
-            String queryInsert = "INSERT INTO contacto(nombre, correo, telf, imagen) VALUES (?,?,?,?)";
+            // preparamos el insert
+            String queryInsert = "INSERT INTO contacto(nombre, correo, telefono, imagen, binarioImagen) VALUES (?,?,?,?,?)";
             PreparedStatement queryFinalInsert = conex.prepareStatement(queryInsert);
             queryFinalInsert.setString(1, NOMBRE);
             queryFinalInsert.setString(2, CORREO);
             queryFinalInsert.setInt(3, TELF);
-            queryFinalInsert.setBytes(4, DATOS_IMAGEN);
-            queryFinalInsert.executeUpdate();
+            queryFinalInsert.setString(4, RUTA_IMAGEN);
+            queryFinalInsert.setBytes(5, DATOS_IMAGEN);
+
+            // ejecutamos el insert
+            if (queryFinalInsert.executeUpdate() > 0) {
+                System.out.println("Contacto insertado correctamente");
+            } else
+                System.out.println("Error al insertar el contacto");
 
             // consultamos contactos
-            String querySelect = "SELECT nombre, correo, telf FROM contacto";
+            String querySelect = "SELECT nombre, correo, telefono FROM contacto";
             PreparedStatement queryFinalSelect = conex.prepareStatement(querySelect);
             ResultSet resultado = queryFinalSelect.executeQuery();
 
@@ -51,7 +57,7 @@ public class ConexionMySQLImagen {
                 String datosContactoActual = "";
                 datosContactoActual += "NOMBRE: " + resultado.getString("nombre") + "\n";
                 datosContactoActual += "CORREO: " + resultado.getString("correo") + "\n";
-                datosContactoActual += "TELF: " + resultado.getInt("telf") + "\n";
+                datosContactoActual += "TELF: " + resultado.getInt("telefono") + "\n";
                 Bordes.mostrarTextoConBordes(datosContactoActual);
             }
 
