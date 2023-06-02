@@ -1,4 +1,4 @@
-package aulaenlanube.tema8.ejemplos;
+package aulaenlanube.tema8.ejemplos.mysql;
 
 import java.awt.*;
 import java.io.File;
@@ -15,9 +15,10 @@ import java.sql.SQLException;
 import java.util.Random;
 
 import aulaenlanube.tema4.bordes.Bordes;
-import aulaenlanube.tema4.generadores.GeneredorNombres;;
+import aulaenlanube.tema4.generadores.GeneredorNombres;
+import aulaenlanube.tema8.ejemplos.ficheros.Contacto;;
 
-public class ConexionMySQLImagenV2 {
+public class EjemploMySQL_Imagen2 {
 
     // Datos conexión con la BD
     public static final String USER = "root";

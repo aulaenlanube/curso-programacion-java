@@ -1,4 +1,4 @@
-package aulaenlanube.tema8.ejemplos;
+package aulaenlanube.tema8.ejemplos.ficheros;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;

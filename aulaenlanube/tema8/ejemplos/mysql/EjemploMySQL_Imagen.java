@@ -1,4 +1,4 @@
-package aulaenlanube.tema8.ejemplos;
+package aulaenlanube.tema8.ejemplos.mysql;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import aulaenlanube.tema4.bordes.Bordes;
 
-public class ConexionMySQLImagen {
+public class EjemploMySQL_Imagen {
 
     // Datos conexión con la BD
     public static final String USER = "root";

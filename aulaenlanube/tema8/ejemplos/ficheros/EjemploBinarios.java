@@ -1,4 +1,4 @@
-package aulaenlanube.tema8.ejemplos;
+package aulaenlanube.tema8.ejemplos.ficheros;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

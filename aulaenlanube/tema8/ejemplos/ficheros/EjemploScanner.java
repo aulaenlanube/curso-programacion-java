@@ -1,4 +1,4 @@
-package aulaenlanube.tema8.ejemplos;
+package aulaenlanube.tema8.ejemplos.ficheros;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;

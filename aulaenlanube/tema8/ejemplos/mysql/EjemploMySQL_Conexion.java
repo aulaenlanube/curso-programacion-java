@@ -1,10 +1,10 @@
-package aulaenlanube.tema8.ejemplos;
+package aulaenlanube.tema8.ejemplos.mysql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class ConexionMySQL {
+public class EjemploMySQL_Conexion {
 
     // Datos conexión con la BD
     public static final String USER = "root";
