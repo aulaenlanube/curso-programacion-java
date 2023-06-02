@@ -12,7 +12,7 @@ public class EjemploMySQL_Select {
         try {
 
             // realizamos conexión
-            Connection conex = ConexionBD.conectar();              
+            Connection conex = ConexionBD.conectar("agenda");              
 
             // preparamos consulta y la ejecutamos
             String query = "SELECT nombre, correo FROM contacto";

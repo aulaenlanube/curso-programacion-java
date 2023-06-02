@@ -4,48 +4,42 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import aulaenlanube.tema4.bordes.Bordes;
+import aulaenlanube.tema4.generadores.GeneredorNombres;
 
 public class EjemploMySQL_Imagen {
-
-    // Datos conexión con la BD
-    public static final String USER = "root";
-    public static final String PWD = "";
-    public static final String URL = "jdbc:MySQL://localhost/agenda";
-
-    // Datos del contacto a insertar
-    public static final String NOMBRE = "Pepe";
-    public static final String CORREO = "Pepe@pepe.com";
-    public static final int TELF = 123456789;
-    public static final String RUTA_IMAGEN = "aulaenlanube/tema8/imagenes/default.jpg";
 
     public static void main(String[] args) {
 
         try {
 
-            Connection conex = DriverManager.getConnection(URL, USER, PWD);
+            // Datos del contacto a insertar
+            String nombre = GeneredorNombres.generarConApellido();
+            String correo = nombre.replaceAll(" ", "_").toLowerCase() + "@aulaenlanube.com";
+            int telefono = 123456789;
+            String rutaImagen = "aulaenlanube/tema8/imagenes/default.jpg";
+
+            // realizamos conexión
+            Connection conex = ConexionBD.conectar("agenda");
 
             // imagen
-            final byte[] DATOS_IMAGEN = Files.readAllBytes(Paths.get(RUTA_IMAGEN));
+            final byte[] binarioImagen = Files.readAllBytes(Paths.get(rutaImagen));
 
             // preparamos el insert
             String queryInsert = "INSERT INTO contacto(nombre, correo, telefono, imagen, binarioImagen) VALUES (?,?,?,?,?)";
             PreparedStatement queryFinalInsert = conex.prepareStatement(queryInsert);
-            queryFinalInsert.setString(1, NOMBRE);
-            queryFinalInsert.setString(2, CORREO);
-            queryFinalInsert.setInt(3, TELF);
-            queryFinalInsert.setString(4, RUTA_IMAGEN);
-            queryFinalInsert.setBytes(5, DATOS_IMAGEN);
+            queryFinalInsert.setString(1, nombre);
+            queryFinalInsert.setString(2, correo);
+            queryFinalInsert.setInt(3, telefono);
+            queryFinalInsert.setString(4, rutaImagen);
+            queryFinalInsert.setBytes(5, binarioImagen);
 
             // ejecutamos el insert
-            if (queryFinalInsert.executeUpdate() > 0) {
-                System.out.println("Contacto insertado correctamente");
-            } else
-                System.out.println("Error al insertar el contacto");
+            if (queryFinalInsert.executeUpdate() == 1)
+                System.out.println("El Contacto de nombre '" + nombre + "' se ha insertado correctamente");
 
             // consultamos contactos
             String querySelect = "SELECT nombre, correo, telefono FROM contacto";

@@ -16,7 +16,7 @@ public class EjemploMySQL_Insert {
             String correo = nombre.replaceAll(" ", "_").toLowerCase() + "@aulaenlanube.com";
 
             // realizamos conexión
-            Connection conex = ConexionBD.conectar();
+            Connection conex = ConexionBD.conectar("agenda");
 
             // insertamos contacto
             String query = "INSERT INTO contacto(nombre, correo) VALUES ('" + nombre + "', '" + correo + "')";
