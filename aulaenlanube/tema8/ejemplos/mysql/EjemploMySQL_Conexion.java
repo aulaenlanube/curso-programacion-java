@@ -21,7 +21,6 @@ public class EjemploMySQL_Conexion {
             System.out.println("Se ha conectado correctamente");
             conex.close();
 
-
         } catch (SQLException e) {
             System.out.println(e);
         }

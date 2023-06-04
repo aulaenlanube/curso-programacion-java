@@ -1,4 +1,6 @@
-package aulaenlanube.tema8.ejemplos.ficheros;
+package aulaenlanube.tema8.ejemplos.mysql;
+
+import aulaenlanube.tema4.bordes.Bordes;
 
 public class Contacto {
 
@@ -13,24 +15,35 @@ public class Contacto {
         this.imagen = imagen;
         this.telefono = telefono;
     }
-    
+
     public String getNombre() {
         return nombre;
     }
+
     public String getCorreo() {
         return correo;
     }
+
     public String getImagen() {
         return imagen;
     }
+
     public int getTelefono() {
         return telefono;
     }
-    
+
     @Override
     public String toString() {
         return "[nombre=" + nombre + ", correo=" + correo + ", imagen=" + imagen + ", telefono=" + telefono
                 + "]";
     }
-    
+
+    public void mostrarDatos() {
+        String datosContactoActual = "";
+        datosContactoActual += "Nombre: " + nombre + "\n";
+        datosContactoActual += "Correo: " + correo + "\n";
+        datosContactoActual += "Teléfono: " + telefono + "\n";
+        datosContactoActual += "Imagen: " + imagen + "\n";
+        Bordes.mostrarTextoConBordes(datosContactoActual);
+    }
 }

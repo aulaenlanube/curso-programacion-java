@@ -8,32 +8,26 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.Blob;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Random;
-
-import aulaenlanube.tema4.bordes.Bordes;
 import aulaenlanube.tema4.generadores.GeneredorNombres;
-import aulaenlanube.tema8.ejemplos.ficheros.Contacto;;
 
 public class EjemploMySQL_Imagen2 {
-
-    // Datos conexión con la BD
-    public static final String USER = "root";
-    public static final String PWD = "";
-    public static final String URL = "jdbc:MySQL://localhost/agenda";
 
     public static void main(String[] args) {
 
         try {
 
-            Connection conex = DriverManager.getConnection(URL, USER, PWD);
-            cargarContactosDesdeCarpeta(conex, "aulaenlanube/tema8/imagenes/imgs");
-            //insertarContactoBD(conex,new Contacto("Tom", "tom@tom.com ", "aulaenlanube/tema8/imagenes/default.jpg", 651454545));
-            //mostrarDatosContactosBD(conex);
-            //descargarImagenesContactosBD(conex);
+            // realizamos conexión
+            Connection conex = ConexionBD.conectar("agenda2");
+
+            // cargarContactosDesdeCarpeta(conex, "aulaenlanube/tema8/imagenes/imgs");
+            // insertarContactoBD(conex,new Contacto("Tom", "tom@tom.com ",
+            // "aulaenlanube/tema8/imagenes/default.jpg", 651454545));
+            mostrarDatosContactosBD(conex);
+            // descargarImagenesContactosBD(conex);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -77,13 +71,15 @@ public class EjemploMySQL_Imagen2 {
             // recorremos los datos obtenidos
             while (contactos.next()) {
 
+                // creamos un contacto con los datos de la fila actual
                 Contacto contacto = new Contacto(
                         contactos.getString("nombre"),
                         contactos.getString("correo"),
                         contactos.getString("imagen"),
                         contactos.getInt("telefono"));
 
-                Bordes.mostrarTextoConBordes(contacto.toString());
+                // mostramos datos del contacto
+                contacto.mostrarDatos();
             }
 
         } catch (SQLException e) {
@@ -123,32 +119,31 @@ public class EjemploMySQL_Imagen2 {
         try {
             if (Desktop.isDesktopSupported()) {
                 Desktop.getDesktop().open(new File(contacto.getImagen()));
-            }
-            else throw new Exception();
+            } else
+                throw new Exception();
         } catch (Exception e) {
             System.out.println("ERROR: no se ha podido leer la imagen del contacto");
-        }//No hace falta dar tantos datos
+        } // No hace falta dar tantos datos
     }
-
 
     public static void cargarContactosDesdeCarpeta(Connection conex, String rutaCarpeta) {
 
         File carpeta = new File(rutaCarpeta);
         if (carpeta.isDirectory()) {
             File[] archivos = carpeta.listFiles();
-    
+
             for (File archivo : archivos) {
                 if (archivo.isFile()) {
                     String nombre = GeneredorNombres.generarConApellido();
-                    String correo = nombre.replaceAll(" ", "_").toLowerCase() +"@aulaenlanube.com";
+                    String correo = nombre.replaceAll(" ", "_").toLowerCase() + "@aulaenlanube.com";
                     String imagen = archivo.getPath();
-                    int telefono = new Random().nextInt(600000000,700000000);
+                    int telefono = new Random().nextInt(600000000, 700000000);
                     Contacto contacto = new Contacto(nombre, correo, imagen, telefono);
-                    insertarContactoBD(conex, contacto);                    
+                    insertarContactoBD(conex, contacto);
                 }
             }
-        } 
-        else System.out.println("La ruta proporcinada no es una carpeta válida");
+        } else
+            System.out.println("La ruta proporcinada no es una carpeta válida");
 
     }
 

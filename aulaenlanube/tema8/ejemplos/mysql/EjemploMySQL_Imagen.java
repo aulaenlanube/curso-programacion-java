@@ -23,7 +23,7 @@ public class EjemploMySQL_Imagen {
             String rutaImagen = "aulaenlanube/tema8/imagenes/default.jpg";
 
             // realizamos conexión
-            Connection conex = ConexionBD.conectar("agenda");
+            Connection conex = ConexionBD.conectar("agenda2");
 
             // imagen
             final byte[] binarioImagen = Files.readAllBytes(Paths.get(rutaImagen));
@@ -49,9 +49,10 @@ public class EjemploMySQL_Imagen {
             // recorremos los datos obtenidos
             while (resultado.next()) {
                 String datosContactoActual = "";
-                datosContactoActual += "NOMBRE: " + resultado.getString("nombre") + "\n";
-                datosContactoActual += "CORREO: " + resultado.getString("correo") + "\n";
-                datosContactoActual += "TELF: " + resultado.getInt("telefono") + "\n";
+                datosContactoActual += "Nombre: " + resultado.getString("nombre") + "\n";
+                datosContactoActual += "Correo: " + resultado.getString("correo") + "\n";
+                datosContactoActual += "Teléfono: " + resultado.getInt("telefono") + "\n";
+                datosContactoActual += "Imagen: " + resultado.getInt("imagen") + "\n";
                 Bordes.mostrarTextoConBordes(datosContactoActual);
             }
 
