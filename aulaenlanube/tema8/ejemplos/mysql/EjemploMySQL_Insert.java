@@ -1,6 +1,7 @@
 package aulaenlanube.tema8.ejemplos.mysql;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 import aulaenlanube.tema4.generadores.GeneredorNombres;
@@ -19,8 +20,11 @@ public class EjemploMySQL_Insert {
             Connection conex = ConexionBD.conectar("agenda");
 
             // insertamos contacto
-            String query = "INSERT INTO contacto(nombre, correo) VALUES ('" + nombre + "', '" + correo + "')";
-            int resultado = conex.prepareStatement(query).executeUpdate();
+            String query = "INSERT INTO contacto(nombre, correo) VALUES (?,?)";
+            PreparedStatement queryInsert = conex.prepareStatement(query);
+            queryInsert.setString(1, nombre);
+            queryInsert.setString(2, correo);
+            int resultado = queryInsert.executeUpdate();
 
             // analizamos el resultado del insert
             if (resultado == 1)
