@@ -7,7 +7,6 @@ import java.sql.SQLException;
 public class EjemploMySQL_Delete {
 
     public static void main(String[] args) {
-
         
             try {
     
@@ -15,9 +14,9 @@ public class EjemploMySQL_Delete {
                 Connection conex = ConexionBD.conectar("agenda");
     
                 // insertamos contacto
-                String query = "DELETE FROM contacto WHERE nombre = ?";
+                String query = "DELETE FROM contacto WHERE edad = ?";
                 PreparedStatement queryDelete = conex.prepareStatement(query);
-                queryDelete.setString(1, "pepe2");
+                queryDelete.setInt(1, 18);
                 int resultado = queryDelete.executeUpdate();
     
                 // analizamos el resultado del insert

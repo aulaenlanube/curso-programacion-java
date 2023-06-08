@@ -7,16 +7,17 @@ import java.sql.SQLException;
 public class EjemploMySQL_Update {
 
     public static void main(String[] args) {
+
         try {
 
             // realizamos conexión
             Connection conex = ConexionBD.conectar("agenda");
 
             // insertamos contacto
-            String query = "UPDATE contacto SET nombre = ? WHERE nombre = ?";
+            String query = "UPDATE contacto SET edad = ? WHERE edad = ?";
             PreparedStatement queryUpdate = conex.prepareStatement(query);
-            queryUpdate.setString(1, "pepe");
-            queryUpdate.setString(2, "pepe2");
+            queryUpdate.setInt(1, 30);
+            queryUpdate.setInt(2, 24);
             int resultado = queryUpdate.executeUpdate();
 
             // analizamos el resultado del insert
