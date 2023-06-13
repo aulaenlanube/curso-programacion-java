@@ -48,12 +48,6 @@ public class Contacto {
         this.telefono = telefono;
     }
 
-    @Override
-    public String toString() {
-        return "[nombre=" + nombre + ", correo=" + correo + ", imagen=" + imagen + ", telefono=" + telefono
-                + "]";
-    }
-
     public void mostrarDatos() {
         String datosContactoActual = "";
         datosContactoActual += "Nombre: " + nombre + "\n";
