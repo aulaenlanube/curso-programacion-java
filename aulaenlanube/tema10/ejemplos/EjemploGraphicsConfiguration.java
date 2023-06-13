@@ -1,3 +1,4 @@
+package aulaenlanube.tema10.ejemplos;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

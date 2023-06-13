@@ -32,6 +32,22 @@ public class Contacto {
         return telefono;
     }
 
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public void setImagen(String imagen) {
+        this.imagen = imagen;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
     @Override
     public String toString() {
         return "[nombre=" + nombre + ", correo=" + correo + ", imagen=" + imagen + ", telefono=" + telefono
@@ -46,4 +62,6 @@ public class Contacto {
         datosContactoActual += "Imagen: " + imagen + "\n";
         Bordes.mostrarTextoConBordes(datosContactoActual);
     }
+
+
 }
