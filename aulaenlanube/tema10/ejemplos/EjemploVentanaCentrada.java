@@ -1,3 +1,4 @@
+package aulaenlanube.tema10.ejemplos;
 import java.awt.Dimension;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
@@ -16,11 +17,11 @@ public class EjemploVentanaCentrada {
         
 
         //Resolución utilizando Toolkit
-        Toolkit toolkit = Toolkit.getDefaultToolkit();
-        int dpi = toolkit.getScreenResolution();
-        System.out.println("Resolución en dpi: " + dpi);
-        Dimension screenSize = toolkit.getScreenSize();
-        System.out.println("Resolución en pixels: " + screenSize.width + " x " + screenSize.height);
+        //Toolkit toolkit = Toolkit.getDefaultToolkit();
+        //int dpi = toolkit.getScreenResolution();
+        //System.out.println("Resolución en dpi: " + dpi);
+        //Dimension screenSize = toolkit.getScreenSize();
+        //System.out.println("Resolución en pixels: " + screenSize.width + " x " + screenSize.height);
   
 
         // Obtener la configuración de la pantalla
@@ -41,10 +42,8 @@ public class EjemploVentanaCentrada {
         System.out.println("Resolución desde GraphicsConfiguration: "+screenBounds.width+" x "+screenBounds.height);
         ventana.setSize(windowWidth, windowHeight);
         
-        // Centrar la ventana en la pantalla
-        int windowX = (screenBounds.width - windowWidth) / 2;
-        int windowY = (screenBounds.height - windowHeight) / 2;
-        ventana.setLocation(windowX, windowY);
+        // Centrar la ventana en la pantalla, por defecto se pone al centro
+       
 
 
         // Agregamos texto y lo centramos
