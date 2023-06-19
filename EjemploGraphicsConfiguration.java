@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 public class EjemploGraphicsConfiguration {
 
     public static void main(String[] args) {
+        
 
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice gd = ge.getDefaultScreenDevice();

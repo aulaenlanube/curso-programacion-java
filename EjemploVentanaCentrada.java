@@ -13,6 +13,7 @@ import java.awt.*;
 public class EjemploVentanaCentrada {
 
     public static void main(String[] args) {
+        
 
         //Resolución utilizando Toolkit
         Toolkit toolkit = Toolkit.getDefaultToolkit();

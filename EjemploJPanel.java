@@ -17,6 +17,7 @@ public class EjemploJPanel {
 
     public static void main(String[] args) {
 
+        
         // Obtener la configuración de la pantalla
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
         GraphicsDevice gd = ge.getDefaultScreenDevice();
