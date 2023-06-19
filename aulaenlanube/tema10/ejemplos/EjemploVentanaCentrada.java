@@ -1,14 +1,11 @@
 package aulaenlanube.tema10.ejemplos;
-import java.awt.Dimension;
+
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
-import java.awt.Toolkit;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-
 import java.awt.*;
 
 public class EjemploVentanaCentrada {
