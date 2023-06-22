@@ -16,7 +16,7 @@ public class EjerciciosBdWorld {
         try {
 
             Connection conex = ConexionBD.conectar("world");
-            mostrarCiudadesPais(conex, "SPN");
+            crearFicherosCiudadesPaises(conex);
 
         } catch (SQLException e) {
             System.out.println(e);
