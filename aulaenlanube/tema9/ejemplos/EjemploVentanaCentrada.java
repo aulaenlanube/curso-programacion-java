@@ -1,4 +1,4 @@
-package aulaenlanube.tema10.ejemplos;
+package aulaenlanube.tema9.ejemplos;
 
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;

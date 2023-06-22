@@ -1,4 +1,4 @@
-package aulaenlanube.tema10.ejemplos;
+package aulaenlanube.tema9.ejemplos;
 
 import java.awt.Component;
 import java.awt.GraphicsConfiguration;
