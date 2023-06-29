@@ -11,15 +11,6 @@ import java.awt.*;
 public class EjemploVentanaCentrada {
 
     public static void main(String[] args) {
-        
-
-        //Resolución utilizando Toolkit
-        //Toolkit toolkit = Toolkit.getDefaultToolkit();
-        //int dpi = toolkit.getScreenResolution();
-        //System.out.println("Resolución en dpi: " + dpi);
-        //Dimension screenSize = toolkit.getScreenSize();
-        //System.out.println("Resolución en pixels: " + screenSize.width + " x " + screenSize.height);
-  
 
         // Obtener la configuración de la pantalla
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -39,10 +30,6 @@ public class EjemploVentanaCentrada {
         System.out.println("Resolución desde GraphicsConfiguration: "+screenBounds.width+" x "+screenBounds.height);
         ventana.setSize(windowWidth, windowHeight);
         
-        // Centrar la ventana en la pantalla, por defecto se pone al centro
-       
-
-
         // Agregamos texto y lo centramos
         ventana.setLayout(new BorderLayout());
         JLabel label = new JLabel("Esto es un texto centrado", SwingConstants.CENTER);
@@ -52,7 +39,8 @@ public class EjemploVentanaCentrada {
         JButton boton = new JButton("Cerrar");
         ventana.add(boton, BorderLayout.PAGE_END);
         
-        ventana.setLocationRelativeTo(null);
+        // Centrar la ventana en la pantalla, por defecto se pone al centro
+       ventana.setLocationRelativeTo(null);
         
         // Mostrar la ventana
         ventana.setVisible(true);
