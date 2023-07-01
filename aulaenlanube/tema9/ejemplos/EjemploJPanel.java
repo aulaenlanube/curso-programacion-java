@@ -4,7 +4,6 @@ import java.awt.Component;
 import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
-import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Rectangle;
 
@@ -56,7 +55,7 @@ public class EjemploJPanel {
         panel.add(boton);
 
         // agregamos panel a la ventana
-        ventana.add(panel, new GridBagConstraints());
+        ventana.add(panel);
 
         //establece la ventana al centro de la pantalla
         ventana.setLocationRelativeTo(null);
