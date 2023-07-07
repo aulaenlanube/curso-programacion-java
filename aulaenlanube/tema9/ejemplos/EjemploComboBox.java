@@ -3,8 +3,6 @@ package aulaenlanube.tema9.ejemplos;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
-import java.awt.Font;
-
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -19,8 +17,7 @@ public class EjemploComboBox {
     public static void main(String[] args) {
         
         JFrame ventana = new JFrame("Ejemplo ComboBox");
-        ventana.setSize(800, 500);
-        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        ventana.setSize(800, 500);       
 
         // creamos un JComboBox
         String[] opciones = { "1DAM", "1DAW", "2DAM", "2DAW" };
@@ -48,11 +45,11 @@ public class EjemploComboBox {
             if (nombre.length() > 2) {
                 System.out.println(nombre + " se ha matriculado en el grupo " + comboBox.getSelectedItem());
                 label.setText(nombre + " se ha matriculado en el grupo " + comboBox.getSelectedItem());
-                ponerLetrasNegro(label);
+                label.setForeground(Color.BLACK);
             } else {
                 System.out.println("ERROR al matricular: El nombre debe tener como mínimo 3 letras");
                 label.setText("ERROR al matricular: El nombre debe tener como mínimo 3 letras");
-                ponerLetrasRojo(label);                
+                label.setForeground(Color.RED);              
             }
         });
 
@@ -72,30 +69,9 @@ public class EjemploComboBox {
         ventana.setLayout(new FlowLayout());
         ventana.add(panel, BorderLayout.CENTER);
 
-        //ventana.add(new JButton("South"), BorderLayout.SOUTH);
-        //ventana.add(new JButton("North"), BorderLayout.NORTH);
-        //ventana.add(new JButton("East"), BorderLayout.EAST);
-        //ventana.add(new JButton("West"), BorderLayout.WEST);
-        //ventana.add(new JButton("Center"), BorderLayout.CENTER);
-
-        //establece la ventana al centro de la pantalla
-        ventana.setLocationRelativeTo(null);
-
         // mostramos ventana
         ventana.setVisible(true);
+        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public static void ponerLetrasRojo(JLabel label) {
-
-        label.setFont(new Font("Arial", Font.BOLD, 16));
-        label.setForeground(Color.RED);
-
-    }
-
-    public static void ponerLetrasNegro(JLabel label) {
-
-        label.setFont(new Font("Arial", Font.BOLD, 16));
-        label.setForeground(Color.BLACK);
-        
-    }
 }

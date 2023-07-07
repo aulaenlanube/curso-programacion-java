@@ -4,13 +4,12 @@ import javax.swing.JFrame;
 
 public class EjemplosJFrame {
 
-    public static void main(String[] args) {
-        
+    public static void main(String[] args) {        
 
-        JFrame ventana = new JFrame("Ventana 1");
-        ventana.setVisible(true);
-        ventana.setSize(500, 200);
-        ventana.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JFrame ventana1 = new JFrame("Ventana 1");
+        ventana1.setVisible(true);
+        ventana1.setSize(500, 200);
+        ventana1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         JFrame ventana2 = new JFrame("Ventana 2");
         ventana2.setVisible(true);
