@@ -20,8 +20,8 @@ public class EjemploComboBox {
         ventana.setSize(800, 500);       
 
         // creamos un JComboBox
-        String[] opciones = { "1DAM", "1DAW", "2DAM", "2DAW" };
-        JComboBox<String> comboBox = new JComboBox<>(opciones);
+        Integer[] opciones = { 1,2,3};
+        JComboBox<Integer> comboBox = new JComboBox<>(opciones);
 
         // Crea un JTextField
         JTextField textField = new JTextField(10); // 10 es el ancho

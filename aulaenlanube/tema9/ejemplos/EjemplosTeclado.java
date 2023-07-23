@@ -2,7 +2,6 @@ package aulaenlanube.tema9.ejemplos;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
 import javax.swing.JFrame;
 
 public class EjemplosTeclado {
@@ -37,7 +36,7 @@ public class EjemplosTeclado {
 
             // cuando se suelta una tecla
             public void keyReleased(KeyEvent e) {
-                System.out.println("Has soltado la tecla: " + e.getKeyChar());
+                
             }
         });
 
