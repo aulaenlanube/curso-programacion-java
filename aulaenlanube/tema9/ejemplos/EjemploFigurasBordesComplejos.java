@@ -11,23 +11,18 @@ public class EjemploFigurasBordesComplejos extends JPanel {
 
         Graphics2D g2d = (Graphics2D) g;
 
-        // dibuja una línea en rojo con un ancho de 10, con terminaciones
+        // dibuja una línea en rojo con un ancho de 20, con terminaciones redondeadas
         g2d.setColor(Color.RED);
-        g2d.setStroke(new BasicStroke(5));
-        g2d.drawLine(20, 30, 200, 30);
+        g2d.setStroke(new BasicStroke(20, BasicStroke.CAP_SQUARE, BasicStroke.JOIN_MITER));               
+        g2d.drawLine(50, 30, 350, 30);
 
+        // dibuja el rectángulo con degradado
+        GradientPaint gradient = new GradientPaint(0, 0, Color.RED, getWidth(), getHeight(), Color.BLUE);
+        g2d.setPaint(gradient);
+        g2d.fillRect(50, 80, 300, 300);
+        g2d.setColor(Color.BLACK);
+        g2d.drawRect(50, 80, 300, 300);
 
-        // dibujar un triángulo en magenta con un ancho de 5
-        //BORDES COMPLEJOS CON TERMINACIONES
-        g2d.setColor(Color.MAGENTA);
-        g2d.setStroke(new BasicStroke(5));
-        Polygon triangulo = new Polygon();
-        triangulo.addPoint(50, 200);
-        triangulo.addPoint(100, 250);
-        triangulo.addPoint(150, 200);
-        g2d.drawPolygon(triangulo);
-
-        //DEGRADADO CON DOS COLORES
     }
 
     public static void main(String[] args) {

@@ -19,11 +19,12 @@ public class EjemploFigurasBordes extends JPanel {
         // dibuja un rectángulo en verde con un ancho de 3
         g2d.setColor(Color.GREEN);
         g2d.setStroke(new BasicStroke(3));
-        g2d.rotate(Math.toRadians(5));
-        g2d.scale(2,2);
+        g2d.rotate(Math.toRadians(5));        
         g2d.fillRect(50, 50, 150, 100);
         g2d.setColor(Color.BLACK);        
         g2d.drawRect(50, 50, 150, 100);
+        g2d.rotate(Math.toRadians(355));    
+        
         
         // dibujar un óvalo en azul con un ancho de 4
         g2d.setColor(Color.BLUE);
