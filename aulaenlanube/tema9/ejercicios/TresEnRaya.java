@@ -1,3 +1,15 @@
+/**
+ * EJERCICIOS FINALES REPASO JAVA SWING
+ * 
+ * Crear el juego del 3 en raya en JAVA Swing, para ello se deben utilizar 9 botones que se corresponden con las 9 posibles jugadas. 
+ * El juego será para 2 judadores(azul y rojo). 
+ * Al pulsar por primera vez en uno de los 9 posibles botones, se fijará el fondo del botón en azul(jugador1) y se deberá bloquear el botón, 
+ * más tarde al pulsar en uno de los 8 posibles botones restantes, se fijará el fondo del botón en color rojo(jugador2) y se bloqueará de nuevo dicho botón. 
+ * De este modo, se deberán ir intercambiando los turnos hasta que se completen los posiciones o alguno de los jugadores haga tres en raya. 
+ * Si alguno de los jugadores gana, o la partida finaliza sin un vencedor(empate), se deberá mostrar un mensaje de retroalimentación y se reiniciará el juego.
+ * 
+ */
+
 package aulaenlanube.tema9.ejercicios;
 
 import javax.swing.*;
@@ -13,22 +25,22 @@ public class TresEnRaya extends JFrame {
     public TresEnRaya() {
 
         // título, tamaño y layout manager
-        this.setTitle("Tres en raya");
-        this.setSize(400, 400);
-        this.setLayout(new GridLayout(3, 3));
+        setTitle("Tres en raya");
+        setSize(400, 400);
+        setLayout(new GridLayout(3, 3));
 
         // creamos los 9 botones y los añadimos al tablero
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero[i].length; j++) {
                 tablero[i][j] = new JButton();
                 tablero[i][j].addActionListener(e -> jugar(e));
-                this.add(tablero[i][j]);
+                add(tablero[i][j]);
             }
         }
 
         // cierre y visibilidad
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
     }
 
     private void jugar(ActionEvent e) {
