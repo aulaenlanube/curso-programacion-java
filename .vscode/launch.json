@@ -1,0 +1,1484 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Examen1EV",
+            "request": "launch",
+            "mainClass": "aulaenlanube.examenes.ev1.Examen1EV",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "BreakContinue",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.BreakContinue",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "BuclesFor",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.BuclesFor",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "BuclesWhile",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.BuclesWhile",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Cadenas",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Cadenas",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Condiciones",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Condiciones",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "CondicionesSwitch",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.CondicionesSwitch",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Desplazamientos",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Desplazamientos",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Entrada",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Entrada",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Escapes",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Escapes",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Hexadecimales",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Hexadecimales",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "HolaMundo",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.HolaMundo",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Llaves",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Llaves",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Matematicas",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Matematicas",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Parses",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Parses",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Precedencia",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Precedencia",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Precision",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Precision",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ternarias",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Ternarias",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Unicode",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejemplos.Unicode",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejer1Figuras",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.Ejer1Figuras",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejer1Iniciacion",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.Ejer1Iniciacion",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejer1Strings",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.Ejer1Strings",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejer2Figuras",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.Ejer2Figuras",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejer2Iniciacion",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.Ejer2Iniciacion",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejer2Strings",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.Ejer2Strings",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejer3Figuras",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.Ejer3Figuras",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejer3Iniciacion",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.Ejer3Iniciacion",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejer3Strings",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.Ejer3Strings",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejer4Iniciacion",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.Ejer4Iniciacion",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejer4Strings",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.Ejer4Strings",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "FigurasComplejas",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.FigurasComplejas",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "FigurasRombos",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.FigurasRombos",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "FigurasTriangulos",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema2.ejercicios.FigurasTriangulos",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "BusquedaBinaria",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejemplos.BusquedaBinaria",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Factorial",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejemplos.Factorial",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Fibonacci",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejemplos.Fibonacci",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Metodos",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejemplos.Metodos",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "PasoPorValor",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejemplos.PasoPorValor",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "PilaLlamadas",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejemplos.PilaLlamadas",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Sobrecarga",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejemplos.Sobrecarga",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Triangulo",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejemplos.Triangulo",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Triangulo2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejemplos.Triangulo2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "ComprobarBinario",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejercicios.ComprobarBinario",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "ConversorBinario",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejercicios.ConversorBinario",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Digitos",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejercicios.Digitos",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Invertir",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejercicios.Invertir",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Menu",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejercicios.Menu",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "MetodosIniciacion",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejercicios.MetodosIniciacion",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "OrdenarAlfabeticamente",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejercicios.OrdenarAlfabeticamente",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Potencia",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejercicios.Potencia",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "SumarNumeros",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejercicios.SumarNumeros",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "SumarNumeros2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema3.ejercicios.SumarNumeros2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "CopiarClonar",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ejemplos.CopiarClonar",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemplosArrays",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ejemplos.EjemplosArrays",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "HolaMundo(1)",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ejemplos.HolaMundo",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "HolaMundoVarArgs",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ejemplos.HolaMundoVarArgs",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Matrices",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ejemplos.Matrices",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "MatricesIrregulares",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ejemplos.MatricesIrregulares",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "DiagonalMatriz",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ejercicios.DiagonalMatriz",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioMatrices",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ejercicios.EjercicioMatrices",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioMatricesIrregulares",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ejercicios.EjercicioMatricesIrregulares",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosIniciacion",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ejercicios.EjerciciosIniciacion",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Burbuja",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ordenacion.Burbuja",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "TestsOrdenacion",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema4.ordenacion.TestsOrdenacion",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AplicacionArrayList",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejemplos.AplicacionArrayList",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AplicacionCirculo",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejemplos.AplicacionCirculo",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AplicacionCuenta",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejemplos.AplicacionCuenta",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AplicacionPunto",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejemplos.AplicacionPunto",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AplicacionTv",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejemplos.AplicacionTv",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "ArrayPuntos",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejemplos.ArrayPuntos",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Inmutables",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejemplos.Inmutables",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "TestObjetoInmutable2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejemplos.TestObjetoInmutable2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "TestObjetoInmutable3",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejemplos.TestObjetoInmutable3",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "ValorReferencia",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejemplos.ValorReferencia",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppAgenda",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejercicios.AppAgenda",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppCuentas",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejercicios.AppCuentas",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppEmpleado",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejercicios.AppEmpleado",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppGraficoLineas2D",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejercicios.AppGraficoLineas2D",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppTriangulos",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema5.ejercicios.AppTriangulos",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppAnimales",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.AppAnimales",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppClientes",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.AppClientes",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppDiasMeses",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.AppDiasMeses",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppEquals",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.AppEquals",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppEstudiantePersona",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.AppEstudiantePersona",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppFiguras",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.AppFiguras",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppPadreHija",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.AppPadreHija",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppPuntos",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.AppPuntos",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppTiposEnumerados1",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.AppTiposEnumerados1",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppTiposEnumerados2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.AppTiposEnumerados2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Excepciones1",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.Excepciones1",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Excepciones2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.Excepciones2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Excepciones3",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.Excepciones3",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Excepciones4",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.Excepciones4",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Excepciones5",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.Excepciones5",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Excepciones6",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.Excepciones6",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Excepciones7",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejemplos.Excepciones7",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "AppSucursalBancaria",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejercicios.cuentas.AppSucursalBancaria",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Practica1Main",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejercicios.practica1.Practica1Main",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Practica2Main",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejercicios.practica2.Practica2Main",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Practica3Main",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejercicios.practica3.Practica3Main",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Practica4Main",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema6.ejercicios.practica4.Practica4Main",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejemplo1Iterador",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.Ejemplo1Iterador",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejemplo2Iterador",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.Ejemplo2Iterador",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploHashMap",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemploHashMap",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploHashMapLetras",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemploHashMapLetras",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploHashMapPalabras",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemploHashMapPalabras",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploHashMapPalabras2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemploHashMapPalabras2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploHashSet",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemploHashSet",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploTreeMapNotas",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemploTreeMapNotas",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploTreeMapNotas2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemploTreeMapNotas2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploTreeMapNotas3",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemploTreeMapNotas3",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploTreeSet",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemploTreeSet",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemplosTime",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemplosTime",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemplosTime2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemplosTime2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemplosTreeMap",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.EjemplosTreeMap",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Instituto",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.Instituto",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Instituto2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.Instituto2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Instituto3",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.Instituto3",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Instituto4",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.Instituto4",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Instituto5",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.Instituto5",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Instituto6",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.Instituto6",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Instituto7",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.Instituto7",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Instituto8",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.Instituto8",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploLambdas",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploLambdas",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploMetodosReferenciados",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploMetodosReferenciados",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploStreams1",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploStreams1",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploStreams2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploStreams2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploStreams3",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploStreams3",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploStreams4",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploStreams4",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploStreams5",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploStreams5",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploStreams6",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploStreams6",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploStreams7",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploStreams7",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploStreams8",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploStreams8",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploStreams9",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploStreams9",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploStreamsProcesos",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejemplos.programacionFuncional.EjemploStreamsProcesos",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Practica1Main(1)",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejercicios.practica1.Practica1Main",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Practica2Main(1)",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema7.ejercicios.practica2.Practica2Main",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploAccesoAleatorio",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploAccesoAleatorio",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploBinarioBasico",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploBinarioBasico",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploBinarios",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploBinarios",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploBinarios2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploBinarios2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploBinariosBuffer",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploBinariosBuffer",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploBinariosNio",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploBinariosNio",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploDeserializacion",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploDeserializacion",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploFileReader",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploFileReader",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploFileWriter",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploFileWriter",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploPrintWriter",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploPrintWriter",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploPrintWriter2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploPrintWriter2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploScanner",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploScanner",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploSerializacion",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploSerializacion",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploTextoNio",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploTextoNio",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploWriteUTF",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemploWriteUTF",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemplosCarpetas",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemplosCarpetas",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemplosCrearFicheros",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemplosCrearFicheros",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemplosFicheros",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.ficheros.EjemplosFicheros",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploMySQL_Conexion",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.mysql.EjemploMySQL_Conexion",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploMySQL_Delete",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.mysql.EjemploMySQL_Delete",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploMySQL_Encriptacion",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.mysql.EjemploMySQL_Encriptacion",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploMySQL_EncriptacionConsola",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.mysql.EjemploMySQL_EncriptacionConsola",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploMySQL_Imagenes",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.mysql.EjemploMySQL_Imagenes",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploMySQL_Insert",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.mysql.EjemploMySQL_Insert",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploMySQL_Select",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.mysql.EjemploMySQL_Select",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploMySQL_Update",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejemplos.mysql.EjemploMySQL_Update",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio1FicherosTexto",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.Ejercicio1FicherosTexto",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio2FicherosTexto",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.Ejercicio2FicherosTexto",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio3FicherosTexto",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.Ejercicio3FicherosTexto",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio4FicherosTexto",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.Ejercicio4FicherosTexto",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio5FicherosTexto",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.Ejercicio5FicherosTexto",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio6FicherosTexto",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.Ejercicio6FicherosTexto",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio7FicherosTexto",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.Ejercicio7FicherosTexto",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Ejercicio8FicherosTexto",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.Ejercicio8FicherosTexto",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioBufferedReader",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.EjercicioBufferedReader",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioBufferedWriter",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.EjercicioBufferedWriter",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjercicioCiudadesPIB",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.EjercicioCiudadesPIB",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjerciciosBdWorld",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema8.ejercicios.EjerciciosBdWorld",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploCirculoCentrado",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploCirculoCentrado",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploComboBox",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploComboBox",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploComponentes",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploComponentes",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploEstrella",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploEstrella",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploEventos",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploEventos",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploFigurasBordes",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploFigurasBordes",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploFigurasBordesComplejos",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploFigurasBordesComplejos",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploFigurasColores",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploFigurasColores",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploFigurasRelleno",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploFigurasRelleno",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploIcono",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploIcono",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploImagen",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploImagen",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploImagen2",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploImagen2",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploJColorChooser",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploJColorChooser",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploJDialog",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploJDialog",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploJFileChooser",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploJFileChooser",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploJLabel",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploJLabel",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploJPanel",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploJPanel",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploJPopMenu",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploJPopMenu",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploJSlider",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploJSlider",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploJTextField",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploJTextField",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploLayout",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploLayout",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploRectangulosQuicksort",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploRectangulosQuicksort",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploRepaintFiguras",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploRepaintFiguras",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploRepaintHora",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploRepaintHora",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemploVentanaCentrada",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemploVentanaCentrada",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemplosJFrame",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemplosJFrame",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemplosJOptionPane",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemplosJOptionPane",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "EjemplosTeclado",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejemplos.EjemplosTeclado",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "ConversorMonedas",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejercicios.ConversorMonedas",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "Cronometro",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejercicios.Cronometro",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "CronometroPrecision",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejercicios.CronometroPrecision",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "MiniPaint",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejercicios.MiniPaint",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "SumadorEnteros",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejercicios.SumadorEnteros",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "TresEnRaya",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejercicios.TresEnRaya",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "VentanaLogin",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejercicios.VentanaLogin",
+            "projectName": "curso-programacion-java_ca609098"
+        }
+    ]
+}

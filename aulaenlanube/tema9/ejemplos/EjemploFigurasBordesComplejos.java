@@ -11,9 +11,11 @@ public class EjemploFigurasBordesComplejos extends JPanel {
 
         Graphics2D g2d = (Graphics2D) g;
 
-        // dibuja una línea en rojo con un ancho de 20, con terminaciones redondeadas
+        float[] patron = new float[]{50,30,10,5};
+
+        // dibuja una línea en rojo con un ancho de 20, con terminaciones redondeadas        
         g2d.setColor(Color.RED);
-        g2d.setStroke(new BasicStroke(20, BasicStroke.CAP_SQUARE, BasicStroke.JOIN_MITER));               
+        g2d.setStroke(new BasicStroke(10, BasicStroke.CAP_BUTT, BasicStroke.JOIN_MITER,1,patron,1));               
         g2d.drawLine(50, 30, 350, 30);
 
         // dibuja el rectángulo con degradado
@@ -21,6 +23,7 @@ public class EjemploFigurasBordesComplejos extends JPanel {
         g2d.setPaint(gradient);
         g2d.fillRect(50, 80, 300, 300);
         g2d.setColor(Color.BLACK);
+        g2d.setStroke(new BasicStroke(5));
         g2d.drawRect(50, 80, 300, 300);
 
     }

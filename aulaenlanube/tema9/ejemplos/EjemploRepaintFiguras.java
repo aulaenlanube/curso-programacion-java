@@ -74,7 +74,7 @@ public class EjemploRepaintFiguras extends JPanel {
         frame.setVisible(true);
 
         // repaint del panel cada 500ms
-        Timer timer = new Timer(500, e -> panel.repaint());
+        Timer timer = new Timer(100, e -> panel.repaint());
         timer.start();
     }
 }
