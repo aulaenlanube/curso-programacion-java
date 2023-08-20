@@ -1,4 +1,5 @@
 package aulaenlanube.tema9.ejemplos;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -12,30 +13,30 @@ public class EjemploJFileChooser extends JFrame {
 
     public EjemploJFileChooser() {
 
-        //configuramos JFrame
+        // configuramos JFrame
         setTitle("Ejemplo JFileChooser");
-        setSize(500, 500);        
-        setLayout(new BorderLayout());       
-        
-        //añadimos JLabel al centro
+        setSize(500, 500);
+        setLayout(new BorderLayout());
+
+        // añadimos JLabel al centro
         etiquetaImagen = new JLabel();
         add(etiquetaImagen, BorderLayout.CENTER);
 
-//añadimos JButton en la parte inferior
-JButton botonSeleccionarImagen = new JButton("Seleccionar Imagen");
-add(botonSeleccionarImagen, BorderLayout.SOUTH);
+        // añadimos JButton en la parte inferior
+        JButton botonSeleccionarImagen = new JButton("Seleccionar Imagen");
+        add(botonSeleccionarImagen, BorderLayout.SOUTH);
 
-//evento al pulsar el botón
-botonSeleccionarImagen.addActionListener(e -> {
-    JFileChooser chooser = new JFileChooser();
-    int opcion = chooser.showOpenDialog(this);
-    if (opcion == JFileChooser.APPROVE_OPTION) {
-        File file = chooser.getSelectedFile();
-        cargarImagen(file);
-    }
-});        
+        // evento al pulsar el botón
+        botonSeleccionarImagen.addActionListener(e -> {
+            JFileChooser chooser = new JFileChooser();
+            int opcion = chooser.showOpenDialog(this);
+            if (opcion == JFileChooser.APPROVE_OPTION) {
+                File file = chooser.getSelectedFile();
+                cargarImagen(file);
+            }
+        });
 
-        //visibilidad y cierre
+        // visibilidad y cierre
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
@@ -45,12 +46,12 @@ botonSeleccionarImagen.addActionListener(e -> {
             imagen = ImageIO.read(file);
             etiquetaImagen.setIcon(new ImageIcon(escalarImagen(imagen)));
         } catch (Exception ex) {
-            JOptionPane.showMessageDialog(this, "Error al cargar la imagen.");
+            JOptionPane.showMessageDialog(this, "Error al cargar la imagen.", "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }
 
     private Image escalarImagen(BufferedImage imagenOriginal) {
-        
+
         double proporcionOriginal = (double) imagenOriginal.getWidth() / (double) imagenOriginal.getHeight();
         int ancho = getWidth();
         int alto = (int) (getWidth() / proporcionOriginal);
@@ -64,6 +65,7 @@ botonSeleccionarImagen.addActionListener(e -> {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new EjemploJFileChooser()); //explicar el concepto de EDT
+
+        SwingUtilities.invokeLater(() -> new EjemploJFileChooser()); // explicar el concepto de EDT
     }
 }

@@ -5,7 +5,7 @@ import java.awt.*;
 
 public class EjemploJColorChooser extends JFrame {
 
-    private Color colorCirculo = Color.RED;
+    private Color colorCirculo = Color.BLACK;
     private int diametro = 200;
 
     public EjemploJColorChooser() {
