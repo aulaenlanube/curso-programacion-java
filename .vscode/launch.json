@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MiniPaint",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.minipaint.MiniPaint",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
