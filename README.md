@@ -32,7 +32,7 @@ Descubre cómo interactuar con archivos y bases de datos para almacenar, recuper
 Crea aplicaciones con interfaces gráficas de usuario utilizando awt, swing y JavaFX.
 
 ### 🔄 &#8658; [**`Mejorando el código y buenas prácticas`**](aulaenlanube/tema10)
-Finaliza el curso aprendiendo sobre los patrones de diseño más comunes, clean code, buenas prácticas, documentación del código, etc.
+Finaliza el curso aprendiendo sobre los patrones de diseño más comunes, clean code, buenas prácticas, documentación del código, complejidad algorítmica, etc.
 
 ## 👨‍💻 Uso
 
