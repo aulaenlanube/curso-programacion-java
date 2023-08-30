@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "QuicksortSwing",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejercicios.QuicksortSwing",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
+            "name": "JuegoMecanografia",
+            "request": "launch",
+            "mainClass": "aulaenlanube.tema9.ejercicios.JuegoMecanografia",
+            "projectName": "curso-programacion-java_ca609098"
+        },
+        {
+            "type": "java",
             "name": "MiniPaint",
             "request": "launch",
             "mainClass": "aulaenlanube.tema9.minipaint.MiniPaint",

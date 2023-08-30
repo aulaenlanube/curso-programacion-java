@@ -21,12 +21,13 @@ public class Cronometro extends JFrame {
     private int centesimas;
     private boolean corriendo;
     private JLabel label;
-    private Timer timer;
+    private Timer reloj;
     private JButton iniciarPausar;
     private JButton reiniciar;
 
     public Cronometro() {
 
+        // valores de inicio
         centesimas = 0;
         corriendo = false;
 
@@ -34,7 +35,6 @@ public class Cronometro extends JFrame {
         setTitle("Cronómetro");
         setLayout(new FlowLayout(FlowLayout.CENTER, 20, 20));
         setSize(400, 200);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         // etiqueta del cronómetro
         label = new JLabel("00:00");
@@ -50,12 +50,12 @@ public class Cronometro extends JFrame {
         add(reiniciar);
 
         // evento del contador cada 10ms
-        timer = new Timer(10, e -> {
+        reloj = new Timer(10, e -> {
             if (corriendo) {
                 centesimas++;
 
                 DecimalFormat df = new DecimalFormat("00");
-                int segundos = (centesimas / 100) % 60;
+                int segundos = centesimas / 100;
                 int restantesCentesimas = centesimas % 100;
 
                 label.setText(df.format(segundos) + ":" + df.format(restantesCentesimas));
@@ -68,14 +68,16 @@ public class Cronometro extends JFrame {
                 corriendo = false;
                 iniciarPausar.setText("Iniciar");
 
+                // si paramos en 00, mostramos mensaje de enhorabuena
                 if (centesimas % 100 == 0) {
                     JOptionPane.showMessageDialog(null, "Has parado el cronómetro en 0 centésimas", "Enhorabuena",
                             JOptionPane.INFORMATION_MESSAGE);
                 }
+                
             } else {
                 corriendo = true;
                 iniciarPausar.setText("Pausar");
-                timer.start();
+                reloj.start();
             }
         });
 
@@ -86,9 +88,13 @@ public class Cronometro extends JFrame {
             iniciarPausar.setText("Iniciar");
             label.setText("00:00");
         });
+
+        // visibilidad y cierre
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
     }
 
     public static void main(String[] args) {
-        new Cronometro().setVisible(true);
+        new Cronometro();
     }
 }

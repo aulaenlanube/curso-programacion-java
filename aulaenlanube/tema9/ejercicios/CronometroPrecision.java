@@ -20,7 +20,7 @@ public class CronometroPrecision extends JFrame {
     private long tiempoPausado;
     private boolean corriendo;
     private JLabel label;
-    private Timer timer;
+    private Timer reloj;
     private JButton iniciarPausar;
     private JButton reiniciar;
 
@@ -33,8 +33,7 @@ public class CronometroPrecision extends JFrame {
         // configuración del JFrame
         setTitle("Cronómetro");
         setLayout(new FlowLayout(FlowLayout.CENTER, 20, 20));
-        setSize(400, 200);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setSize(400, 200);        
 
         // etiqueta del cronómetro
         label = new JLabel("00:00");
@@ -50,13 +49,13 @@ public class CronometroPrecision extends JFrame {
         add(reiniciar);
 
         // evento del contador cada 10ms
-        timer = new Timer(10, e -> {
+        reloj = new Timer(10, e -> {
             if (corriendo) {
                 long ahora = System.currentTimeMillis();
                 long transcurrido = tiempoPausado + (ahora - inicioTiempo);
 
                 DecimalFormat df = new DecimalFormat("00");
-                long segundos = (transcurrido / 1000) % 60;
+                long segundos = transcurrido / 1000;
                 long centesimas = (transcurrido / 10) % 100;
 
                 label.setText(df.format(segundos) + ":" + df.format(centesimas));
@@ -69,18 +68,18 @@ public class CronometroPrecision extends JFrame {
                 tiempoPausado += System.currentTimeMillis() - inicioTiempo;
                 corriendo = false;
                 iniciarPausar.setText("Iniciar");
-
-                long transcurrido = tiempoPausado;
-                long centesimas = (transcurrido / 10) % 100;
-                if (centesimas == 0) {
-                    JOptionPane.showMessageDialog(null, "Cronómetro en 0 centésimas", "Mensaje",
+               
+                // si paramos en 00, mostramos mensaje de enhorabuena
+                if (label.getText().endsWith("00")) {
+                    JOptionPane.showMessageDialog(null, "Has parado el cronómetro en 0 centésimas", "Enhorabuna",
                             JOptionPane.INFORMATION_MESSAGE);
                 }
+                
             } else {
                 inicioTiempo = System.currentTimeMillis();
                 corriendo = true;
                 iniciarPausar.setText("Pausar");
-                timer.start();
+                reloj.start();
             }
         });
 
@@ -92,9 +91,13 @@ public class CronometroPrecision extends JFrame {
             iniciarPausar.setText("Iniciar");
             label.setText("00:00");
         });
+
+        // visibilidad y cierre
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
     }
 
     public static void main(String[] args) {
-        new CronometroPrecision().setVisible(true);
+        new CronometroPrecision();
     }
 }
