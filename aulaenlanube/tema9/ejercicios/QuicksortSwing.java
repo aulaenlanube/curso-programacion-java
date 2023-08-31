@@ -31,8 +31,9 @@ public class QuicksortSwing extends JPanel {
 
     public void desordenar() {
 
+        Random r = new Random();
         for (int i = 0; i < alturas.length; i++) {
-            int indice = new Random().nextInt(alturas.length);
+            int indice = r.nextInt(alturas.length);
             int temp = alturas[indice];
             alturas[indice] = alturas[i];
             alturas[i] = temp;
@@ -45,9 +46,8 @@ public class QuicksortSwing extends JPanel {
 
         for (int i = 0; i < rectangulos; i++) {
             int x = i * (dimension + espaciado) + 5;
-            int alturaActual = alturas[i];
-            int y = getHeight() - alturaActual;
-            g.fillRect(x, y, dimension, alturaActual);
+            int y = getHeight() - alturas[i];
+            g.fillRect(x, y, dimension, alturas[i]);
         }
     }
 
@@ -55,7 +55,7 @@ public class QuicksortSwing extends JPanel {
         try {
             Thread.sleep(2000);
             quicksort(alturas, 0, alturas.length - 1); // ordenamos
-            JOptionPane.showMessageDialog(null, "Se ha ordenado el array de " + alturas.length + " elementos",
+            JOptionPane.showMessageDialog(null, "Se ha ordenado el array de " + rectangulos + " elementos",
                     "Ordenación finalizada",
                     JOptionPane.INFORMATION_MESSAGE);
         } catch (InterruptedException e) {

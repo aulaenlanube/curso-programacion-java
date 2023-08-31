@@ -31,8 +31,9 @@ public class QuicksortBurbujaSwing extends JPanel {
 
     public void desordenar() {
 
+        Random r = new Random();
         for (int i = 0; i < alturas.length; i++) {
-            int indice = new Random().nextInt(alturas.length);
+            int indice = r.nextInt(alturas.length);
             int temp = alturas[indice];
             alturas[indice] = alturas[i];
             alturas[i] = temp;
@@ -45,9 +46,8 @@ public class QuicksortBurbujaSwing extends JPanel {
 
         for (int i = 0; i < rectangulos; i++) {
             int x = i * (dimension + espaciado) + 5;
-            int alturaActual = alturas[i];
-            int y = getHeight() - alturaActual;
-            g.fillRect(x, y, dimension, alturaActual);
+            int y = getHeight() - alturas[i];
+            g.fillRect(x, y, dimension, alturas[i]);
         }
     }
 
@@ -70,7 +70,7 @@ public class QuicksortBurbujaSwing extends JPanel {
                     }
                 }
             }
-            JOptionPane.showMessageDialog(null, "Se ha ordenado el array de " + alturas.length + " elementos",
+            JOptionPane.showMessageDialog(null, "Se ha ordenado el array de " + rectangulos + " elementos",
                     "Ordenación con burbuja finalizada",
                     JOptionPane.INFORMATION_MESSAGE);
         } catch (InterruptedException e) {
@@ -83,7 +83,7 @@ public class QuicksortBurbujaSwing extends JPanel {
             Thread.sleep(5000);
             // ordenamos con quicksort
             quicksort(alturas, 0, alturas.length - 1);
-            JOptionPane.showMessageDialog(null, "Se ha ordenado el array de " + alturas.length + " elementos",
+            JOptionPane.showMessageDialog(null, "Se ha ordenado el array de " + rectangulos + " elementos",
                     "Ordenación con quicksort finalizada",
                     JOptionPane.INFORMATION_MESSAGE);
         } catch (InterruptedException e) {
