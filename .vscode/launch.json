@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.aula.saludo1/com.aula.saludo1.App",
+            "projectName": "saludo1"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.aula.saludo2/com.aula.saludo2.App",
+            "projectName": "saludo2"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.aula.node/com.aula.node.App",
+            "projectName": "node"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.aula.layouts/com.aula.layouts.App",
+            "projectName": "layouts"
+        },
+        {
+            "type": "java",
             "name": "QuicksortBurbujaSwing",
             "request": "launch",
             "mainClass": "aulaenlanube.tema9.ejercicios.QuicksortBurbujaSwing",
