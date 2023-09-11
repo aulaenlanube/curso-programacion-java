@@ -19,9 +19,12 @@ public class App extends Application {
 
         boton1.setTranslateX(50);
         boton1.setTranslateY(50);
+        boton1.getChildrenUnmodifiable().addAll(boton2);
 
         boton2.setTranslateX(10);
         boton2.setTranslateY(50);
+
+
 
         VBox vbox = new VBox(); // VBox es una subclase de Parent
         vbox.getChildren().addAll(boton1, boton2);
