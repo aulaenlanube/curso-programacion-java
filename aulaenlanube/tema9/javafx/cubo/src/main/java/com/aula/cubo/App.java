@@ -6,6 +6,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Camera;
 import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.ScrollEvent;
 import javafx.scene.layout.VBox;
@@ -26,7 +27,7 @@ public class App extends Application {
 
     // parte colores
     private final Color[] coloresCubo = {
-            Color.RED, Color.DODGERBLUE, Color.GREEN, Color.YELLOW, Color.ORANGE, Color.PURPLE
+            Color.RED, Color.DODGERBLUE, Color.PALEGREEN, Color.YELLOW, Color.ORANGE, Color.PURPLE
     };
     private int indiceColorActual = 0;
 
@@ -54,12 +55,12 @@ public class App extends Application {
         // inicializar la rotación
         cubo.getTransforms().addAll(rotacionX, rotacionY);
 
-        //configuramos la ventana
+        // configuramos la ventana
         ventanaPrincipal.setTitle("Ejemplo de Cubo 3D con Zoom en JavaFX");
         ventanaPrincipal.setScene(scene);
         ventanaPrincipal.show();
 
-        //creamos los eventos
+        // creamos los eventos
         crearEventos(root, scene, cubo);
     }
 
@@ -108,6 +109,24 @@ public class App extends Application {
         cubo.setOnMouseClicked(event -> {
             if (event.getButton() == MouseButton.SECONDARY) {
                 cambiarColorCubo(cubo);
+            }
+        });
+
+        // evento con teclado para hacer zoom
+        scene.setOnKeyPressed(e -> {
+
+            factorZoom = 1.1;
+
+            if (e.isControlDown() && e.getCode() == KeyCode.PLUS) {
+                cubo.setScaleX(cubo.getScaleX() * factorZoom);
+                cubo.setScaleY(cubo.getScaleY() * factorZoom);
+                cubo.setScaleZ(cubo.getScaleZ() * factorZoom);
+            }
+            if (e.isControlDown() && e.getCode() == KeyCode.MINUS) {
+                factorZoom = 1 / factorZoom;
+                cubo.setScaleX(cubo.getScaleX() * factorZoom);
+                cubo.setScaleY(cubo.getScaleY() * factorZoom);
+                cubo.setScaleZ(cubo.getScaleZ() * factorZoom);
             }
         });
     }
