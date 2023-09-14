@@ -8,6 +8,13 @@
             "type": "java",
             "name": "App",
             "request": "launch",
+            "mainClass": "com.aula.cubo/com.aula.cubo.App",
+            "projectName": "cubo"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
             "mainClass": "com.aula.saludo1/com.aula.saludo1.App",
             "projectName": "saludo1"
         },

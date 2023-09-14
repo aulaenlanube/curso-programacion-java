@@ -3,9 +3,8 @@ package com.aula.cubo;
 import javafx.application.Application;
 import javafx.geometry.Point3D;
 import javafx.geometry.Pos;
-import javafx.scene.Camera;
-import javafx.scene.PerspectiveCamera;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.ScrollEvent;
@@ -21,9 +20,10 @@ public class App extends Application {
     private double puntoAnclajeX, puntoAnclajeY;
     private double anguloAnclajeX = 0;
     private double anguloAnclajeY = 0;
-    private final Rotate rotacionX = new Rotate(0, Rotate.X_AXIS);
-    private final Rotate rotacionY = new Rotate(0, Rotate.Y_AXIS);
     private double factorZoom = 1;
+
+    private final Rotate rotacionX = new Rotate(0, Rotate.X_AXIS);
+    private final Rotate rotacionY = new Rotate(0, Rotate.Y_AXIS);    
 
     // parte colores
     private final Color[] coloresCubo = {
@@ -40,16 +40,18 @@ public class App extends Application {
         cubo.setDepth(200.0);
 
         PhongMaterial material = new PhongMaterial();
-        material.setDiffuseColor(Color.PALEGREEN);
+        material.setDiffuseColor(Color.PALEGREEN);        
+
+        Image textura = new Image("texture5.jpg");
+        material.setDiffuseMap(textura);
+
         cubo.setMaterial(material);
 
         VBox root = new VBox();
         root.getChildren().add(cubo);
         root.setAlignment(Pos.CENTER);
-
-        Camera camara = new PerspectiveCamera();
-        Scene scene = new Scene(root, 600, 400);
-        scene.setCamera(camara);
+        
+        Scene scene = new Scene(root, 600, 400);        
         scene.setFill(Color.SILVER);
 
         // inicializar la rotación
@@ -66,12 +68,10 @@ public class App extends Application {
 
     private void crearEventos(VBox vbox, Scene scene, Box cubo) {
 
-        Rotate xRotate;
-        Rotate yRotate;
+        Rotate xRotate = new Rotate(0, new Point3D(0, 0, 0)); 
+        Rotate yRotate = new Rotate(0, new Point3D(0, 0, 0));
 
-        vbox.getTransforms().addAll(
-                xRotate = new Rotate(0, new Point3D(0, 0, 0)),
-                yRotate = new Rotate(0, new Point3D(0, 0, 0)));
+        vbox.getTransforms().addAll(xRotate, yRotate);
 
         // bindings para la rotación
         xRotate.angleProperty().bind(rotacionX.angleProperty());
@@ -91,7 +91,7 @@ public class App extends Application {
             rotacionY.setAngle(anguloAnclajeY + (puntoAnclajeX - event.getSceneX()));
         });
 
-        // eventro scroll para cambiar el tamaño del cubo
+        // evento scroll para cambiar el tamaño del cubo
         scene.addEventHandler(ScrollEvent.SCROLL, event -> {
             factorZoom = 1.1;
             double deltaY = event.getDeltaY();
