@@ -40,11 +40,8 @@ public class App extends Application {
         cubo.setDepth(200.0);
 
         PhongMaterial material = new PhongMaterial();
-        material.setDiffuseColor(Color.PALEGREEN);        
-
-        Image textura = new Image("texture5.jpg");
-        material.setDiffuseMap(textura);
-
+        //material.setDiffuseColor(Color.PALEGREEN);   
+        material.setDiffuseMap(new Image("texture2.jpg"));
         cubo.setMaterial(material);
 
         VBox root = new VBox();

@@ -1,0 +1,8 @@
+.boton-personalizado {
+	-fx-background-color: #3498db;
+	-fx-text-fill: white;
+}
+.texto-destacado {
+	-fx-font-size: 20px;
+	-fx-font-weight: bold;
+}
