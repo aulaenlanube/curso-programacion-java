@@ -1,8 +1,13 @@
-.boton-personalizado {
-	-fx-background-color: #3498db;
-	-fx-text-fill: white;
-}
-.texto-destacado {
+Button {
+	-fx-background-color: green; 
+	-fx-text-fill: white;    	
+	-fx-border-radius: 5px;
+	-fx-background-radius: 5px;
+	-fx-padding: 5px 15px; 
 	-fx-font-size: 20px;
-	-fx-font-weight: bold;
-}
+ }
+ .boton-especial {
+	-fx-text-fill: red;
+	-fx-background-color: black;
+ }
+ 
