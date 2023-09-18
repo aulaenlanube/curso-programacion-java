@@ -8,6 +8,13 @@
             "type": "java",
             "name": "App",
             "request": "launch",
+            "mainClass": "com.aula.agenda/com.aula.agenda.vista.App",
+            "projectName": "agenda"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
             "mainClass": "com.aula.cubo/com.aula.cubo.App",
             "projectName": "cubo"
         },
