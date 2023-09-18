@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<VBox styleClass="vbox" xmlns:fx="http://javafx.com/fxml" fx:controller="com.aula.agenda.controlador.NuevoContactoController">
+
+    <Label text="Formulario de Contacto" />
+
+    <!-- Campos del formulario -->
+    <HBox>
+        <Label text="Nombre:" prefWidth="100" />
+        <TextField fx:id="campoNombre" prefWidth="200" />
+    </HBox>
+
+    <HBox>
+        <Label text="Teléfono:" prefWidth="100" />
+        <TextField fx:id="campoTelefono" prefWidth="200" />
+    </HBox>
+
+    <HBox >
+        <Label text="Correo:" prefWidth="100" />
+        <TextField fx:id="campoCorreo" prefWidth="200" />
+    </HBox>
+
+    <HBox>
+        <Label text="Web Personal:" prefWidth="100" />
+        <TextField fx:id="campoWebPersonal" prefWidth="200" />
+    </HBox>
+
+    <!-- Carga de imagen -->
+    <HBox spacing="10">
+        
+        <ImageView fx:id="previsualizacionImagen" />
+        <Button text="Seleccionar Imagen" onAction="#cargarImagen" />
+        <Label fx:id="nombreImagen" text="" prefWidth="250" />
+    </HBox>
+
+    <!-- Botones -->
+    <HBox styleClass="hbox">
+        <Button styleClass="botonCancelar" text="Cancelar" onAction="#cancelar" />
+        <Button styleClass="botonGuardar" text="Guardar" onAction="#guardarContacto" />
+        
+    </HBox>
+
+</VBox>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<HBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="com.aula.agenda.controlador.VentanaPrincipalController">
+
+    <!-- TableView para los contactos -->
+    <TableView fx:id="tablaContactos" prefWidth="400">
+        <columns>
+            <TableColumn text="Nombre" fx:id="columnaNombre" prefWidth="100" />
+            <TableColumn text="Teléfono" fx:id="columnaTelefono" prefWidth="100" />
+            <TableColumn text="Correo" fx:id="columnaCorreo" prefWidth="100" />
+        </columns>
+        <HBox.margin>
+            <Insets top="20" right="20" bottom="20" left="20" />
+        </HBox.margin>
+    </TableView>
+
+    <!-- Panel para mostrar detalles del contacto seleccionado -->
+    <VBox fx:id="panelDetalles" spacing="10" alignment="CENTER" prefWidth="400" >
+        <!-- ImageView para mostrar la imagen de perfil del contacto -->
+        <ImageView fx:id="imagenPerfil"  pickOnBounds="true" preserveRatio="true"/>
+    
+        <!-- Labels para mostrar detalles -->
+        <Label fx:id="labelNombre" text="Nombre: " />
+        <Label fx:id="labelTelefono" text="Teléfono: " />
+        <Label fx:id="labelCorreo" text="Correo: " />
+        <Label fx:id="labelWebPersonal" text="Web personal: " />
+
+        <!-- Botón para agregar un nuevo contacto -->
+        <Button  fx:id="botonNuevoContacto" text="Agregar Contacto" onAction="#mostrarFormulario"/>
+    </VBox>    
+
+</HBox>

@@ -16,7 +16,7 @@ public class App extends Application {
     public void start(Stage ventanaPrincipal) throws Exception {
 
         // cargamos el FXML desde la carpeta resources
-        Parent root = FXMLLoader.load(getClass().getResource("ventanaPrincipal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/aula/estilos/ventanaPrincipal.fxml"));
         Scene scene = new Scene(root, 500, 400);
         scene.getStylesheets().add(getClass().getResource("/css/estilosVentanaPrincipal1.css").toExternalForm());
 

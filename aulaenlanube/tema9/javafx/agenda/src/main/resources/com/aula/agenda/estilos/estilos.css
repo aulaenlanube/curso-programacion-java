@@ -1,0 +1,28 @@
+TableView {
+    -fx-padding: 10px;
+}
+
+.vbox {
+    -fx-padding: 30px;
+    -fx-spacing: 20px;
+}
+
+.hbox {    
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER_RIGHT;
+}
+
+.contenedorImagenEstilo {
+    -fx-border-color: #3a5faf;
+    -fx-border-width: 5px;
+}
+
+.botonCancelar {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+}
+
+.botonGuardar {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+}
