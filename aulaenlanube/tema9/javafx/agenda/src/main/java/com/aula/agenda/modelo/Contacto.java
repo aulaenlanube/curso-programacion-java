@@ -64,7 +64,7 @@ public class Contacto {
     }
 
     public String getRutaImagenPerfil() {
-        return RUTA+imagenPerfil.getValue();
+        return RUTA + imagenPerfil.getValue();
     }
 
     @Override

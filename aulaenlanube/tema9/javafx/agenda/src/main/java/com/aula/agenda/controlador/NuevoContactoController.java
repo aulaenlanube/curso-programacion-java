@@ -41,12 +41,12 @@ public class NuevoContactoController {
         this.controladorPrincipal = controladorPrincipal;
     }
 
-     // método para enlazar con el contacto actual
+    // método para enlazar con el contacto actual
     public void setContactoActual(Contacto contactoActual) {
 
-        //vinculamos el contacto
+        // vinculamos el contacto
         this.contactoActual = contactoActual;
-        
+
         // rellenamos los datos del contacto
         if (contactoActual != null) {
             campoNombre.setText(contactoActual.getNombre().get());
@@ -93,15 +93,13 @@ public class NuevoContactoController {
         String telefono = campoTelefono.getText();
         String correo = campoCorreo.getText();
         String webPersonal = campoWebPersonal.getText();
-        String imagen = guardarImagen();
-
-        Contacto nuevoContacto = new Contacto(nombre, correo, imagen, webPersonal, telefono);
+        String imagen = guardarImagen();        
 
         // guardamos o editamos dependiendo del modo
-
         if (modoEdicion) {
 
-            //editamos el contactoActual, que está vinculado a la lista del controlador principal
+            // editamos el contactoActual, que está vinculado a la lista del controlador
+            // principal
             this.contactoActual.setCorreo(correo);
             this.contactoActual.setNombre(nombre);
             this.contactoActual.setTelefono(telefono);
@@ -109,11 +107,12 @@ public class NuevoContactoController {
             this.contactoActual.setImagenPerfil(imagen);
             modoEdicion = false;
 
-            //recargamos la imagen si la hemos modificado
-            //....
+            // mostramos mensaje
+            controladorPrincipal.mostrarMensajeEdicion(contactoActual);
 
         } else {
             // agregamos el nuevo contacto a la lista del ControladorPrincipal
+            Contacto nuevoContacto = new Contacto(nombre, correo, imagen, webPersonal, telefono);
             controladorPrincipal.agregarContacto(nuevoContacto);
         }
 
@@ -160,6 +159,5 @@ public class NuevoContactoController {
         // devolvemos el nombre del fichero
         return nombreImagen.getText();
     }
-
 
 }

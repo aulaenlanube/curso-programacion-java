@@ -78,7 +78,7 @@ public class VentanaPrincipalController {
     }
 
     // mostramos los detalles de un contacto en la parte derecha de la ventana
-    private void mostrarDetallesContacto(Contacto contacto) {
+    public void mostrarDetallesContacto(Contacto contacto) {
 
         // comrpobamos si tenemos un Contacto
         if (contacto != null) {
@@ -147,8 +147,8 @@ public class VentanaPrincipalController {
 
         Contacto contactoSeleccionado = tablaContactos.getSelectionModel().getSelectedItem();
 
-        if (contactoSeleccionado != null) {      
-            NuevoContactoController controladorSecundario = crearVentanaContacto();            
+        if (contactoSeleccionado != null) {
+            NuevoContactoController controladorSecundario = crearVentanaContacto();
             controladorSecundario.setContactoActual(contactoSeleccionado);
 
         } else {
@@ -190,6 +190,18 @@ public class VentanaPrincipalController {
             alerta.showAndWait();
 
         }
+    }
+
+    public void mostrarMensajeEdicion(Contacto c) {
+
+        tablaContactos.getSelectionModel().clearSelection();
+
+        Alert alerta = new Alert(AlertType.INFORMATION);
+        alerta.setTitle("Contacto modificado");
+        alerta.setHeaderText(null);
+        alerta.setContentText(
+                "El contacto " + c.getNombre().getValue() + " ha sido modificado de forma correcta.");
+        alerta.showAndWait();
     }
 
 }
