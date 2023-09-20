@@ -45,21 +45,21 @@ public class NuevoContactoController {
 
     @FXML
     private void cargarImagen() {
+        
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Seleccionar Imagen de Perfil");
         fileChooser.getExtensionFilters().addAll(
                 new FileChooser.ExtensionFilter("Imágenes", "*.jpg", "*.png", "*.jpeg"));
 
         archivoImagen = fileChooser.showOpenDialog(null);
-        
-        
+
         if (archivoImagen != null) {
 
-            // si queremos ver vista previa de la imagen            
-            //Image imagen = new Image(archivoImagen.toURI().toString());
-            //previsualizacionImagen.setImage(imagen);
+            // si queremos ver vista previa de la imagen
+            // Image imagen = new Image(archivoImagen.toURI().toString());
+            // previsualizacionImagen.setImage(imagen);
 
-            //mostramos nombre de la imagen
+            // mostramos nombre de la imagen
             nombreImagen.setText(Paths.get(archivoImagen.getAbsolutePath()).getFileName().toString());
         }
     }
@@ -71,7 +71,7 @@ public class NuevoContactoController {
         String telefono = campoTelefono.getText();
         String correo = campoCorreo.getText();
         String webPersonal = campoWebPersonal.getText();
-        String imagen = (archivoImagen != null) ? guardarImagen(archivoImagen) : "default.jpg";
+        String imagen = (archivoImagen != null) ? guardarImagen() : "default.jpg";
 
         Contacto nuevoContacto = new Contacto(nombre, correo, imagen, webPersonal, telefono);
 
@@ -84,36 +84,32 @@ public class NuevoContactoController {
 
     @FXML
     private void cancelar() {
-        // Obtener el Stage (ventana) actual a través de uno de los nodos.
+
+        // obtenemos la instancia de la ventana actual
         Stage ventanaActual = (Stage) campoNombre.getScene().getWindow();
 
-        // Cerrar la ventana
+        // cerramos la ventana
         ventanaActual.close();
     }
 
-    private String guardarImagen(File imagen) {
+    private String guardarImagen() {
 
         try {
-            // Crea la carpeta imgs si no existe
+            // definimos carpeta para guardar la imagen
             Path carpetaDestino = Paths.get("src/main/resources/com/aula/agenda/imgs");
-            if (!Files.exists(carpetaDestino)) {
-                Files.createDirectories(carpetaDestino);
-            }
 
-            // Obtiene el nombre de la imagen del path de origen
-            Path imagenOrigen = Paths.get(imagen.getAbsolutePath());
+            //obtenemos nombre de la imagen del path de origen
+            Path imagenOrigen = Paths.get(archivoImagen.getAbsolutePath());
             Path imagenDestino = carpetaDestino.resolve(imagenOrigen.getFileName());
 
-            // Copia la imagen
+            // hacemos una copia de la imagen
             Files.copy(imagenOrigen, imagenDestino, StandardCopyOption.REPLACE_EXISTING);
 
         } catch (IOException e) {
             e.printStackTrace();
-            // Puedes mostrar un mensaje de error o manejar la excepción como mejor te
-            // parezca.
-        } 
-        
-        //devolvemos el nombre del fichero
-        return nombreImagen.getText();        
+        }
+
+        // devolvemos el nombre del fichero
+        return nombreImagen.getText();
     }
 }

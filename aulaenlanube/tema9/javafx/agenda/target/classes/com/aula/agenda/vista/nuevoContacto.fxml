@@ -35,8 +35,7 @@
     </HBox>
 
     <!-- Carga de imagen -->
-    <HBox spacing="10">
-        
+    <HBox spacing="10">        
         <ImageView fx:id="previsualizacionImagen" />
         <Button text="Seleccionar Imagen" onAction="#cargarImagen" />
         <Label fx:id="nombreImagen" text="" prefWidth="250" />
@@ -45,8 +44,7 @@
     <!-- Botones -->
     <HBox styleClass="hbox">
         <Button styleClass="botonCancelar" text="Cancelar" onAction="#cancelar" />
-        <Button styleClass="botonGuardar" text="Guardar" onAction="#guardarContacto" />
-        
+        <Button styleClass="botonGuardar" text="Guardar" onAction="#guardarContacto" />        
     </HBox>
 
 </VBox>

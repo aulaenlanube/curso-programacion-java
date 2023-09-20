@@ -1,6 +1,5 @@
 package com.aula.agenda.controlador;
 
-import java.io.IOException;
 import com.aula.agenda.modelo.Contacto;
 
 import javafx.collections.FXCollections;
@@ -52,7 +51,7 @@ public class VentanaPrincipalController {
         borde.setOffsetY(0);
         borde.setColor(Color.BLACK);
         imagenPerfil.setEffect(borde);
-
+        
         // crea un ObservableArrayList para los contactos
         listaContactos = FXCollections.observableArrayList();
 
@@ -78,12 +77,15 @@ public class VentanaPrincipalController {
 
     // mostramos los detalles de un contacto en la parte derecha de la ventana
     private void mostrarDetallesContacto(Contacto contacto) {
+
+        // comrpobamos si tenemos un Contacto
         if (contacto != null) {
             labelNombre.setText("Nombre: " + contacto.getNombre().getValue());
             labelTelefono.setText("Teléfono: " + contacto.getTelefono().getValue());
             labelCorreo.setText("Correo: " + contacto.getCorreo().getValue());
             labelWebPersonal.setText("Web personal: " + contacto.getWebPersonal().getValue());
 
+            // si tenemos imagen de perfil
             if (contacto.getImagenPerfil().getValue() != null && !contacto.getImagenPerfil().getValue().isEmpty()) {
                 imagenPerfil.setImage(new Image(getClass().getResourceAsStream(contacto.getRutaImagenPerfil())));
             } else {
@@ -96,42 +98,35 @@ public class VentanaPrincipalController {
     }
 
     @FXML
-    private void mostrarFormulario() {
-        try {
-            // Cargar el archivo FXML del formulario
+    private void mostrarFormulario() throws Exception {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/aula/agenda/vista/nuevoContacto.fxml"));
-            Parent root = loader.load(); // load() debe ser llamado primero
+        // cargamos el archivo FXML del formulario
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/aula/agenda/vista/nuevoContacto.fxml"));
+        Parent root = loader.load(); 
 
-            //enlazamos el controlador del formulario con el controlador principal (para poder añadir contactos desde el otro controlador)
-            NuevoContactoController controladorSecundario = loader.getController();
-            controladorSecundario.setControladorPrincipal(this);
+        // enlazamos el controlador del formulario con el controlador principal 
+        NuevoContactoController controladorSecundario = loader.getController();
+        controladorSecundario.setControladorPrincipal(this);
 
-            // Crear un nuevo Stage (ventana)
-            Stage ventanaFormulario = new Stage();
-            ventanaFormulario.setTitle("Añadir nuevo contacto");
-            ventanaFormulario.initModality(Modality.WINDOW_MODAL); // Esto hace que la ventana sea modal
-            ventanaFormulario.initOwner(tablaContactos.getScene().getWindow()); // Asigna la ventana principal como
-                                                                                // propietaria
+        // crear un nuevo Stage (ventana)
+        Stage ventanaFormulario = new Stage();
+        ventanaFormulario.setTitle("Añadir nuevo contacto");
+        ventanaFormulario.initModality(Modality.WINDOW_MODAL); // modal
+        ventanaFormulario.initOwner(tablaContactos.getScene().getWindow()); // asigna la ventana principal como propietaria
+                                
+        // establecer la escena y mostrar la ventana
+        Scene escena = new Scene(root);
 
-            // Establecer la escena y mostrar la ventana
-            Scene escena = new Scene(root);
+        // establecemos CSS
+        escena.getStylesheets()
+                .add(getClass().getResource("/com/aula/agenda/estilos/estilos.css").toExternalForm());
 
-            // establecemos CSS
-            escena.getStylesheets()
-                    .add(getClass().getResource("/com/aula/agenda/estilos/estilos.css").toExternalForm());
-
-            ventanaFormulario.setScene(escena);
-            ventanaFormulario.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ventanaFormulario.setScene(escena);
+        ventanaFormulario.show();
     }
 
     public void agregarContacto(Contacto c) {
-        // Simplemente añade el nuevo contacto a la lista observable.
-        // Dado que la tabla está enlazada a esta lista, se actualizará automáticamente.
+        // dado que la tabla está enlazada a esta lista, se actualizará automáticamente
         listaContactos.add(c);
     }
 

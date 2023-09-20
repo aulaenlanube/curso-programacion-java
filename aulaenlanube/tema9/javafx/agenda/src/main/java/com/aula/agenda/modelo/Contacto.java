@@ -12,7 +12,7 @@ public class Contacto {
     private SimpleStringProperty webPersonal;
     private SimpleStringProperty telefono;
 
-    // Constructor completo
+    // constructor completo
     public Contacto(String nombre, String correo, String imagenPerfil, String webPersonal, String telefono) {
         this.nombre = new SimpleStringProperty(nombre);
         this.correo = new SimpleStringProperty(correo);
@@ -21,11 +21,7 @@ public class Contacto {
         this.telefono = new SimpleStringProperty(telefono);
     }
 
-    // Constructor vacío
-    public Contacto() {
-    }
-
-    // Getters y setters
+    // getters y setters
 
     public SimpleStringProperty getNombre() {
         return nombre;
