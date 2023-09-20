@@ -12,6 +12,11 @@ TableView {
     -fx-alignment: CENTER_RIGHT;
 }
 
+.hboxBotones {    
+    -fx-spacing: 10px;
+    -fx-alignment: CENTER;
+}
+
 .contenedorImagenEstilo {
     -fx-border-color: #3a5faf;
     -fx-border-width: 5px;
@@ -26,3 +31,30 @@ TableView {
     -fx-background-color: #28a745;
     -fx-text-fill: white;
 }
+
+.botonBorrarContacto {
+    -fx-background-color: #ff6060;
+    -fx-background-image: url("../iconos/borrar.png");
+}
+
+.botonEditarContacto {
+    -fx-background-color: #7fc3ff;
+    -fx-background-image: url("../iconos/editar.png");    -fx-background-repeat: no-repeat;      
+}
+
+.botonNuevoContacto {
+    -fx-background-color: #a0da82;
+    -fx-background-image: url("../iconos/agregar.png");  
+}
+
+.botonesVentanaPrincipal {
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center; 
+    -fx-background-size: 70% 70%;          /* Escala la imagen para que ocupe el 70% del espacio del botón tanto en ancho como en alto */
+    -fx-pref-width:  40px;      /* Ancho preferido del botón */
+    -fx-pref-height: 40px;     /* Altura preferida del botón */    
+    -fx-border-color: black;  /* Color del borde */
+    -fx-border-width: 2px;    /* Ancho del borde */     
+    -fx-padding: 10px; /* top, right, bottom, left */
+}
+

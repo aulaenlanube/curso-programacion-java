@@ -10,8 +10,13 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
 
 <HBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="com.aula.agenda.controlador.VentanaPrincipalController">
+
+
 
     <!-- TableView para los contactos -->
     <TableView fx:id="tablaContactos" prefWidth="400">
@@ -23,6 +28,7 @@
         <HBox.margin>
             <Insets top="20" right="20" bottom="20" left="20" />
         </HBox.margin>
+        
     </TableView>
 
     <!-- Panel para mostrar detalles del contacto seleccionado -->
@@ -36,8 +42,14 @@
         <Label fx:id="labelCorreo" text="Correo: " />
         <Label fx:id="labelWebPersonal" text="Web personal: " />
 
-        <!-- Botón para agregar un nuevo contacto -->
-        <Button  fx:id="botonNuevoContacto" text="Agregar Contacto" onAction="#mostrarFormulario"/>
+        <!-- Botones -->
+    <HBox styleClass="hboxBotones">
+        <Button styleClass="botonBorrarContacto, botonesVentanaPrincipal" fx:id="botonBorrarContacto" text="" onAction="#eliminarContacto" />
+        <Button styleClass="botonEditarContacto, botonesVentanaPrincipal" fx:id="botonEditarContacto" text="" onAction="#editarContacto" />    
+        <Button styleClass="botonNuevoContacto, botonesVentanaPrincipal" fx:id="botonNuevoContacto" text="" onAction="#mostrarFormulario"/>    
+    </HBox>
+        
+        
     </VBox>    
 
 </HBox>

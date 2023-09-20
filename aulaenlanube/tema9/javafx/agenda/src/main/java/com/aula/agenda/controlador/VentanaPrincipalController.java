@@ -8,6 +8,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -51,7 +53,7 @@ public class VentanaPrincipalController {
         borde.setOffsetY(0);
         borde.setColor(Color.BLACK);
         imagenPerfil.setEffect(borde);
-        
+
         // crea un ObservableArrayList para los contactos
         listaContactos = FXCollections.observableArrayList();
 
@@ -98,13 +100,13 @@ public class VentanaPrincipalController {
     }
 
     @FXML
-    private void mostrarFormulario() throws Exception {
+    private NuevoContactoController crearVentanaContacto() throws Exception {
 
         // cargamos el archivo FXML del formulario
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/aula/agenda/vista/nuevoContacto.fxml"));
-        Parent root = loader.load(); 
+        Parent root = loader.load();
 
-        // enlazamos el controlador del formulario con el controlador principal 
+        // enlazamos el controlador del formulario con el controlador principal
         NuevoContactoController controladorSecundario = loader.getController();
         controladorSecundario.setControladorPrincipal(this);
 
@@ -112,8 +114,9 @@ public class VentanaPrincipalController {
         Stage ventanaFormulario = new Stage();
         ventanaFormulario.setTitle("Añadir nuevo contacto");
         ventanaFormulario.initModality(Modality.WINDOW_MODAL); // modal
-        ventanaFormulario.initOwner(tablaContactos.getScene().getWindow()); // asigna la ventana principal como propietaria
-                                
+        ventanaFormulario.initOwner(tablaContactos.getScene().getWindow()); // asigna la ventana principal como
+                                                                            // propietaria
+
         // establecer la escena y mostrar la ventana
         Scene escena = new Scene(root);
 
@@ -121,13 +124,72 @@ public class VentanaPrincipalController {
         escena.getStylesheets()
                 .add(getClass().getResource("/com/aula/agenda/estilos/estilos.css").toExternalForm());
 
+        // mostramos ventana
         ventanaFormulario.setScene(escena);
         ventanaFormulario.show();
+
+        // devolvemos el controlador de la ventana
+        return controladorSecundario;
+    }
+
+    @FXML
+    private void mostrarFormulario() throws Exception {
+        crearVentanaContacto();
     }
 
     public void agregarContacto(Contacto c) {
-        // dado que la tabla está enlazada a esta lista, se actualizará automáticamente
+        // la tabla está enlazada con listaContactos, se actualizará automáticamente
         listaContactos.add(c);
+    }
+
+    @FXML
+    private void editarContacto() throws Exception {
+
+        Contacto contactoSeleccionado = tablaContactos.getSelectionModel().getSelectedItem();
+
+        if (contactoSeleccionado != null) {      
+            NuevoContactoController controladorSecundario = crearVentanaContacto();            
+            controladorSecundario.setContactoActual(contactoSeleccionado);
+
+        } else {
+
+            // informa al usuario que debe seleccionar un contacto para editarlo
+            Alert alerta = new Alert(AlertType.ERROR);
+            alerta.setTitle("ERROR");
+            alerta.setHeaderText(null);
+            alerta.setContentText(
+                    "ERROR al editar contacto. Debes seleccionar un contacto de la tabla para poder editarlo.");
+            alerta.showAndWait();
+        }
+    }
+
+    @FXML
+    private void eliminarContacto() {
+
+        int indiceSeleccionado = tablaContactos.getSelectionModel().getSelectedIndex();
+
+        if (indiceSeleccionado >= 0) {
+            // Borrar el contacto de la lista de contactos
+            tablaContactos.getItems().remove(indiceSeleccionado);
+
+            // mostramos alerta
+            Alert alerta = new Alert(AlertType.INFORMATION);
+            alerta.setTitle("Contacto Borrado");
+            alerta.setHeaderText(null);
+            alerta.setContentText("El contacto ha sido borrado de forma correcta.");
+            alerta.showAndWait();
+
+        } else {
+
+            // Informa al usuario que debe seleccionar un contacto para borrarlo
+            Alert alerta = new Alert(AlertType.ERROR);
+            alerta.setTitle("ERROR");
+            alerta.setHeaderText(null);
+            alerta.setContentText(
+                    "ERROR al borrar contacto. Debes seleccionar un contacto de la tabla para poder borrarlo.");
+            alerta.showAndWait();
+
+        }
     }
 
 }

@@ -17,6 +17,9 @@ import java.nio.file.StandardCopyOption;
 
 public class NuevoContactoController {
 
+    private boolean modoEdicion = false;
+    private Contacto contactoActual = null;
+
     @FXML
     private TextField campoNombre;
     @FXML
@@ -38,6 +41,25 @@ public class NuevoContactoController {
         this.controladorPrincipal = controladorPrincipal;
     }
 
+     // método para enlazar con el contacto actual
+    public void setContactoActual(Contacto contactoActual) {
+
+        //vinculamos el contacto
+        this.contactoActual = contactoActual;
+        
+        // rellenamos los datos del contacto
+        if (contactoActual != null) {
+            campoNombre.setText(contactoActual.getNombre().get());
+            campoTelefono.setText(contactoActual.getTelefono().get());
+            campoCorreo.setText(contactoActual.getCorreo().get());
+            campoWebPersonal.setText(contactoActual.getWebPersonal().get());
+            nombreImagen.setText(contactoActual.getImagenPerfil().getValue().toString());
+        }
+
+        // estamos editando, fijamos modo edición
+        modoEdicion = true;
+    }
+
     @FXML
     public void initialize() {
         // código de inicialización si es necesario
@@ -45,7 +67,7 @@ public class NuevoContactoController {
 
     @FXML
     private void cargarImagen() {
-        
+
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Seleccionar Imagen de Perfil");
         fileChooser.getExtensionFilters().addAll(
@@ -71,12 +93,29 @@ public class NuevoContactoController {
         String telefono = campoTelefono.getText();
         String correo = campoCorreo.getText();
         String webPersonal = campoWebPersonal.getText();
-        String imagen = (archivoImagen != null) ? guardarImagen() : "default.jpg";
+        String imagen = guardarImagen();
 
         Contacto nuevoContacto = new Contacto(nombre, correo, imagen, webPersonal, telefono);
 
-        // agregamos el nuevo contacto a la lista del ControladorPrincipal
-        controladorPrincipal.agregarContacto(nuevoContacto);
+        // guardamos o editamos dependiendo del modo
+
+        if (modoEdicion) {
+
+            //editamos el contactoActual, que está vinculado a la lista del controlador principal
+            this.contactoActual.setCorreo(correo);
+            this.contactoActual.setNombre(nombre);
+            this.contactoActual.setTelefono(telefono);
+            this.contactoActual.setWebPersonal(webPersonal);
+            this.contactoActual.setImagenPerfil(imagen);
+            modoEdicion = false;
+
+            //recargamos la imagen si la hemos modificado
+            //....
+
+        } else {
+            // agregamos el nuevo contacto a la lista del ControladorPrincipal
+            controladorPrincipal.agregarContacto(nuevoContacto);
+        }
 
         // cerramos ventana
         cancelar();
@@ -94,11 +133,20 @@ public class NuevoContactoController {
 
     private String guardarImagen() {
 
+        // si no hay archivo ni texto
+        if (archivoImagen == null && nombreImagen.getText().isEmpty())
+            return "default.jpg";
+
+        // si no hay archivo pero hay texto, mantenemos la imagen
+        if (archivoImagen == null && !nombreImagen.getText().isEmpty())
+            return nombreImagen.getText();
+
+        // si hay archivo, lo guardamos
         try {
             // definimos carpeta para guardar la imagen
             Path carpetaDestino = Paths.get("src/main/resources/com/aula/agenda/imgs");
 
-            //obtenemos nombre de la imagen del path de origen
+            // obtenemos nombre de la imagen del path de origen
             Path imagenOrigen = Paths.get(archivoImagen.getAbsolutePath());
             Path imagenDestino = carpetaDestino.resolve(imagenOrigen.getFileName());
 
@@ -112,4 +160,6 @@ public class NuevoContactoController {
         // devolvemos el nombre del fichero
         return nombreImagen.getText();
     }
+
+
 }
