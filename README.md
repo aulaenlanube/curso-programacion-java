@@ -1,5 +1,5 @@
 # Curso de JAVA ☕ [ DAM - DAW ] ☕
-![JAVA-AULAENLANUBE-1024x576](https://github.com/aulaenlanube/curso-programacion-java/assets/15714409/3a348d0c-15ed-4ec2-a288-d6b91fee2e01)
+![JAVA-AULAENLANUBE-1024x576](https://github.com/aulaenlanube/curso-programacion-java/assets/15714409/1230e1b2-945f-487f-a116-c42bae22e4ad)
 
 Este repositorio contiene todos los recursos y materiales del curso de JAVA impartido en el módulo de PROGRAMACIÓN de los ciclos formativos de grado superior de [**DAM**](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2010-11888) y [**DAW**](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2010-17329). Cada uno de los temas ha sido meticulosamente dividido y estructurado en su propia carpeta, de manera que sea fácil de seguir y entender.
 
